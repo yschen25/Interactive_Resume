@@ -1,0 +1,184 @@
+body {
+    font-family: "Open Sans", "Trebuchet MS", "Comic Sans MS", "Constantia", sans-serif;
+    width: 100%;
+}
+
+.mask {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    img {
+        position: fixed;
+        transition: .3s;
+        cursor: url('./../img/magnifier.png'), pointer;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
+        }
+    }
+
+    .wall {
+        width: 100vw;
+        height: 636px;
+        background: #78c8ca;
+
+        .pic {
+            width: 200px;
+            top: 67px;
+            left: 30px;
+
+            &.pic2 {
+                top: 10px;
+                left: 233px;
+            }
+
+            &.pic3 {
+                top: 185px;
+                left: 230px;
+            }
+        }
+
+        .leftBooks {
+            width: 345px;
+            top: 350px;
+            left: 0;
+        }
+
+        .lamp {
+            width: 450px;
+            top: 147px;
+            left: 410px;
+            z-index: 1;
+        }
+
+        .duck {
+            width: 80px;
+            top: 580px;
+            left: 650px;
+            z-index: 1;
+        }
+
+        .computer {
+            width: 550px;
+            top: 252px;
+            left: 700px;
+        }
+
+        .stick {
+            width: 100px;
+            top: 223px;
+            left: 1394px;
+
+            &.stick2 {
+                top: 400px;
+                left: 1350px;
+            }
+
+            &.stick3 {
+                top: 460px;
+                left: 1500px;
+            }
+        }
+
+        .calender {
+            top: 50px;
+            left: 1590px;
+        }
+
+        .rightBooks {
+            width: 320px;
+            top: 327px;
+            left: 1600px;
+        }
+
+    }
+
+    .desk {
+        width: 100vw;
+        height: 301px;
+        background: #924b23;
+
+        .papers {
+            width: 420px;
+            top: 680px;
+            left: 75px;
+        }
+
+        .phone {
+            width: 150px;
+            top: 720px;
+            left: 550px;
+        }
+
+        .keyboard {
+            width: 600px;
+            top: 730px;
+            left: 700px;
+        }
+
+        .mouse {
+            width: 100px;
+            top: 730px;
+            left: 1320px;
+        }
+
+        .coffee {
+            width: 100px;
+            top: 580px;
+            left: 1300px;
+        }
+
+        .noteBooks {
+            width: 300px;
+            top: 700px;
+            left: 1550px;
+        }
+
+        .octocat {
+            width: 120px;
+            top: 620px;
+            left: 1450px;
+        }
+    }
+
+    .text {
+        position: fixed;
+        text-align: center;
+        top: 870px;
+        color: #d7dbdb;
+        left: 0;
+        right: 0;
+        font-size: 1.1rem;
+
+        &.ref{
+            top: 890px;
+
+            a{
+                color: #c7cbcb;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+//
+.showPic {
+    width: 500px;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
