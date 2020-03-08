@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import pic2 from '../../img/pic12.png';
 import Wall from '../wall/wall';
 import Desk from '../desk/desk';
 
-class Test extends React.Component {
+class Room extends React.Component {
     constructor(props){
         super(props);
         this.state = { mask: 'noShow' };
@@ -33,4 +32,4 @@ class Test extends React.Component {
     }
 }
 
-ReactDOM.render(<Test />, document.getElementById('app'));
+export default Room;
