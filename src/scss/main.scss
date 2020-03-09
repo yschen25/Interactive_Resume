@@ -3,14 +3,6 @@ body {
     width: 100%;
 }
 
-.mask {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-}
-
 .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -105,7 +97,8 @@ body {
 
     .desk {
         width: 100vw;
-        height: 301px;
+        min-height: 301px;
+        padding-bottom: 10%;
         background: #924b23;
 
         .papers {
@@ -171,9 +164,32 @@ body {
     }
 }
 
-//
-.showPic {
+// Display
+.mask {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.show-pic1 {
+    background: url('../img/show_pic1.png') no-repeat center center;
     width: 500px;
+    background-size: contain;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.show-duck {
+    background: url('../img/duck.png') no-repeat center center;
+    width: 500px;
+    background-size: contain;
     position: fixed;
     margin: auto;
     top: 0;

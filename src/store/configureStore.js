@@ -3,10 +3,10 @@ import roomReducer from '../reducer';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const makerApp = combineReducers({
+const app = combineReducers({
     room: roomReducer
 });
 
-const store = createStore(makerApp, {}, composeEnhancer());
+const store = createStore(app, {}, composeEnhancer());
 
 export default store;

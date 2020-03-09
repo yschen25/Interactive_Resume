@@ -1,8 +1,26 @@
+import { CLICK, CHANGE_STATUS } from '../constant/actionType';
 
-const initState = [];
+const initState = {
+    "notClick": {},
+    "clicked": {}
+};
 
 const roomReducer = (state = initState, action) => {
-    return state;
+    switch (action.type) {
+        case CHANGE_STATUS:
+            return {
+                ...state,
+                clicked: {
+                    ...state.clicked,
+                    [action.payload.name]: {
+                        ...state.clicked[action.payload.name],
+                        show: action.payload.show = true
+                    }
+                }
+            };
+        default:
+            return state;
+    }
 };
 
 export default roomReducer;

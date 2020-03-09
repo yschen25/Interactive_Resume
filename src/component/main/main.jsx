@@ -1,31 +1,19 @@
 import React from 'react';
-import pic2 from '../../img/pic12.png';
-import Wall from '../wall/wall';
+import { Display } from '../display/display';
+import { Wall } from '../wall/wall';
 import Desk from '../desk/desk';
+import Text from '../text/text'
 
 class Room extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = { mask: 'noShow' };
-        this.checkPic = this.checkPic.bind(this);
-    }
-
-    checkPic(){
-        console.log("ddd");
-        this.setState({ mask : 'show' });
-    }
-
 
     render() {
         return (
             <div>
-                {(this.state.mask) == 'show' ? <div className="mask"></div> : "" }
-                {(this.state.mask) == 'show' ? <img className="showPic" src={pic2} /> : ""}
+                <Display />
             <div className="wrapper">
-                <Wall checkPic={this.checkPic}/>
+                <Wall />
                 <Desk />
-                <p className="text">For the best experience, recommend use 1920×1080 pixels</p>
-                <p className="text ref"><a href="https://www.freepik.com/" target="_blank">Photo created by freepik - www.freepik.com</a></p>
+                <Text />
             </div>
             </div>
         );
