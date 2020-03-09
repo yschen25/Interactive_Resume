@@ -5,11 +5,15 @@ import {changeStatus, click} from "../../action";
 class ConnectDisplay extends React.Component {
 
     click(e) {
-        console.log('display.js / close', e);
+
+        let data_name = e.target.getAttribute('data-name');
+        let name = data_name.split('-')[1];
+
+        console.log('display.js / close', name);
 
         const {dispatchChangeStatus} = this.props;
 
-        // Change status to
+        // Close popup
         dispatchChangeStatus({
             name,
             show: false
@@ -25,9 +29,9 @@ class ConnectDisplay extends React.Component {
             console.log('display.js/', val);
 
             return (
-                <div>
-                    {val[1].show ? <div className="mask" onClick={this.click.bind(this)}></div> : ""}
-                    {val[1].show ? <div className={`show-${val[0]}`} ></div> : ""}
+                <div key={`show-${val[0]}`}>
+                    {val[1].show ? <div className="mask" data-name={`show-${val[0]}`} onClick={this.click.bind(this)}></div> : ""}
+                    {val[1].show ? <div className={`show-${val[0]}`} data-name={`show-${val[0]}`} onClick={this.click.bind(this)}></div> : ""}
                 </div>
             )
         })

@@ -1,5 +1,5 @@
 body {
-    font-family: "Open Sans", "Trebuchet MS", "Comic Sans MS", "Constantia", sans-serif;
+    font-family: 'Open Sans', "Trebuchet MS", "Comic Sans MS", "Constantia", sans-serif;
     width: 100%;
 }
 
@@ -153,10 +153,10 @@ body {
         right: 0;
         font-size: 1.1rem;
 
-        &.ref{
+        &.ref {
             top: 890px;
 
-            a{
+            a {
                 color: #c7cbcb;
                 font-size: 0.9rem;
             }
@@ -169,21 +169,58 @@ body {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 2;
+    cursor: url('./../img/close.png'), pointer;
 }
 
-.show-pic1 {
+.show-pic1,
+.show-pic2,
+.show-pic3 {
     background: url('../img/show_pic1.png') no-repeat center center;
     width: 500px;
+    height: 650px;
     background-size: contain;
     position: fixed;
     margin: auto;
-    top: 0;
-    bottom: 0;
+    top: -110px;
+    bottom: -18px;
     left: 0;
     right: 0;
     z-index: 2;
+
+    &:before {
+        content: "";
+        white-space: pre;
+        display: inline-block;
+        font-size: 1.4rem;
+        color: #f6f6f6;
+        position: absolute;
+        top: 480px;
+        line-height: 1.5;
+    }
+}
+
+.show-pic2 {
+    background: url('../img/show_pic2.png') no-repeat center center;
+    width: 700px;
+    height: 500px;
+    background-size: contain;
+
+    &:before {
+        content: "The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes. \A - Christmas in Berlin, Germany";
+    }
+}
+
+.show-pic3 {
+    background: url('../img/show_pic3.png') no-repeat center center;
+    height: 700px;
+    background-size: contain;
+
+    &:before {
+        content: "Wherever I go, I like to take a picture that I jump.";
+        top: 660px;
+    }
 }
 
 .show-duck {
