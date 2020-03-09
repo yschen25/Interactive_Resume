@@ -14,7 +14,7 @@ const roomReducer = (state = initState, action) => {
                     ...state.clicked,
                     [action.payload.name]: {
                         ...state.clicked[action.payload.name],
-                        show: action.payload.show = true
+                        show: action.payload.show
                     }
                 }
             };
