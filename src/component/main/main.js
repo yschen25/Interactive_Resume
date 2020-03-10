@@ -1,7 +1,7 @@
 import React from 'react';
 import { Display } from '../display/display';
 import { Wall } from '../wall/wall';
-import Desk from '../desk/desk';
+import { Desk } from '../desk/desk';
 import Text from '../text/text'
 
 class Room extends React.Component {

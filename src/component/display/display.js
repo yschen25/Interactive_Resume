@@ -23,22 +23,52 @@ class ConnectDisplay extends React.Component {
 
     render() {
 
-        const { clicked } = this.props;
+        const {clicked} = this.props;
         return Object.entries(clicked).map((val) => {
 
             console.log('display.js/', val);
 
+            let mask = '';
+            let display = '';
+            if (val[1].show) {
+
+                display = <div className={`show show-${val[0]}`} data-name={`show-${val[0]}`} onClick={this.click.bind(this)}></div>;
+
+                if (val[0] === 'computer') {
+                    console.log('COMPUTER');
+
+                    display = <div className='show show-computer' data-name='show-computer'>
+                        {/*<div className="pwdTab">*/}
+                            {/*<div className="pwdInput">*/}
+                                {/*<input className="textInput" autoFocus placeholder="Please enter the password"/>*/}
+                                {/*<p>Tip : I am a teapot</p>*/}
+                                {/*<input className="submitInput" type='submit' value='submit' />*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+
+                        <div className="trigger youtubeTrigger">Youtube</div>
+                        <div className="tab youtubeTab">
+                            <div className="youtubeBg">
+                                <iframe width="470" height="230" src="https://www.youtube.com/embed/G4LEvvffwVY" frameBorder="0"></iframe>
+                            </div>
+                        </div>
+
+                    </div>;
+                }
+
+                mask = <div className="mask" data-name={`show-${val[0]}`} onClick={this.click.bind(this)}></div>;
+            }
+
             return (
                 <div key={`show-${val[0]}`}>
-                    {val[1].show ? <div className="mask" data-name={`show-${val[0]}`} onClick={this.click.bind(this)}></div> : ""}
-                    {val[1].show ? <div className={`show-${val[0]}`} data-name={`show-${val[0]}`} onClick={this.click.bind(this)}></div> : ""}
+                    {mask}
+                    {display}
                 </div>
             )
         })
 
     }
 }
-
 
 ConnectDisplay.defaultProps = {
     clicked: {}
@@ -52,7 +82,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        dispatchChangeStatus : selected => {
+        dispatchChangeStatus: selected => {
             dispatch(changeStatus(selected))
         }
     }

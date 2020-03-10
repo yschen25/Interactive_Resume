@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { changeStatus } from '../../action';
+import {connect} from 'react-redux';
+import {changeStatus} from '../../action';
 
 import pic1 from '../../img/pic1.png';
 import pic2 from '../../img/pic2.png';
@@ -22,7 +22,7 @@ class ConnectWall extends React.Component {
         console.log('wall.js / click', name);
 
         // Show popup
-        if(name !== null ){
+        if (name !== null) {
             const {dispatchChangeStatus} = this.props;
             dispatchChangeStatus({
                 name,
@@ -34,27 +34,26 @@ class ConnectWall extends React.Component {
     render() {
         return (
             <div className="wall" onClick={this.click.bind(this)}>
-                <img className="pic" data-name="pic1" src={pic1} />
-                <img className="pic pic2" data-name="pic2" src={pic2} />
-                <img className="pic pic3" data-name="pic3" src={pic3} />
+                <img className="pic" data-name="pic1" src={pic1}/>
+                <img className="pic pic2" data-name="pic2" src={pic2}/>
+                <img className="pic pic3" data-name="pic3" src={pic3}/>
                 <img className="leftBooks" data-name="leftBooks" src={leftBooks}/>
                 <img className="lamp" data-name="lamp" src={lamp}/>
-                <img className="duck" data-name="leftBooks" src={duck} />
+                <img className="duck" data-name="duck" src={duck}/>
                 <img className="computer" data-name="computer" src={computer}/>
                 <img className="stick" data-name="stick1" src={stick1}/>
                 <img className="stick stick2" data-name="stick2" src={stick2}/>
                 <img className="stick stick3" data-name="stick3" src={stick3}/>
                 <img className="calender" data-name="calender" src={calender}/>
-                <img className="rightBooks"data-name="rightBooks"  src={rightBooks}/>
+                <img className="rightBooks" data-name="rightBooks" src={rightBooks}/>
             </div>
         );
     }
 }
 
-
 const mapDispatchToProps = dispatch => {
     return {
-        dispatchChangeStatus : selected => {
+        dispatchChangeStatus: selected => {
             dispatch(changeStatus(selected))
         }
     }
