@@ -185,7 +185,7 @@ body {
     z-index: 2;
 }
 
-%before {
+%textBefore {
     content: "";
     white-space: pre;
     display: inline-block;
@@ -205,7 +205,7 @@ body {
     background-size: contain;
 
     &:before {
-        @extend %before
+        @extend %textBefore
     }
 }
 
@@ -227,7 +227,7 @@ body {
     top: -200px;
 
     &:before {
-        content: "Company held a greening environmental competition, \A I spent my vacation to post a ocotocat on th wall by stickers, \A and I got the prize!";
+        content: "";
         top: 660px;
     }
 }
@@ -241,7 +241,7 @@ body {
 
     &:before {
         content: "Do you heard about rubber duck debugging before? \A Programmer debug their code by explain to the duck line-by-line. \A It's really cute, I would like to have one.";
-        @extend %before;
+        @extend %textBefore;
         top: 310px;
         left: -200px;
         line-height: 1.5;
@@ -256,7 +256,7 @@ body {
 
     &:before {
         content: "Hmmmm... \A programmers are persons that convert caffeine into code, \A one of my colleagues needs four cups of coffe a day. ";
-        @extend %before;
+        @extend %textBefore;
         top: 310px;
         left: -200px;
         line-height: 1.5;
@@ -264,36 +264,37 @@ body {
 }
 
 .show-octocat {
-    background: url('../img/show_octocat.png') no-repeat center center;
-    width: 350px;
-    height: 300px;
+    background: url('../img/show_octocat.jpg') no-repeat center center;
+    width: 600px;
+    height: 600px;
     background-size: contain;
+    top: -150px;
 
     &:before {
-        content: "Octocat, part cat, part octopus, which is a little weird but still cute.";
-        @extend %before;
-        top: 310px;
-        left: -200px;
+        content: "Company held a greening environmental competition, \A I spent my vacation to post a ocotocat on th wall by stickers, \A and I got the prize!";
+        @extend %textBefore;
+        top: 610px;
+        left: -100px;
         line-height: 1.5;
     }
 }
 
 .show-computer {
     font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
-    background: url('../img/computer.png') no-repeat center center;
+    background: url('../img/show_computer.png') no-repeat center center;
     width: 800px;
     height: 700px;
     background-size: contain;
     font-size: 1.2rem;
 
     .pwdTab {
-        background: #131c10;
-        width: 773px;
-        height: 449px;
-        border-radius: 30px;
+        background: #333333;
+        width: 736px;
+        height: 435px;
+        border-radius: 30px 30px 0 0;
         position: relative;
-        top: 31px;
-        left: 14px;
+        top: 101px;
+        left: 32px;
 
         .textInput {
             display: block;
@@ -330,14 +331,25 @@ body {
         }
     }
 
+    %triggerBefore {
+        background-size: contain;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+
     .trigger {
-        background: #f6f6f6;
+        display: inline-block;
+        background: #fff;
         width: 120px;
-        height: 25px;
+        height: 20px;
         position: relative;
         border-radius: 5px 5px 0 0;
-        top: 50px;
-        left: 25px;
+        top: 107px;
+        left: 57px;
         font-size: 0.8rem;
         text-align: center;
         line-height: 25px;
@@ -346,45 +358,63 @@ body {
             content: "";
             background: url("../img/youtube_icon.png") no-repeat center center;
             background-size: contain;
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            top: 5px;
-            left: 10px;
+            @extend %triggerBefore
         }
     }
 
-    .youtubeTrigger {
+    .portfolioTrigger {
+        background: #c7cbcb;
+        top: 107px;
+        left: 56px;
 
+        &:before {
+            content: "";
+            background: url("../img/portfolio_icon.png") no-repeat center center;
+            background-size: contain;
+            @extend %triggerBefore;
+            top: 3px;
+            left: 12px;
+        }
     }
 
     .tab {
-        background: #f6f6f6;
-        width: 773px;
-        height: 400px;
+        background: #fff;
+        width: 736px;
+        height: 409px;
         border-radius: 10px 10px 0 0;
         position: relative;
-        top: 50px;
-        left: 14px;
+        top: 106px;
+        left: 32px;
     }
 
     .youtubeTab {
 
         .youtubeBg {
-            background: url('../img/youtube.png') no-repeat center center;
-            width: 750px;
-            height: 450px;
+            background: url("../img/youtube.png") no-repeat center center;
+            width: 730px;
+            height: 752px;
             background-size: contain;
+            border-radius: 10px 10px 0 0;
             position: relative;
-            top: -20px;
-            left: 14px;
+            top: -170px;
+            left: 3px;
 
             iframe {
                 position: relative;
-                top: 80px;
-                left: 55px;
+                top: 217px;
+                left: 38px;
             }
+        }
+    }
+
+    .portfolioTab {
+
+        iframe {
+            position: relative;
+            top: 0;
+            left: 0;
+            border-radius: 10px 10px 0 0;
+            border: 0;
         }
     }
 }

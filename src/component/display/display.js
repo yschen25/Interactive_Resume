@@ -46,11 +46,18 @@ class ConnectDisplay extends React.Component {
                             {/*</div>*/}
                         {/*</div>*/}
 
-                        <div className="trigger youtubeTrigger">Youtube</div>
-                        <div className="tab youtubeTab">
-                            <div className="youtubeBg">
-                                <iframe width="470" height="230" src="https://www.youtube.com/embed/G4LEvvffwVY" frameBorder="0"></iframe>
-                            </div>
+                        <div className="trigger youtubeTrigger">YouTube</div>
+                        <div className="trigger portfolioTrigger">Portfolio</div>
+
+                        {/*<div className="tab youtubeTab">*/}
+                            {/*<div className="youtubeBg">*/}
+                                {/*<iframe width="490" height="260" src="https://www.youtube.com/embed/t3v25rt-DYA"*/}
+                                        {/*frameBorder="0"></iframe>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+
+                        <div className="tab portfolioTab">
+                            <iframe width="736" height="410" src="https://www.yschen25.com/" />
                         </div>
 
                     </div>;
