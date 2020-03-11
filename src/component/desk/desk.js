@@ -11,7 +11,7 @@ import {changeStatus} from "../../action";
 
 class ConnectDesk extends React.Component {
 
-    click(e) {
+    changeStatus(e) {
         let name = e.target.getAttribute('data-name');
         console.log('desk.js / click', name);
 
@@ -27,7 +27,7 @@ class ConnectDesk extends React.Component {
 
     render() {
         return (
-               <div className="desk" onClick={this.click.bind(this)}>
+               <div className="desk" onClick={this.changeStatus.bind(this)}>
                    <img className="papers" data-name="papers" src={papers} />
                    <img className="phone" data-name="phone" src={phone} />
                    <img className="keyboard" data-name="keyboard" src={keyboard} />

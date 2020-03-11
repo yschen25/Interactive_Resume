@@ -1,8 +1,13 @@
-import { CLICK, CHANGE_STATUS } from '../constant/actionType';
+import { CHANGE_STATUS } from '../constant/actionType';
 
 const initState = {
     "notClick": {},
-    "clicked": {}
+    "clicked": {},
+    "tab": {
+        "youtube": {
+            "show" : false
+        }
+    }
 };
 
 const roomReducer = (state = initState, action) => {

@@ -17,7 +17,7 @@ import rightBooks from '../../img/right_books.png';
 
 class ConnectWall extends React.Component {
 
-    click(e) {
+    changeStatus(e) {
         let name = e.target.getAttribute('data-name');
         console.log('wall.js / click', name);
 
@@ -31,9 +31,12 @@ class ConnectWall extends React.Component {
         }
     }
 
+    // <div className="wall" onClick={(e) => this.changeStatus(e)}>
+
     render() {
         return (
-            <div className="wall" onClick={this.click.bind(this)}>
+
+            <div className="wall" onClick={this.changeStatus.bind(this)}>
                 <img className="pic" data-name="pic1" src={pic1}/>
                 <img className="pic pic2" data-name="pic2" src={pic2}/>
                 <img className="pic pic3" data-name="pic3" src={pic3}/>

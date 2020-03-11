@@ -249,7 +249,7 @@ body {
 }
 
 .show-coffee {
-    background: url('../img/show_coffee.png') no-repeat center center;
+    background: url('../img/show_coffee2.png') no-repeat center center;
     width: 350px;
     height: 300px;
     background-size: contain;
@@ -337,7 +337,7 @@ body {
         width: 15px;
         height: 15px;
         position: absolute;
-        top: 5px;
+        top: 3px;
         left: 10px;
     }
 
@@ -352,7 +352,7 @@ body {
         left: 57px;
         font-size: 0.8rem;
         text-align: center;
-        line-height: 25px;
+        line-height: 20px;
 
         &:before {
             content: "";
@@ -373,7 +373,7 @@ body {
             background-size: contain;
             @extend %triggerBefore;
             top: 3px;
-            left: 12px;
+            left: 7px;
         }
     }
 
