@@ -1,9 +1,12 @@
-import { CHANGE_STATUS } from '../constant/actionType';
+import { CHANGE_STATUS, SUBMIT } from '../constant/actionType';
 
 const initState = {
     "notClick": {},
     "clicked": {},
     "tab": {
+        "pwd" :{
+            "show": true
+        },
         "youtube": {
             "show" : false
         }
@@ -19,6 +22,17 @@ const roomReducer = (state = initState, action) => {
                     ...state.clicked,
                     [action.payload.name]: {
                         ...state.clicked[action.payload.name],
+                        show: action.payload.show
+                    }
+                }
+            };
+        case SUBMIT :
+            return {
+                ...state,
+                tab: {
+                    ...state.tab,
+                    [action.payload.name]: {
+                        ...state.tab[action.payload.name],
                         show: action.payload.show
                     }
                 }

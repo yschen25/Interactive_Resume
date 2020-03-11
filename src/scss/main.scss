@@ -232,6 +232,31 @@ body {
     }
 }
 
+.show-stick1,
+.show-stick2,
+.show-stick3 {
+    background: url('../img/show_stick1.png') no-repeat center center;
+    width: 500px;
+    height: 650px;
+    background-size: contain;
+}
+
+.show-stick2{
+    background: url('../img/show_stick2.png') no-repeat center center;
+    width: 500px;
+    height: 650px;
+    background-size: contain;
+}
+
+
+.show-stick3{
+    background: url('../img/show_stick3.png') no-repeat center center;
+    width: 500px;
+    height: 650px;
+    background-size: contain;
+}
+
+
 .show-duck {
     background: url('../img/show_duck.png') no-repeat center center;
     width: 350px;
@@ -320,6 +345,7 @@ body {
             top: 210px;
             border-width: 0;
             outline: none;
+            cursor: pointer;
         }
 
         p {
