@@ -8,6 +8,7 @@ import pic3 from '../../img/pic3.png';
 import leftBooks from '../../img/left_books.png';
 import lamp from '../../img/lamp.png';
 import duck from '../../img/duck.png';
+import capoo from '../../img/capoo.png';
 import computer from '../../img/computer.png';
 import stick1 from '../../img/stick1.png';
 import stick2 from '../../img/stick2.png';
@@ -31,18 +32,17 @@ class ConnectWall extends React.Component {
         }
     }
 
-    // <div className="wall" onClick={(e) => this.changeStatus(e)}>
-
     render() {
         return (
 
-            <div className="wall" onClick={this.changeStatus.bind(this)}>
+            <div className="wall" onClick={this.changeStatus.bind(this)}> {/*<div className="wall" onClick={(e) => this.changeStatus(e)}>*/}
                 <img className="pic" data-name="pic1" src={pic1}/>
                 <img className="pic pic2" data-name="pic2" src={pic2}/>
                 <img className="pic pic3" data-name="pic3" src={pic3}/>
                 <img className="leftBooks" data-name="leftBooks" src={leftBooks}/>
                 <img className="lamp" data-name="lamp" src={lamp}/>
                 <img className="duck" data-name="duck" src={duck}/>
+                <img className="capoo" data-name="capoo" src={capoo}/>
                 <img className="computer" data-name="computer" src={computer}/>
                 <img className="stick" data-name="stick1" src={stick1}/>
                 <img className="stick stick2" data-name="stick2" src={stick2}/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import FlipPage from "react-flip-page";
 import {connect} from 'react-redux';
 import {changeStatus, submit} from "../../action";
 
@@ -14,8 +15,6 @@ class ConnectDisplay extends React.Component {
 
         let data_name = e.target.getAttribute('data-name');
         let name = data_name.split('-')[1];
-
-        console.log('display.js / close', name);
 
         const {dispatchChangeStatus} = this.props;
 
@@ -59,11 +58,7 @@ class ConnectDisplay extends React.Component {
 
         const { data } = this.props;
 
-        console.log('data', data);
-
         return Object.entries(data.clicked).map((val) => {
-
-            console.log('display.js/', val);
 
             let mask = '';
             let display = '';
@@ -118,6 +113,25 @@ class ConnectDisplay extends React.Component {
                         {tabDisplay}
                         {youtubeDisplay}
                     </div>;
+                }
+
+                // Show notebooks
+                if(val[0] === 'notebooks' && val[1].show){
+
+                    display = <FlipPage showSwipeHint showTouchHint loopForever className="show-notebooks">
+                        <article>
+                            <h1>First</h1>
+                            <p>My awesome first content</p>
+                        </article>
+                        <article>
+                            <h1>Seond</h1>
+                            <p>My wonderful second content</p>
+                        </article>
+                        <article>
+                            <h1>Third</h1>
+                            <p>My excellent third content</p>
+                        </article>
+                    </FlipPage>
                 }
 
                 mask = <div className="mask " data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;

@@ -1,10 +1,21 @@
 import React from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { addMessages } from '../../action';
 import { Display } from '../display/display';
 import { Wall } from '../wall/wall';
 import { Desk } from '../desk/desk';
 import Text from '../text/text'
 
-class Room extends React.Component {
+class ConnectRoom extends React.Component {
+
+    componentDidMount(){
+        const { dispatchAddMessages } = this.props;
+
+        axios.get('https://my-json-server.typicode.com/yschen25/Interactive_resume/db')
+            .then(response => dispatchAddMessages(response.data))
+            .catch(error => console.log(error));
+    }
 
     render() {
         return (
@@ -20,4 +31,14 @@ class Room extends React.Component {
     }
 }
 
-export default Room;
+ConnectRoom.propTypes = {
+    dispatchAddMessages: PropTypes.func.isRequired
+};
+
+const mapDispatchToProps = (dispatch) => ({
+    dispatchAddMessages: (text) =>{
+        dispatch(addMessages(text));
+    }
+});
+
+export const Room = connect(null, mapDispatchToProps)(ConnectRoom);

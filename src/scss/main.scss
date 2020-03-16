@@ -22,7 +22,7 @@ body {
     .wall {
         width: 100vw;
         height: 636px;
-        background: #78c8ca;
+        background: #debfcf;
 
         .pic {
             width: 200px;
@@ -58,6 +58,19 @@ body {
             top: 580px;
             left: 650px;
             z-index: 1;
+        }
+
+        .capoo {
+            display: block;
+            width: 220px;
+            top: 113px;
+            left: 948px;
+            transition: .4s cubic-bezier(.78, -1.12, .22, 1.64);
+
+            &:hover {
+                transform: scale(1.2);
+                top: 70px;
+            }
         }
 
         .computer {
@@ -131,7 +144,7 @@ body {
             left: 1300px;
         }
 
-        .noteBooks {
+        .notebooks {
             width: 300px;
             top: 700px;
             left: 1550px;
@@ -241,21 +254,19 @@ body {
     background-size: contain;
 }
 
-.show-stick2{
+.show-stick2 {
     background: url('../img/show_stick2.png') no-repeat center center;
     width: 500px;
     height: 650px;
     background-size: contain;
 }
 
-
-.show-stick3{
+.show-stick3 {
     background: url('../img/show_stick3.png') no-repeat center center;
     width: 500px;
     height: 650px;
     background-size: contain;
 }
-
 
 .show-duck {
     background: url('../img/show_duck.png') no-repeat center center;
@@ -304,6 +315,53 @@ body {
     }
 }
 
+.show-capoo {
+    background: url('../img/show_capoo.gif') no-repeat center center;
+    width: 500px;
+    height: 500px;
+    background-size: contain;
+    top: -150px;
+
+    &:before {
+        content: "Capoo also calls bugcat, it's a creature looks like a cat or bug, \A he loves eats meats and junk foods, sometimes he eats his friend Dogdog...\A This cute creature was created by a Taiwanese - Yara";
+        @extend %textBefore;
+        top: 467px;
+        left: -180px;
+        line-height: 1.5;
+    }
+}
+
+.show-keyboard {
+    background: url('../img/show_keyboard.png') no-repeat center center;
+    width: 800px;
+    height: 800px;
+    background-size: contain;
+    top: -150px;
+
+    &:before {
+        content: "My lovely filco ninja majestouch 2 cherry MX blue mechanical Keyboard \A with side printed gradient keycaps, I also changeded esc to a cat's paw, \A you will get the soft feeling from the slowly rebounding of the cat palm keycap.";
+        @extend %textBefore;
+        top: 650px;
+        left: -180px;
+        line-height: 1.5;
+    }
+}
+
+.show-notebooks {
+    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
+    position: fixed !important;
+    height: 700px !important;
+    width: 800px !important;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .show-computer {
     font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
     background: url('../img/show_computer.png') no-repeat center center;
@@ -313,7 +371,7 @@ body {
     font-size: 1.2rem;
 
     .pwdTab {
-        background: #333333;
+        background: #333;
         width: 736px;
         height: 435px;
         border-radius: 30px 30px 0 0;

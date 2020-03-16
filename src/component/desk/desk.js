@@ -5,7 +5,7 @@ import keyboard from '../../img/keyboard.png';
 import mouse from '../../img/mouse.png';
 import coffee from '../../img/coffee.png';
 import octocat from '../../img/octocat.png';
-import noteBooks from '../../img/notebooks.png';
+import notebooks from '../../img/notebooks.png';
 import {connect} from "react-redux";
 import {changeStatus} from "../../action";
 
@@ -13,7 +13,6 @@ class ConnectDesk extends React.Component {
 
     changeStatus(e) {
         let name = e.target.getAttribute('data-name');
-        console.log('desk.js / click', name);
 
         // Show popup
         if(name !== null ){
@@ -34,7 +33,7 @@ class ConnectDesk extends React.Component {
                    <img className="mouse" data-name="mouse" src={mouse} />
                    <img className="coffee" data-name="coffee" src={coffee} />
                    <img className="octocat" data-name="octocat" src={octocat} />
-                   <img className="noteBooks" data-name="noteBooks" src={noteBooks} />
+                   <img className="notebooks" data-name="notebooks" src={notebooks} />
                </div>
         );
     }

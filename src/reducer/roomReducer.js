@@ -1,4 +1,4 @@
-import { CHANGE_STATUS, SUBMIT } from '../constant/actionType';
+import { CHANGE_STATUS, SUBMIT, ADD_MESSAGES } from '../constant/actionType';
 
 const initState = {
     "notClick": {},
@@ -37,6 +37,9 @@ const roomReducer = (state = initState, action) => {
                     }
                 }
             };
+        case  ADD_MESSAGES:
+            console.log('ABCCCCCCCC', state);
+            return state;
         default:
             return state;
     }

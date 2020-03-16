@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import Room from './component/main/main';
+import { Room } from './component/main/main';
 
 // Direct to another resume if the device is mobile
 if (isMobile) {

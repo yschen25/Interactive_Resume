@@ -1,0 +1,20 @@
+{
+  "notClick": {},
+  "clicked": {},
+  "tab": {
+    "pwd" :{
+      "show": true
+    },
+    "youtube": {
+      "show" : false
+    }
+  },
+  "messages": {
+    "Joe": {
+      "text": "what a awesome website!"
+    },
+    "Doe": {
+      "text": "Wish I can meet the author."
+    }
+  }
+}
