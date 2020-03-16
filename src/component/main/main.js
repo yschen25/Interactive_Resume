@@ -31,10 +31,6 @@ class ConnectRoom extends React.Component {
     }
 }
 
-ConnectRoom.propTypes = {
-    dispatchAddMessages: PropTypes.func.isRequired
-};
-
 const mapDispatchToProps = (dispatch) => ({
     dispatchAddMessages: (text) =>{
         dispatch(addMessages(text));

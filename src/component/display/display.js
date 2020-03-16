@@ -119,19 +119,8 @@ class ConnectDisplay extends React.Component {
                 if(val[0] === 'notebooks' && val[1].show){
 
                     display = <FlipPage showSwipeHint showTouchHint loopForever className="show-notebooks">
-                        <article>
-                            <h1>First</h1>
-                            <p>My awesome first content</p>
-                        </article>
-                        <article>
-                            <h1>Seond</h1>
-                            <p>My wonderful second content</p>
-                        </article>
-                        <article>
-                            <h1>Third</h1>
-                            <p>My excellent third content</p>
-                        </article>
-                    </FlipPage>
+                                Object.entries(data.messages).map((val) => <article><h1>{val[0]}</h1><p>{val[1].text}</p></article>)
+                              </FlipPage>
                 }
 
                 mask = <div className="mask " data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;

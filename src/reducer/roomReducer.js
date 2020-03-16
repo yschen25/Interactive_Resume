@@ -10,7 +10,8 @@ const initState = {
         "youtube": {
             "show" : false
         }
-    }
+    },
+    "messages":{}
 };
 
 const roomReducer = (state = initState, action) => {
@@ -38,8 +39,10 @@ const roomReducer = (state = initState, action) => {
                 }
             };
         case  ADD_MESSAGES:
-            console.log('ABCCCCCCCC', state);
-            return state;
+            return {
+                ...state,
+                messages:action.payload.messages
+            };
         default:
             return state;
     }
