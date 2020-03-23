@@ -9,6 +9,9 @@ const initState = {
         },
         "youtube": {
             "show" : false
+        },
+        "portfolio": {
+            "show" : false
         }
     },
     "messages":{}

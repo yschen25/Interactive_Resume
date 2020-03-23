@@ -426,8 +426,8 @@ body {
     }
 
     .trigger {
+        background: #c7cbcb;
         display: inline-block;
-        background: #fff;
         width: 120px;
         height: 20px;
         position: relative;
@@ -437,6 +437,8 @@ body {
         font-size: 0.8rem;
         text-align: center;
         line-height: 20px;
+        cursor: pointer;
+        z-index: 1;
 
         &:before {
             content: "";
@@ -447,7 +449,6 @@ body {
     }
 
     .portfolioTrigger {
-        background: #c7cbcb;
         top: 107px;
         left: 56px;
 
@@ -461,10 +462,14 @@ body {
         }
     }
 
+    .active {
+        background: #fff;
+    }
+
     .tab {
         background: #fff;
         width: 736px;
-        height: 409px;
+        height: 406px;
         border-radius: 10px 10px 0 0;
         position: relative;
         top: 106px;
@@ -475,8 +480,8 @@ body {
 
         .youtubeBg {
             background: url("../img/youtube.png") no-repeat center center;
-            width: 730px;
-            height: 752px;
+            width: 725px;
+            height: 746px;
             background-size: contain;
             border-radius: 10px 10px 0 0;
             position: relative;
@@ -492,6 +497,9 @@ body {
     }
 
     .portfolioTab {
+        top: 107px;
+        left: 32px;
+        height: 405px;
 
         iframe {
             position: relative;
@@ -500,5 +508,109 @@ body {
             border-radius: 10px 10px 0 0;
             border: 0;
         }
+    }
+
+    .bottom {
+        background: #2b2a2a;
+        display: inline-block;
+        width: 737px;
+        height: 25px;
+        position: relative;
+        top: 81px;
+        left: 31px;
+        cursor: pointer;
+        z-index: 1;
+
+        .obj {
+            position: absolute;
+            bottom: 0;
+            width: 30px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            font-size: 0.8rem;
+            color: #fff;
+            margin: 0 10px;
+
+            &:before {
+                content: "";
+                background: url("../img/windows_icon.png") no-repeat center center;
+                background-size: contain;
+                @extend %triggerBefore;
+                width: 13px;
+                height: 13px;
+                top: 7px;
+                left: 7px;
+            }
+        }
+
+        .illustrator {
+            left: 30px;
+
+            &:before {
+                content: "";
+                background: url("../img/illustrator_Icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .steam {
+            left: 60px;
+
+            &:before {
+                content: "";
+                background: url("../img/steam_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .chrome {
+            width: 120px;
+            left: 100px;
+            background: #585858;
+
+            &:before {
+                content: "";
+                background: url("../img/chrome_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .phpstorm {
+            width: 120px;
+            left: 220px;
+            background: #333;
+
+            &:before {
+                content: "";
+                background: url("../img/phpstorm_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .photoshop {
+            width: 120px;
+            left: 340px;
+            background: #333;
+
+            &:before {
+                content: "";
+                background: url("../img/photoshop_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .gitbash {
+            width: 120px;
+            left: 460px;
+            background: #333;
+
+            &:before {
+                content: "";
+                background: url("../img/gitbash_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
     }
 }

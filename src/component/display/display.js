@@ -35,18 +35,50 @@ class ConnectDisplay extends React.Component {
 
         e.preventDefault();
 
-        let inputValue = parseInt(this.state.textInput.trim());
+        let inputValue = this.state.textInput.trim() ? parseInt(this.state.textInput.trim()) : '';
+        const {dispatchSubmit} = this.props;
 
-        if (inputValue === 418) {
-            const {dispatchSubmit} = this.props;
+        console.log(e.target.getAttribute('data-name'));
+        console.log(inputValue);
+
+        if (e.target.getAttribute('data-name') === 'portfolio') {
             dispatchSubmit({
-                name : 'youtube',
-                show : true
+                name: 'portfolio',
+                show: true
             });
 
             dispatchSubmit({
-                name : 'pwd',
-                show : false
+                name: 'youtube',
+                show: false
+            });
+
+            return;
+        }
+
+        if (e.target.getAttribute('data-name') === 'youtube') {
+            dispatchSubmit({
+                name: 'portfolio',
+                show: false
+            });
+
+            dispatchSubmit({
+                name: 'youtube',
+                show: true
+            });
+
+            return;
+        }
+
+        if (inputValue === 418) {
+
+            dispatchSubmit({
+                name: 'youtube',
+                show: true
+            });
+
+            dispatchSubmit({
+                name: 'pwd',
+                show: false
             });
 
         } else {
@@ -56,7 +88,7 @@ class ConnectDisplay extends React.Component {
 
     render() {
 
-        const { data } = this.props;
+        const {data} = this.props;
 
         return Object.entries(data.clicked).map((val) => {
 
@@ -65,17 +97,20 @@ class ConnectDisplay extends React.Component {
             let pwdDisplay = '';
             let tabDisplay = '';
             let youtubeDisplay = '';
+            let portfolioDisplay = '';
+            let bottomDisplay = '';
             if (val[1].show) {
 
                 // Display other objects
-                display = <div className={`show show-${val[0]}`} data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;
+                display = <div className={`show show-${val[0]}`} data-name={`show-${val[0]}`}
+                               onClick={this.changeStatus.bind(this)}></div>;
 
                 if (val[0] === 'computer' && val[1].show) {
 
                     Object.entries(data.tab).map((val) => {
 
                         // Password tab
-                        if(val[0] === 'pwd' && val[1].show){
+                        if (val[0] === 'pwd' && val[1].show) {
                             pwdDisplay = <div className="pwdTab">
                                 <form autoComplete="off">
                                     <div className="pwdInput">
@@ -83,17 +118,24 @@ class ConnectDisplay extends React.Component {
                                                placeholder="Please enter the password"
                                                value={this.state.textInput} onChange={this.changeText}/>
                                         <p>Tip : I am a teapot</p>
-                                        <input className="submitInput" type='submit' value='Submit' onClick={this.submit}/>
+                                        <input className="submitInput" type='submit' value='Submit'
+                                               onClick={this.submit}/>
                                     </div>
                                 </form>
                             </div>
                         }
 
+                        // val[0] = 'youtube';
+
                         // Youtube tab
                         if (val[0] === 'youtube' && val[1].show) {
 
-                            tabDisplay = <div><div className="trigger youtubeTrigger">YouTube</div>
-                                <div className="trigger portfolioTrigger">Portfolio</div></div>;
+                            tabDisplay = <div>
+                                <div className="active trigger youtubeTrigger ">YouTube</div>
+                                <div className="trigger portfolioTrigger" data-name='portfolio'
+                                     onClick={this.submit}>Portfolio
+                                </div>
+                            </div>;
 
                             youtubeDisplay = <div className="tab youtubeTab">
                                 <div className="youtubeBg">
@@ -101,29 +143,55 @@ class ConnectDisplay extends React.Component {
                                             frameBorder="0"></iframe>
                                 </div>
                             </div>
+
+                            bottomDisplay = <div className="bottom">
+                                <div className="obj windows"></div>
+                                <div className="obj illustrator"></div>
+                                <div className="obj steam"></div>
+                                <div className="obj chrome">Life Is Str...</div>
+                                <div className="obj phpstorm">Interactiv...</div>
+                                <div className="obj photoshop">photoshop</div>
+                                <div className="obj gitbash">MINGW64 : ..</div>
+                            </div>
+                        }
+
+                        // Portfolio tab
+                        if (val[0] === 'portfolio' && val[1].show) {
+
+                            tabDisplay = <div>
+                                <div className="trigger youtubeTrigger" data-name='youtube'
+                                     onClick={this.submit}>YouTube
+                                </div>
+                                <div className="active trigger portfolioTrigger">Portfolio</div>
+                            </div>;
+
+                            portfolioDisplay = <div className="tab portfolioTab">
+                                <iframe width="736" height="405" src="http://www.yschen25.com/portfolio/messageBoard/"/>
+                            </div>
                         }
                     });
 
-                    {/*<div className="tab portfolioTab">*/}
-                    {/*<iframe width="736" height="410" src="http://www.yschen25.com/portfolio/pizzaMaker/" />*/}
-                    {/*</div>*/}
 
                     display = <div className='show show-computer' data-name='show-computer'>
                         {pwdDisplay}
                         {tabDisplay}
                         {youtubeDisplay}
+                        {portfolioDisplay}
+                        {bottomDisplay}
                     </div>;
                 }
 
                 // Show notebooks
-                if(val[0] === 'notebooks' && val[1].show){
+                if (val[0] === 'notebooks' && val[1].show) {
 
                     display = <FlipPage showSwipeHint showTouchHint loopForever className="show-notebooks">
-                                Object.entries(data.messages).map((val) => <article><h1>{val[0]}</h1><p>{val[1].text}</p></article>)
-                              </FlipPage>
+                        {Object.entries(data.messages).map((val) => <article><h1>{val[0]}</h1><p>{val[1].text}</p>
+                        </article>)}
+                    </FlipPage>
                 }
 
-                mask = <div className="mask " data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;
+                mask =
+                    <div className="mask " data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;
             }
 
             return (
