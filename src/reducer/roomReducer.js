@@ -12,6 +12,9 @@ const initState = {
         },
         "portfolio": {
             "show" : false
+        },
+        "uiuxDesign": {
+            "show" : false
         }
     },
     "messages":{}

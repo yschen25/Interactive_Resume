@@ -462,6 +462,20 @@ body {
         }
     }
 
+    .uiuxDesignTrigger {
+        top: 107px;
+        left: 56px;
+
+        &:before {
+            content: "";
+            background: url("../img/medium_icon.jpg") no-repeat center center;
+            background-size: contain;
+            @extend %triggerBefore;
+            top: 3px;
+            left: 7px;
+        }
+    }
+
     .active {
         background: #fff;
     }
@@ -508,6 +522,17 @@ body {
             border-radius: 10px 10px 0 0;
             border: 0;
         }
+    }
+
+    .uiuxDesignTab {
+        background: #fff url("../img/uiux_design.png") no-repeat center center;
+        width: 734px;
+        height: 405px;
+        background-size: contain;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        top: 107px;
+        left: 33px;
     }
 
     .bottom {

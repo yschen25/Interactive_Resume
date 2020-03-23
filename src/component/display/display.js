@@ -41,6 +41,34 @@ class ConnectDisplay extends React.Component {
         console.log(e.target.getAttribute('data-name'));
         console.log(inputValue);
 
+        let displayArr = ['youtube', 'portfolio', 'uiuxDesign'];
+
+        // displayArr.map( val => {
+        //     dispatchSubmit({
+        //         name: [val],
+        //         show: true
+        //     });
+        // });
+
+        if (e.target.getAttribute('data-name') === 'youtube') {
+            dispatchSubmit({
+                name: 'youtube',
+                show: true
+            });
+
+            dispatchSubmit({
+                name: 'portfolio',
+                show: false
+            });
+
+            dispatchSubmit({
+                name: 'uiuxDesign',
+                show: false
+            });
+
+            return;
+        }
+
         if (e.target.getAttribute('data-name') === 'portfolio') {
             dispatchSubmit({
                 name: 'portfolio',
@@ -52,18 +80,29 @@ class ConnectDisplay extends React.Component {
                 show: false
             });
 
+            dispatchSubmit({
+                name: 'uiuxDesign',
+                show: false
+            });
+
             return;
         }
 
-        if (e.target.getAttribute('data-name') === 'youtube') {
+        if (e.target.getAttribute('data-name') === 'uiuxDesign') {
+
             dispatchSubmit({
-                name: 'portfolio',
-                show: false
+                name: 'uiuxDesign',
+                show: true
             });
 
             dispatchSubmit({
                 name: 'youtube',
-                show: true
+                show: false
+            });
+
+            dispatchSubmit({
+                name: 'portfolio',
+                show: false
             });
 
             return;
@@ -78,6 +117,11 @@ class ConnectDisplay extends React.Component {
 
             dispatchSubmit({
                 name: 'pwd',
+                show: false
+            });
+
+            dispatchSubmit({
+                name: 'uiuxDesign',
                 show: false
             });
 
@@ -98,6 +142,7 @@ class ConnectDisplay extends React.Component {
             let tabDisplay = '';
             let youtubeDisplay = '';
             let portfolioDisplay = '';
+            let uiuxDesignDisplay = '';
             let bottomDisplay = '';
             if (val[1].show) {
 
@@ -132,9 +177,8 @@ class ConnectDisplay extends React.Component {
 
                             tabDisplay = <div>
                                 <div className="active trigger youtubeTrigger ">YouTube</div>
-                                <div className="trigger portfolioTrigger" data-name='portfolio'
-                                     onClick={this.submit}>Portfolio
-                                </div>
+                                <div className="trigger portfolioTrigger" data-name='portfolio' onClick={this.submit}>Portfolio</div>
+                                <div className="trigger uiuxDesignTrigger" data-name='uiuxDesign' onClick={this.submit}>UI Design</div>
                             </div>;
 
                             youtubeDisplay = <div className="tab youtubeTab">
@@ -159,14 +203,26 @@ class ConnectDisplay extends React.Component {
                         if (val[0] === 'portfolio' && val[1].show) {
 
                             tabDisplay = <div>
-                                <div className="trigger youtubeTrigger" data-name='youtube'
-                                     onClick={this.submit}>YouTube
-                                </div>
-                                <div className="active trigger portfolioTrigger">Portfolio</div>
+                                <div className="trigger youtubeTrigger" data-name='youtube' onClick={this.submit}>YouTube</div>
+                                <div className="active trigger portfolioTrigger" data-name='portfolio'>Portfolio</div>
+                                <div className="trigger uiuxDesignTrigger" data-name='uiuxDesign' onClick={this.submit}>UI Design</div>
                             </div>;
 
                             portfolioDisplay = <div className="tab portfolioTab">
                                 <iframe width="736" height="405" src="http://www.yschen25.com/portfolio/messageBoard/"/>
+                            </div>
+                        }
+
+                        if (val[0] === 'uiuxDesign' && val[1].show) {
+
+                            tabDisplay = <div>
+                                <div className="trigger youtubeTrigger" data-name='youtube' onClick={this.submit}>YouTube</div>
+                                <div className="trigger portfolioTrigger" data-name='portfolio' onClick={this.submit}>Portfolio</div>
+                                <div className="active trigger uiuxDesignTrigger" data-name='uiuxDesign'>UI Design</div>
+                            </div>;
+
+                            uiuxDesignDisplay = <div className="tab uiuxDesignTab">
+
                             </div>
                         }
                     });
@@ -177,6 +233,7 @@ class ConnectDisplay extends React.Component {
                         {tabDisplay}
                         {youtubeDisplay}
                         {portfolioDisplay}
+                        {uiuxDesignDisplay}
                         {bottomDisplay}
                     </div>;
                 }
