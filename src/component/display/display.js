@@ -23,8 +23,6 @@ class ConnectDisplay extends React.Component {
             name,
             show: false
         });
-
-        this.setState({textInput: ''});
     }
 
     changeText(e) {
@@ -35,98 +33,29 @@ class ConnectDisplay extends React.Component {
 
         e.preventDefault();
 
-        let inputValue = this.state.textInput.trim() ? parseInt(this.state.textInput.trim()) : '';
+        let inputValue = this.state.textInput ? parseInt(this.state.textInput.trim()) : '';
         const {dispatchSubmit} = this.props;
 
         console.log(e.target.getAttribute('data-name'));
         console.log(inputValue);
 
-        let displayArr = ['youtube', 'portfolio', 'uiuxDesign'];
-
-        // displayArr.map( val => {
-        //     dispatchSubmit({
-        //         name: [val],
-        //         show: true
-        //     });
-        // });
-
-        if (e.target.getAttribute('data-name') === 'youtube') {
-            dispatchSubmit({
-                name: 'youtube',
-                show: true
-            });
-
-            dispatchSubmit({
-                name: 'portfolio',
-                show: false
-            });
-
-            dispatchSubmit({
-                name: 'uiuxDesign',
-                show: false
-            });
-
-            return;
-        }
-
-        if (e.target.getAttribute('data-name') === 'portfolio') {
-            dispatchSubmit({
-                name: 'portfolio',
-                show: true
-            });
-
-            dispatchSubmit({
-                name: 'youtube',
-                show: false
-            });
-
-            dispatchSubmit({
-                name: 'uiuxDesign',
-                show: false
-            });
-
-            return;
-        }
-
-        if (e.target.getAttribute('data-name') === 'uiuxDesign') {
-
-            dispatchSubmit({
-                name: 'uiuxDesign',
-                show: true
-            });
-
-            dispatchSubmit({
-                name: 'youtube',
-                show: false
-            });
-
-            dispatchSubmit({
-                name: 'portfolio',
-                show: false
-            });
-
-            return;
-        }
-
+        let displayArr = ['pwd', 'youtube', 'portfolio', 'uiuxDesign'];
         if (inputValue === 418) {
 
+            displayArr.map( val => {
+                dispatchSubmit({
+                    name: [val],
+                    show: false
+                });
+            });
+
             dispatchSubmit({
-                name: 'youtube',
+                name: [e.target.getAttribute('data-name')],
                 show: true
-            });
-
-            dispatchSubmit({
-                name: 'pwd',
-                show: false
-            });
-
-            dispatchSubmit({
-                name: 'uiuxDesign',
-                show: false
             });
 
         } else {
-            alert('You enter the wrong password, see the tip.');
+            alert('You enter the wrong password, plz see the tip.');
         }
     }
 
@@ -139,11 +68,14 @@ class ConnectDisplay extends React.Component {
             let mask = '';
             let display = '';
             let pwdDisplay = '';
-            let tabDisplay = '';
+            let menuDisplay = '';
             let youtubeDisplay = '';
             let portfolioDisplay = '';
             let uiuxDesignDisplay = '';
             let bottomDisplay = '';
+
+            let isTabShow = false;
+            let isBottomShow = false;
             if (val[1].show) {
 
                 // Display other objects
@@ -164,91 +96,81 @@ class ConnectDisplay extends React.Component {
                                                value={this.state.textInput} onChange={this.changeText}/>
                                         <p>Tip : I am a teapot</p>
                                         <input className="submitInput" type='submit' value='Submit'
-                                               onClick={this.submit}/>
+                                               data-name='youtube' onClick={this.submit}/>
                                     </div>
                                 </form>
                             </div>
                         }
 
-                        // val[0] = 'youtube';
+                        // Tabs menu
+                        menuDisplay = <div>
+                            <div className="active trigger youtubeTrigger" data-name='youtube' onClick={this.submit}>YouTube</div>
+                            <div className="trigger portfolioTrigger" data-name='portfolio' onClick={this.submit}>Portfolio</div>
+                            <div className="trigger uiuxDesignTrigger" data-name='uiuxDesign' onClick={this.submit}>UI Design</div>
+                        </div>;
+
+                        // Software menu
+                        bottomDisplay = <div className="bottom">
+                            <div className="obj windows"></div>
+                            <div className="obj illustrator"></div>
+                            <div className="obj steam"></div>
+                            <div className="obj chrome">Life Is Str...</div>
+                            <div className="obj phpstorm">Interactiv...</div>
+                            <div className="obj photoshop">photoshop</div>
+                            <div className="obj gitbash">MINGW64 : ..</div>
+                        </div>;
 
                         // Youtube tab
                         if (val[0] === 'youtube' && val[1].show) {
 
-                            tabDisplay = <div>
-                                <div className="active trigger youtubeTrigger ">YouTube</div>
-                                <div className="trigger portfolioTrigger" data-name='portfolio' onClick={this.submit}>Portfolio</div>
-                                <div className="trigger uiuxDesignTrigger" data-name='uiuxDesign' onClick={this.submit}>UI Design</div>
-                            </div>;
-
+                            // Show tha tabs menu and software menu
+                            isTabShow = isBottomShow = true;
                             youtubeDisplay = <div className="tab youtubeTab">
                                 <div className="youtubeBg">
-                                    <iframe width="490" height="260" src="https://www.youtube.com/embed/t3v25rt-DYA"
-                                            frameBorder="0"></iframe>
+                                    <iframe width="490" height="260" src="https://www.youtube.com/embed/t3v25rt-DYA" frameBorder="0"></iframe>
                                 </div>
-                            </div>
-
-                            bottomDisplay = <div className="bottom">
-                                <div className="obj windows"></div>
-                                <div className="obj illustrator"></div>
-                                <div className="obj steam"></div>
-                                <div className="obj chrome">Life Is Str...</div>
-                                <div className="obj phpstorm">Interactiv...</div>
-                                <div className="obj photoshop">photoshop</div>
-                                <div className="obj gitbash">MINGW64 : ..</div>
                             </div>
                         }
 
                         // Portfolio tab
                         if (val[0] === 'portfolio' && val[1].show) {
 
-                            tabDisplay = <div>
-                                <div className="trigger youtubeTrigger" data-name='youtube' onClick={this.submit}>YouTube</div>
-                                <div className="active trigger portfolioTrigger" data-name='portfolio'>Portfolio</div>
-                                <div className="trigger uiuxDesignTrigger" data-name='uiuxDesign' onClick={this.submit}>UI Design</div>
-                            </div>;
-
+                            // Show tha tabs menu and software menu
+                            isTabShow = isBottomShow = true;
                             portfolioDisplay = <div className="tab portfolioTab">
                                 <iframe width="736" height="405" src="http://www.yschen25.com/portfolio/messageBoard/"/>
                             </div>
                         }
 
+                        // UI/UX design tab
                         if (val[0] === 'uiuxDesign' && val[1].show) {
 
-                            tabDisplay = <div>
-                                <div className="trigger youtubeTrigger" data-name='youtube' onClick={this.submit}>YouTube</div>
-                                <div className="trigger portfolioTrigger" data-name='portfolio' onClick={this.submit}>Portfolio</div>
-                                <div className="active trigger uiuxDesignTrigger" data-name='uiuxDesign'>UI Design</div>
-                            </div>;
-
-                            uiuxDesignDisplay = <div className="tab uiuxDesignTab">
-
-                            </div>
+                            // Show tha tabs menu and software menu
+                            isTabShow = isBottomShow = true;
+                            uiuxDesignDisplay = <div className="tab uiuxDesignTab"></div>
                         }
                     });
 
-
                     display = <div className='show show-computer' data-name='show-computer'>
                         {pwdDisplay}
-                        {tabDisplay}
+                        {isTabShow ? menuDisplay : ''}
                         {youtubeDisplay}
                         {portfolioDisplay}
                         {uiuxDesignDisplay}
-                        {bottomDisplay}
+                        {isBottomShow ? bottomDisplay : ''}
                     </div>;
                 }
 
                 // Show notebooks
-                if (val[0] === 'notebooks' && val[1].show) {
+                // if (val[0] === 'notebooks' && val[1].show) {
+                //
+                //     display = <FlipPage showSwipeHint showTouchHint loopForever className="show-notebooks">
+                //         {Object.entries(data.messages).map((val) => <article><h1>{val[0]}</h1><p>{val[1].text}</p>
+                //         </article>)}
+                //     </FlipPage>
+                // }
 
-                    display = <FlipPage showSwipeHint showTouchHint loopForever className="show-notebooks">
-                        {Object.entries(data.messages).map((val) => <article><h1>{val[0]}</h1><p>{val[1].text}</p>
-                        </article>)}
-                    </FlipPage>
-                }
-
-                mask =
-                    <div className="mask " data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;
+                mask = <div className="mask " data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;
             }
 
             return (
