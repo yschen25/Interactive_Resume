@@ -373,10 +373,10 @@ body {
     .pwdTab {
         background: #333;
         width: 736px;
-        height: 435px;
+        height: 423px;
         border-radius: 30px 30px 0 0;
         position: relative;
-        top: 101px;
+        top: 110px;
         left: 32px;
 
         .textInput {
@@ -568,9 +568,7 @@ body {
         position: absolute;
         bottom: 167px;
         left: 31px;
-        cursor: pointer;
         z-index: 2;
-        cursor: pointer;
 
         .obj {
             position: absolute;
@@ -618,6 +616,7 @@ body {
         .chromeObj {
             width: 120px;
             left: 100px;
+            cursor: pointer;
 
             &:before {
                 content: "";
@@ -630,6 +629,7 @@ body {
             width: 120px;
             left: 220px;
             background: #333;
+            cursor: pointer;
 
             &:before {
                 content: "";
@@ -642,6 +642,7 @@ body {
             width: 120px;
             left: 340px;
             background: #333;
+            cursor: pointer;
 
             &:before {
                 content: "";
@@ -654,6 +655,7 @@ body {
             width: 120px;
             left: 460px;
             background: #333;
+            cursor: pointer;
 
             &:before {
                 content: "";
@@ -670,7 +672,8 @@ body {
 
             &:before {
                 content: "";
-                background: url("../img/computer_icon.png") no-repeat center center;
+                background: url("") no-repeat center center;
+                //background: url("../img/computer_icon.png") no-repeat center center;
                 background-size: contain;
                 left: -8px;
             }

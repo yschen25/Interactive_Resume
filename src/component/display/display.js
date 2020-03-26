@@ -12,6 +12,7 @@ class ConnectDisplay extends React.Component {
         this.submit = this.submit.bind(this);
     }
 
+    // Time
     componentDidMount() {
         const upTime = () => {
             this.setState({time: new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString()})
@@ -33,6 +34,7 @@ class ConnectDisplay extends React.Component {
         });
     }
 
+    // Password
     changeText(e) {
         this.setState({textInput: e.target.value});
     }
@@ -125,7 +127,9 @@ class ConnectDisplay extends React.Component {
                                     <iframe width="490" height="260" src="https://www.youtube.com/embed/t3v25rt-DYA"
                                             frameBorder="0"></iframe>
                                 </div>
-                            </div>
+                            </div>;
+
+                            if (document.getElementById("web") !== null) document.getElementById("web").innerHTML = "Life Is Str...";
                         }
 
                         // Portfolio tab
@@ -133,12 +137,18 @@ class ConnectDisplay extends React.Component {
 
                             portfolioDisplay = <div className="tab portfolioTab">
                                 <iframe width="736" height="400" src="http://www.yschen25.com/portfolio/messageBoard/"/>
-                            </div>
+                            </div>;
+
+                            if (document.getElementById("web") !== null) document.getElementById("web").innerHTML = "Message..."
+
                         }
 
                         // UI/UX design tab
                         if (val[0] === 'uiuxDesign' && val[1].show) {
                             uiuxDesignDisplay = <div className="tab uiuxDesignTab"></div>
+
+                            if (document.getElementById("web") !== null) document.getElementById("web").innerHTML = "8 UI/UX..."
+
                         }
 
                         // Phpstorm tab
@@ -175,7 +185,9 @@ class ConnectDisplay extends React.Component {
                         <div className="obj windowsObj"></div>
                         <div className="obj illustratorObj"></div>
                         <div className="obj steamObj"></div>
-                        <div className={`${youtubeDisplay !== '' ? 'objActive' : ''} obj chromeObj`} data-name='youtube'
+                        <div id="web"
+                             className={`${youtubeDisplay !== '' || portfolioDisplay !== '' || uiuxDesignDisplay !== '' ? 'objActive' : ''} obj chromeObj`}
+                             data-name='youtube'
                              onClick={this.submit}>Life Is Str...
                         </div>
                         <div className={`${phpstormDisplay !== '' ? 'objActive' : ''} obj phpstormObj`}
@@ -190,7 +202,7 @@ class ConnectDisplay extends React.Component {
                         <div className="obj timeObj">{this.state.time}</div>
                     </div>;
 
-
+                    // Computer display
                     display = <div className='show show-computer' data-name='show-computer'>
                         {pwdDisplay}
                         {isTabShow ? menuDisplay : ''}
