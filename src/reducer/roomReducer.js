@@ -15,10 +15,22 @@ const initState = {
         },
         "uiuxDesign": {
             "show" : false
+        },
+        "phpstorm":{
+            "show" : false
+        },
+        "photoshop":{
+            "show" : false
+        },
+        "gitBash":{
+            "show" : false
         }
     },
     "messages":{}
 };
+
+
+
 
 const roomReducer = (state = initState, action) => {
     switch (action.type) {

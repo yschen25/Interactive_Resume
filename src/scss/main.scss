@@ -476,7 +476,7 @@ body {
         }
     }
 
-    .active {
+    .triggerActive {
         background: #fff;
     }
 
@@ -486,7 +486,7 @@ body {
         height: 406px;
         border-radius: 10px 10px 0 0;
         position: relative;
-        top: 106px;
+        top: 103px;
         left: 32px;
     }
 
@@ -494,7 +494,7 @@ body {
 
         .youtubeBg {
             background: url("../img/youtube.png") no-repeat center center;
-            width: 725px;
+            width: 723px;
             height: 746px;
             background-size: contain;
             border-radius: 10px 10px 0 0;
@@ -513,7 +513,7 @@ body {
     .portfolioTab {
         top: 107px;
         left: 32px;
-        height: 405px;
+        height: 400px;
 
         iframe {
             position: relative;
@@ -527,7 +527,7 @@ body {
     .uiuxDesignTab {
         background: #fff url("../img/uiux_design.png") no-repeat center center;
         width: 734px;
-        height: 405px;
+        height: 402px;
         background-size: contain;
         border-radius: 10px 10px 0 0;
         position: relative;
@@ -535,16 +535,42 @@ body {
         left: 33px;
     }
 
+    .item {
+        width: 737px;
+        height: 477px;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        top: 46px;
+        left: 32px;
+        z-index: 2;
+    }
+
+    .phpstormItem {
+        background: url("../img/phpstorm.png") no-repeat center center;
+        background-size: contain;
+    }
+
+    .photoshopItem {
+        background: url("../img/photoshop.png") no-repeat center center;
+        background-size: contain;
+    }
+
+    .gitBashItem {
+        background: url("../img/gitBash.png") no-repeat center center;
+        background-size: contain;
+    }
+
     .bottom {
         background: #2b2a2a;
         display: inline-block;
-        width: 737px;
+        width: 738px;
         height: 25px;
-        position: relative;
-        top: 82px;
+        position: absolute;
+        bottom: 167px;
         left: 31px;
         cursor: pointer;
-        z-index: 1;
+        z-index: 2;
+        cursor: pointer;
 
         .obj {
             position: absolute;
@@ -569,7 +595,7 @@ body {
             }
         }
 
-        .illustrator {
+        .illustratorObj {
             left: 30px;
 
             &:before {
@@ -579,7 +605,7 @@ body {
             }
         }
 
-        .steam {
+        .steamObj {
             left: 60px;
 
             &:before {
@@ -589,10 +615,9 @@ body {
             }
         }
 
-        .chrome {
+        .chromeObj {
             width: 120px;
             left: 100px;
-            background: #585858;
 
             &:before {
                 content: "";
@@ -601,7 +626,7 @@ body {
             }
         }
 
-        .phpstorm {
+        .phpstormObj {
             width: 120px;
             left: 220px;
             background: #333;
@@ -613,7 +638,7 @@ body {
             }
         }
 
-        .photoshop {
+        .photoshopObj {
             width: 120px;
             left: 340px;
             background: #333;
@@ -625,7 +650,7 @@ body {
             }
         }
 
-        .gitbash {
+        .gitbashObj {
             width: 120px;
             left: 460px;
             background: #333;
@@ -635,6 +660,24 @@ body {
                 background: url("../img/gitbash_icon.png") no-repeat center center;
                 background-size: contain;
             }
+        }
+
+        .timeObj {
+            width: 151px;
+            left: 578px;
+            background: #333;
+            margin-right: 10px;
+
+            &:before {
+                content: "";
+                background: url("../img/computer_icon.png") no-repeat center center;
+                background-size: contain;
+                left: -8px;
+            }
+        }
+
+        .objActive {
+            background: #585858;
         }
 
     }
