@@ -358,10 +358,10 @@ body {
     top: -150px;
 
     &:before {
-        content: "Literally a mouse.";
+        content: "Literally a mouse. \A His name is less sugar, he accompanied me through many difficulties, \A although he has passed away, he always in the bottom of my heart.";
         @extend %textBefore;
         top: 620px;
-        left: 170px;
+        left: -150px;
         line-height: 1.5;
     }
 }
