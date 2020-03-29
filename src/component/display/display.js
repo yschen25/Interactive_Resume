@@ -46,11 +46,52 @@ class ConnectDisplay extends React.Component {
         let inputValue = this.state.textInput ? parseInt(this.state.textInput.trim()) : '';
         const {dispatchSubmit} = this.props;
 
-        console.log(e.target.getAttribute('data-name'));
-        console.log(inputValue);
-
-        let displayArr = ['pwd', 'youtube', 'portfolio', 'uiuxDesign', 'phpstorm', 'photoshop', 'gitBash'];
+        let name = e.target.getAttribute('data-name');
+        let displayArr = ['youtube', 'portfolio', 'uiuxDesign', 'phpstorm', 'photoshop', 'gitBash'];
         if (inputValue === 418) {
+
+            dispatchSubmit({
+                name: 'pwd',
+                show: false
+            });
+
+            let pre = localStorage.getItem('pre') !== '' ? localStorage.getItem('pre') : ''; // Record what tabs or software did you choose
+            let web = localStorage.getItem('web') !== '' ? localStorage.getItem('web') : ''; // Record the specific tab when change tabs to software
+            if(pre === 'youtube' || pre === 'portfolio' || pre === 'uiuxDesign'){
+                if(name === 'phpstorm' || name === 'photoshop' || name === 'gitBash'){
+                    localStorage.setItem('web', pre);
+                }
+            }
+
+            if (name === 'youtube' || name === 'portfolio' || name === 'uiuxDesign'){
+                if(pre === 'phpstorm' || pre === 'photoshop' || pre === 'gitBash'){
+
+                    displayArr.map(val => {
+                        dispatchSubmit({
+                            name: [val],
+                            show: false
+                        });
+                    });
+
+                    if (web === 'youtube'){
+                        dispatchSubmit({
+                            name: [name],
+                            show: true
+                        });
+
+                        localStorage.setItem('pre', name);
+                        return;
+                    }
+
+                    dispatchSubmit({
+                        name: [web],
+                        show: true
+                    });
+
+                    localStorage.setItem('pre', name);
+                    return;
+                }
+            }
 
             displayArr.map(val => {
                 dispatchSubmit({
@@ -60,9 +101,11 @@ class ConnectDisplay extends React.Component {
             });
 
             dispatchSubmit({
-                name: [e.target.getAttribute('data-name')],
+            name: [name],
                 show: true
             });
+
+            localStorage.setItem('pre', name);
 
         } else {
             alert('You enter the wrong password, plz see the tip.');
@@ -140,7 +183,6 @@ class ConnectDisplay extends React.Component {
                             </div>;
 
                             if (document.getElementById("web") !== null) document.getElementById("web").innerHTML = "Message..."
-
                         }
 
                         // UI/UX design tab
@@ -148,7 +190,6 @@ class ConnectDisplay extends React.Component {
                             uiuxDesignDisplay = <div className="tab uiuxDesignTab"></div>
 
                             if (document.getElementById("web") !== null) document.getElementById("web").innerHTML = "8 UI/UX..."
-
                         }
 
                         // Phpstorm tab
