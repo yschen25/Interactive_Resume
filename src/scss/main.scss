@@ -216,9 +216,10 @@ body {
     width: 500px;
     height: 650px;
     background-size: contain;
+    top: -120px;
 
     &:before {
-        @extend %textBefore
+        @extend %textBefore;
     }
 }
 
@@ -227,6 +228,7 @@ body {
     width: 700px;
     height: 500px;
     background-size: contain;
+    top: -200px;
 
     &:before {
         content: "The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes. \A - Christmas in Berlin, Germany";
@@ -237,11 +239,12 @@ body {
     background: url('../img/show_pic3.png') no-repeat center center;
     height: 700px;
     background-size: contain;
-    top: -200px;
+    top: -120px;
 
     &:before {
-        content: "";
+        content: "Cacth me if you can.";
         top: 660px;
+        left: 100px;
     }
 }
 
@@ -345,6 +348,36 @@ body {
         left: -180px;
         line-height: 1.5;
     }
+}
+
+.show-mouse {
+    background: url('../img/show_mouse.jpg') no-repeat center center;
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+    top: -150px;
+
+    &:before {
+        content: "Literally a mouse.";
+        @extend %textBefore;
+        top: 620px;
+        left: 170px;
+        line-height: 1.5;
+    }
+}
+
+.show-leftBooks {
+    background: url('../img/show_leftBooks.png') no-repeat center center;
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+}
+
+.show-rightBooks {
+    background: url('../img/show_rightBooks.png') no-repeat center center;
+    width: 600px;
+    height: 600px;
+    background-size: contain;
 }
 
 .show-notebooks {
