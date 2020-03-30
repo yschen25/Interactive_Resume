@@ -1,5 +1,12 @@
 import './css/normalize.css';
 import './scss/main.scss';
+import './scss/display.scss';
+import './scss/display_computer.scss';
+import './scss/style.css';
+// import './js/flickity.pkgd';
+// import './js/howler';
+// import './js/index';
+
 import { isMobile } from 'react-device-detect';
 
 import React from 'react';

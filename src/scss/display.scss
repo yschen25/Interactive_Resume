@@ -1,0 +1,216 @@
+.mask {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    cursor: url('./../img/close.png'), pointer;
+}
+
+.show {
+    background-size: contain;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+%textBefore {
+    content: "";
+    white-space: pre;
+    display: inline-block;
+    font-size: 2.2rem;
+    color: #f6f6f6;
+    position: absolute;
+    top: 480px;
+    line-height: 1.5;
+}
+
+.show-pic1,
+.show-pic2,
+.show-pic3 {
+    background: url('../img/show_pic1.png') no-repeat center center;
+    width: 500px;
+    height: 650px;
+    background-size: contain;
+    top: -120px;
+
+    &:before {
+        @extend %textBefore;
+    }
+}
+
+.show-pic2 {
+    background: url('../img/show_pic2.png') no-repeat center center;
+    width: 700px;
+    height: 500px;
+    background-size: contain;
+    top: -200px;
+
+    &:before {
+        content: "The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes. \A - Christmas in Berlin, Germany";
+    }
+}
+
+.show-pic3 {
+    background: url('../img/show_pic3.png') no-repeat center center;
+    height: 700px;
+    background-size: contain;
+    top: -120px;
+
+    &:before {
+        content: "Cacth me if you can.";
+        top: 660px;
+        left: 100px;
+    }
+}
+
+.show-stick1,
+.show-stick2,
+.show-stick3 {
+    background: url('../img/show_stick1.png') no-repeat center center;
+    width: 500px;
+    height: 650px;
+    background-size: contain;
+}
+
+.show-stick2 {
+    background: url('../img/show_stick2.png') no-repeat center center;
+    width: 500px;
+    height: 650px;
+    background-size: contain;
+}
+
+.show-stick3 {
+    background: url('../img/show_stick3.png') no-repeat center center;
+    width: 500px;
+    height: 650px;
+    background-size: contain;
+}
+
+.show-duck {
+    background: url('../img/show_duck.png') no-repeat center center;
+    width: 350px;
+    height: 300px;
+    background-size: contain;
+    top: -150px;
+
+    &:before {
+        content: "Do you heard about rubber duck debugging before? \A Programmer debug their code by explain to the duck line-by-line. \A It's really cute, I would like to have one.";
+        @extend %textBefore;
+        top: 310px;
+        left: -200px;
+        line-height: 1.5;
+    }
+}
+
+.show-coffee {
+    background: url('../img/show_coffee2.png') no-repeat center center;
+    width: 350px;
+    height: 300px;
+    background-size: contain;
+
+    &:before {
+        content: "Hmmmm... \A programmers are persons that convert caffeine into code, \A one of my colleagues needs four cups of coffe a day. ";
+        @extend %textBefore;
+        top: 310px;
+        left: -200px;
+        line-height: 1.5;
+    }
+}
+
+.show-octocat {
+    background: url('../img/show_octocat.jpg') no-repeat center center;
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+    top: -150px;
+
+    &:before {
+        content: "Company held a greening environmental competition, \A I spent my vacation to post a ocotocat on th wall by stickers, \A and I got the prize!";
+        @extend %textBefore;
+        top: 610px;
+        left: -100px;
+        line-height: 1.5;
+    }
+}
+
+.show-capoo {
+    background: url('../img/show_capoo.gif') no-repeat center center;
+    width: 500px;
+    height: 500px;
+    background-size: contain;
+    top: -150px;
+
+    &:before {
+        content: "Capoo also calls bugcat, it's a creature looks like a cat or bug, \A he loves eats meats and junk foods, sometimes he eats his friend Dogdog...\A This cute creature was created by a Taiwanese - Yara";
+        @extend %textBefore;
+        top: 467px;
+        left: -180px;
+        line-height: 1.5;
+    }
+}
+
+.show-keyboard {
+    background: url('../img/show_keyboard.png') no-repeat center center;
+    width: 800px;
+    height: 800px;
+    background-size: contain;
+    top: -150px;
+
+    &:before {
+        content: "My lovely filco ninja majestouch 2 cherry MX blue mechanical Keyboard \A with side printed gradient keycaps, I also changeded esc to a cat's paw, \A you will get the soft feeling from the slowly rebounding of the cat palm keycap.";
+        @extend %textBefore;
+        top: 650px;
+        left: -180px;
+        line-height: 1.5;
+    }
+}
+
+.show-mouse {
+    background: url('../img/show_mouse.jpg') no-repeat center center;
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+    top: -150px;
+
+    &:before {
+        content: "Literally a mouse. \A His name is less sugar, he accompanied me through many difficulties, \A although he has passed away, he always in the bottom of my heart.";
+        @extend %textBefore;
+        top: 620px;
+        left: -150px;
+        line-height: 1.5;
+    }
+}
+
+.show-leftBooks {
+    background: url('../img/show_leftBooks.png') no-repeat center center;
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+}
+
+.show-rightBooks {
+    background: url('../img/show_rightBooks.png') no-repeat center center;
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+}
+
+.show-notebooks {
+    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
+    position: fixed !important;
+    height: 700px !important;
+    width: 800px !important;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 1.5rem;
+}

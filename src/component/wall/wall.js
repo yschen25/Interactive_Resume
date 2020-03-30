@@ -6,7 +6,8 @@ import pic1 from '../../img/pic1.png';
 import pic2 from '../../img/pic2.png';
 import pic3 from '../../img/pic3.png';
 import leftBooks from '../../img/left_books.png';
-import lamp from '../../img/lamp.png';
+import rose from '../../img/rose.png';
+import lock from '../../img/lock.png';
 import duck from '../../img/duck.png';
 import capoo from '../../img/capoo.png';
 import computer from '../../img/computer.png';
@@ -40,7 +41,8 @@ class ConnectWall extends React.Component {
                 <img className="pic pic2" data-name="pic2" src={pic2}/>
                 <img className="pic pic3" data-name="pic3" src={pic3}/>
                 <img className="leftBooks" data-name="leftBooks" src={leftBooks}/>
-                <img className="lamp" data-name="lamp" src={lamp}/>
+                <img className="rose" data-name="rose" src={rose}/>
+                <img className="lock" data-name="lock" src={lock}/>
                 <img className="duck" data-name="duck" src={duck}/>
                 <img className="capoo" data-name="capoo" src={capoo}/>
                 <img className="computer" data-name="computer" src={computer}/>

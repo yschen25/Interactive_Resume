@@ -26,8 +26,8 @@ body {
 
         .pic {
             width: 200px;
-            top: 67px;
-            left: 30px;
+            top: 116px;
+            left: 60px;
 
             &.pic2 {
                 top: 10px;
@@ -35,8 +35,8 @@ body {
             }
 
             &.pic3 {
-                top: 185px;
-                left: 230px;
+                top: 160px;
+                left: 303px;
             }
         }
 
@@ -46,18 +46,24 @@ body {
             left: 0;
         }
 
-        .lamp {
-            width: 450px;
-            top: 147px;
-            left: 410px;
+        .rose {
+            width: 120px;
+            top: 450px;
+            left: 610px;
+            z-index: 2;
+        }
+
+        .lock {
+            width: 226px;
+            top: 417px;
+            left: 360px;
             z-index: 1;
         }
 
         .duck {
             width: 80px;
-            top: 580px;
-            left: 650px;
-            z-index: 1;
+            top: 175px;
+            left: 747px
         }
 
         .capoo {
@@ -122,8 +128,23 @@ body {
 
         .phone {
             width: 150px;
-            top: 720px;
-            left: 550px;
+            top: 758px;
+            left: 505px;
+            animation: .7s vibration 15s 30;
+        }
+
+        @keyframes vibration {
+            0% {left: 503px;}
+            10% {left: 506px;}
+            20% {left: 503px;}
+            30% {left: 506px;}
+            40% {left: 503px;}
+            50% {left: 506px;}
+            60% {left: 503px;}
+            70% {left: 506px;}
+            80% {left: 503px;}
+            90% {left: 506px;}
+            100% {left: 503px;}
         }
 
         .keyboard {
@@ -174,547 +195,5 @@ body {
                 font-size: 0.9rem;
             }
         }
-    }
-}
-
-// Display
-.mask {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 2;
-    cursor: url('./../img/close.png'), pointer;
-}
-
-.show {
-    background-size: contain;
-    position: fixed;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-}
-
-%textBefore {
-    content: "";
-    white-space: pre;
-    display: inline-block;
-    font-size: 2.2rem;
-    color: #f6f6f6;
-    position: absolute;
-    top: 480px;
-    line-height: 1.5;
-}
-
-.show-pic1,
-.show-pic2,
-.show-pic3 {
-    background: url('../img/show_pic1.png') no-repeat center center;
-    width: 500px;
-    height: 650px;
-    background-size: contain;
-    top: -120px;
-
-    &:before {
-        @extend %textBefore;
-    }
-}
-
-.show-pic2 {
-    background: url('../img/show_pic2.png') no-repeat center center;
-    width: 700px;
-    height: 500px;
-    background-size: contain;
-    top: -200px;
-
-    &:before {
-        content: "The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes. \A - Christmas in Berlin, Germany";
-    }
-}
-
-.show-pic3 {
-    background: url('../img/show_pic3.png') no-repeat center center;
-    height: 700px;
-    background-size: contain;
-    top: -120px;
-
-    &:before {
-        content: "Cacth me if you can.";
-        top: 660px;
-        left: 100px;
-    }
-}
-
-.show-stick1,
-.show-stick2,
-.show-stick3 {
-    background: url('../img/show_stick1.png') no-repeat center center;
-    width: 500px;
-    height: 650px;
-    background-size: contain;
-}
-
-.show-stick2 {
-    background: url('../img/show_stick2.png') no-repeat center center;
-    width: 500px;
-    height: 650px;
-    background-size: contain;
-}
-
-.show-stick3 {
-    background: url('../img/show_stick3.png') no-repeat center center;
-    width: 500px;
-    height: 650px;
-    background-size: contain;
-}
-
-.show-duck {
-    background: url('../img/show_duck.png') no-repeat center center;
-    width: 350px;
-    height: 300px;
-    background-size: contain;
-    top: -150px;
-
-    &:before {
-        content: "Do you heard about rubber duck debugging before? \A Programmer debug their code by explain to the duck line-by-line. \A It's really cute, I would like to have one.";
-        @extend %textBefore;
-        top: 310px;
-        left: -200px;
-        line-height: 1.5;
-    }
-}
-
-.show-coffee {
-    background: url('../img/show_coffee2.png') no-repeat center center;
-    width: 350px;
-    height: 300px;
-    background-size: contain;
-
-    &:before {
-        content: "Hmmmm... \A programmers are persons that convert caffeine into code, \A one of my colleagues needs four cups of coffe a day. ";
-        @extend %textBefore;
-        top: 310px;
-        left: -200px;
-        line-height: 1.5;
-    }
-}
-
-.show-octocat {
-    background: url('../img/show_octocat.jpg') no-repeat center center;
-    width: 600px;
-    height: 600px;
-    background-size: contain;
-    top: -150px;
-
-    &:before {
-        content: "Company held a greening environmental competition, \A I spent my vacation to post a ocotocat on th wall by stickers, \A and I got the prize!";
-        @extend %textBefore;
-        top: 610px;
-        left: -100px;
-        line-height: 1.5;
-    }
-}
-
-.show-capoo {
-    background: url('../img/show_capoo.gif') no-repeat center center;
-    width: 500px;
-    height: 500px;
-    background-size: contain;
-    top: -150px;
-
-    &:before {
-        content: "Capoo also calls bugcat, it's a creature looks like a cat or bug, \A he loves eats meats and junk foods, sometimes he eats his friend Dogdog...\A This cute creature was created by a Taiwanese - Yara";
-        @extend %textBefore;
-        top: 467px;
-        left: -180px;
-        line-height: 1.5;
-    }
-}
-
-.show-keyboard {
-    background: url('../img/show_keyboard.png') no-repeat center center;
-    width: 800px;
-    height: 800px;
-    background-size: contain;
-    top: -150px;
-
-    &:before {
-        content: "My lovely filco ninja majestouch 2 cherry MX blue mechanical Keyboard \A with side printed gradient keycaps, I also changeded esc to a cat's paw, \A you will get the soft feeling from the slowly rebounding of the cat palm keycap.";
-        @extend %textBefore;
-        top: 650px;
-        left: -180px;
-        line-height: 1.5;
-    }
-}
-
-.show-mouse {
-    background: url('../img/show_mouse.jpg') no-repeat center center;
-    width: 600px;
-    height: 600px;
-    background-size: contain;
-    top: -150px;
-
-    &:before {
-        content: "Literally a mouse. \A His name is less sugar, he accompanied me through many difficulties, \A although he has passed away, he always in the bottom of my heart.";
-        @extend %textBefore;
-        top: 620px;
-        left: -150px;
-        line-height: 1.5;
-    }
-}
-
-.show-leftBooks {
-    background: url('../img/show_leftBooks.png') no-repeat center center;
-    width: 600px;
-    height: 600px;
-    background-size: contain;
-}
-
-.show-rightBooks {
-    background: url('../img/show_rightBooks.png') no-repeat center center;
-    width: 600px;
-    height: 600px;
-    background-size: contain;
-}
-
-.show-notebooks {
-    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
-    position: fixed !important;
-    height: 700px !important;
-    width: 800px !important;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.show-computer {
-    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
-    background: url('../img/show_computer.png') no-repeat center center;
-    width: 800px;
-    height: 700px;
-    background-size: contain;
-    font-size: 1.2rem;
-
-    .pwdTab {
-        background: #333;
-        width: 736px;
-        height: 423px;
-        border-radius: 30px 30px 0 0;
-        position: relative;
-        top: 110px;
-        left: 32px;
-
-        .textInput {
-            display: block;
-            margin: auto;
-            width: 300px;
-            height: 40px;
-            position: relative;
-            padding-left: 10px;
-            top: 200px;
-            border-width: 0;
-            outline: none;
-        }
-
-        .submitInput {
-            background-color: #78c8ca;
-            display: block;
-            margin: auto;
-            width: 100px;
-            height: 30px;
-            position: relative;
-            padding-left: 10px;
-            border-radius: 10px;
-            top: 210px;
-            border-width: 0;
-            outline: none;
-            cursor: pointer;
-        }
-
-        p {
-            position: relative;
-            margin: 20px auto auto;
-            text-align: center;
-            top: 195px;
-            color: #f6f6f6;
-        }
-    }
-
-    %triggerBefore {
-        background-size: contain;
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        position: absolute;
-        top: 3px;
-        left: 10px;
-    }
-
-    .trigger {
-        background: #c7cbcb;
-        display: inline-block;
-        width: 120px;
-        height: 20px;
-        position: relative;
-        border-radius: 5px 5px 0 0;
-        top: 107px;
-        left: 57px;
-        font-size: 0.8rem;
-        text-align: center;
-        line-height: 20px;
-        cursor: pointer;
-        z-index: 1;
-
-        &:before {
-            content: "";
-            background: url("../img/youtube_icon.png") no-repeat center center;
-            background-size: contain;
-            @extend %triggerBefore
-        }
-    }
-
-    .portfolioTrigger {
-        top: 107px;
-        left: 56px;
-
-        &:before {
-            content: "";
-            background: url("../img/portfolio_icon.png") no-repeat center center;
-            background-size: contain;
-            @extend %triggerBefore;
-            top: 3px;
-            left: 7px;
-        }
-    }
-
-    .uiuxDesignTrigger {
-        top: 107px;
-        left: 56px;
-
-        &:before {
-            content: "";
-            background: url("../img/medium_icon.jpg") no-repeat center center;
-            background-size: contain;
-            @extend %triggerBefore;
-            top: 3px;
-            left: 7px;
-        }
-    }
-
-    .triggerActive {
-        background: #fff;
-    }
-
-    .tab {
-        background: #fff;
-        width: 736px;
-        height: 402px;
-        border-radius: 10px 10px 0 0;
-        position: relative;
-        top: 107px;
-        left: 32px;
-    }
-
-    .youtubeTab {
-
-        .youtubeBg {
-            background: url("../img/youtube.png") no-repeat center center;
-            width: 722px;
-            height: 701px;
-            background-size: contain;
-            border-radius: 10px 10px 0 0;
-            position: relative;
-            top: -149px;
-            left: 3px;
-
-            iframe {
-                position: relative;
-                top: 183px;
-                left: 38px;
-            }
-        }
-    }
-
-    .portfolioTab {
-        top: 107px;
-        left: 32px;
-        height: 400px;
-
-        iframe {
-            position: relative;
-            top: 0;
-            left: 0;
-            border-radius: 10px 10px 0 0;
-            border: 0;
-        }
-    }
-
-    .uiuxDesignTab {
-        background: #fff url("../img/uiux_design.png") no-repeat center center;
-        width: 734px;
-        height: 402px;
-        background-size: contain;
-        border-radius: 10px 10px 0 0;
-        position: relative;
-        top: 107px;
-        left: 33px;
-    }
-
-    .item {
-        width: 737px;
-        height: 477px;
-        border-radius: 10px 10px 0 0;
-        position: relative;
-        top: 46px;
-        left: 32px;
-        z-index: 2;
-    }
-
-    .phpstormItem {
-        background: url("../img/phpstorm.png") no-repeat center center;
-        background-size: contain;
-    }
-
-    .photoshopItem {
-        background: url("../img/photoshop.png") no-repeat center center;
-        background-size: contain;
-    }
-
-    .gitBashItem {
-        background: url("../img/gitBash.png") no-repeat center center;
-        background-size: contain;
-    }
-
-    .bottom {
-        background: #2b2a2a;
-        display: inline-block;
-        width: 738px;
-        height: 25px;
-        position: absolute;
-        bottom: 167px;
-        left: 31px;
-        z-index: 2;
-
-        .obj {
-            position: absolute;
-            bottom: 0;
-            width: 30px;
-            height: 25px;
-            text-align: center;
-            line-height: 25px;
-            font-size: 0.8rem;
-            color: #fff;
-            margin: 0 10px;
-
-            &:before {
-                content: "";
-                background: url("../img/windows_icon.png") no-repeat center center;
-                background-size: contain;
-                @extend %triggerBefore;
-                width: 13px;
-                height: 13px;
-                top: 7px;
-                left: 7px;
-            }
-        }
-
-        .illustratorObj {
-            left: 30px;
-
-            &:before {
-                content: "";
-                background: url("../img/illustrator_Icon.png") no-repeat center center;
-                background-size: contain;
-            }
-        }
-
-        .steamObj {
-            left: 60px;
-
-            &:before {
-                content: "";
-                background: url("../img/steam_icon.png") no-repeat center center;
-                background-size: contain;
-            }
-        }
-
-        .chromeObj {
-            width: 120px;
-            left: 100px;
-            cursor: pointer;
-
-            &:before {
-                content: "";
-                background: url("../img/chrome_icon.png") no-repeat center center;
-                background-size: contain;
-            }
-        }
-
-        .phpstormObj {
-            width: 120px;
-            left: 220px;
-            background: #333;
-            cursor: pointer;
-
-            &:before {
-                content: "";
-                background: url("../img/phpstorm_icon.png") no-repeat center center;
-                background-size: contain;
-            }
-        }
-
-        .photoshopObj {
-            width: 120px;
-            left: 340px;
-            background: #333;
-            cursor: pointer;
-
-            &:before {
-                content: "";
-                background: url("../img/photoshop_icon.png") no-repeat center center;
-                background-size: contain;
-            }
-        }
-
-        .gitbashObj {
-            width: 120px;
-            left: 460px;
-            background: #333;
-            cursor: pointer;
-
-            &:before {
-                content: "";
-                background: url("../img/gitbash_icon.png") no-repeat center center;
-                background-size: contain;
-            }
-        }
-
-        .timeObj {
-            width: 151px;
-            left: 578px;
-            background: #333;
-            margin-right: 10px;
-
-            &:before {
-                content: "";
-                background: url("") no-repeat center center;
-                //background: url("../img/computer_icon.png") no-repeat center center;
-                background-size: contain;
-                left: -8px;
-            }
-        }
-
-        .objActive {
-            background: #585858;
-        }
-
     }
 }

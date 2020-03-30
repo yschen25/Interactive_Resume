@@ -1,0 +1,321 @@
+.show-computer {
+    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
+    background: url('../img/show_computer.png') no-repeat center center;
+    width: 800px;
+    height: 700px;
+    background-size: contain;
+    font-size: 1.2rem;
+
+    .pwdTab {
+        background: #333;
+        width: 736px;
+        height: 423px;
+        border-radius: 30px 30px 0 0;
+        position: relative;
+        top: 110px;
+        left: 32px;
+
+        .textInput {
+            display: block;
+            margin: auto;
+            width: 300px;
+            height: 40px;
+            position: relative;
+            padding-left: 10px;
+            top: 200px;
+            border-width: 0;
+            outline: none;
+        }
+
+        .submitInput {
+            background-color: #78c8ca;
+            display: block;
+            margin: auto;
+            width: 100px;
+            height: 30px;
+            position: relative;
+            padding-left: 10px;
+            border-radius: 10px;
+            top: 210px;
+            border-width: 0;
+            outline: none;
+            cursor: pointer;
+        }
+
+        p {
+            position: relative;
+            margin: 20px auto auto;
+            text-align: center;
+            top: 195px;
+            color: #f6f6f6;
+        }
+    }
+
+    %triggerBefore {
+        background-size: contain;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 3px;
+        left: 10px;
+    }
+
+    .trigger {
+        background: #c7cbcb;
+        display: inline-block;
+        width: 120px;
+        height: 20px;
+        position: relative;
+        border-radius: 5px 5px 0 0;
+        top: 107px;
+        left: 57px;
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+        z-index: 1;
+
+        &:before {
+            content: "";
+            background: url("../img/youtube_icon.png") no-repeat center center;
+            background-size: contain;
+            @extend %triggerBefore
+        }
+    }
+
+    .portfolioTrigger {
+        top: 107px;
+        left: 56px;
+
+        &:before {
+            content: "";
+            background: url("../img/portfolio_icon.png") no-repeat center center;
+            background-size: contain;
+            @extend %triggerBefore;
+            top: 3px;
+            left: 7px;
+        }
+    }
+
+    .uiuxDesignTrigger {
+        top: 107px;
+        left: 56px;
+
+        &:before {
+            content: "";
+            background: url("../img/medium_icon.jpg") no-repeat center center;
+            background-size: contain;
+            @extend %triggerBefore;
+            top: 3px;
+            left: 7px;
+        }
+    }
+
+    .triggerActive {
+        background: #fff;
+    }
+
+    .tab {
+        background: #fff;
+        width: 736px;
+        height: 402px;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        top: 107px;
+        left: 32px;
+    }
+
+    .youtubeTab {
+
+        .youtubeBg {
+            background: url("../img/youtube.png") no-repeat center center;
+            width: 722px;
+            height: 701px;
+            background-size: contain;
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            top: -149px;
+            left: 3px;
+
+            iframe {
+                position: relative;
+                top: 183px;
+                left: 38px;
+            }
+        }
+    }
+
+    .portfolioTab {
+        top: 107px;
+        left: 32px;
+        height: 400px;
+
+        iframe {
+            position: relative;
+            top: 0;
+            left: 0;
+            border-radius: 10px 10px 0 0;
+            border: 0;
+        }
+    }
+
+    .uiuxDesignTab {
+        background: #fff url("../img/uiux_design.png") no-repeat center center;
+        width: 734px;
+        height: 402px;
+        background-size: contain;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        top: 107px;
+        left: 33px;
+    }
+
+    .item {
+        width: 737px;
+        height: 477px;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        top: 46px;
+        left: 32px;
+        z-index: 2;
+    }
+
+    .phpstormItem {
+        background: url("../img/phpstorm.png") no-repeat center center;
+        background-size: contain;
+    }
+
+    .photoshopItem {
+        background: url("../img/photoshop.png") no-repeat center center;
+        background-size: contain;
+    }
+
+    .gitBashItem {
+        background: url("../img/gitBash.png") no-repeat center center;
+        background-size: contain;
+    }
+
+    .bottom {
+        background: #2b2a2a;
+        display: inline-block;
+        width: 738px;
+        height: 25px;
+        position: absolute;
+        bottom: 167px;
+        left: 31px;
+        z-index: 2;
+
+        .obj {
+            position: absolute;
+            bottom: 0;
+            width: 30px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            font-size: 0.8rem;
+            color: #fff;
+            margin: 0 10px;
+
+            &:before {
+                content: "";
+                background: url("../img/windows_icon.png") no-repeat center center;
+                background-size: contain;
+                @extend %triggerBefore;
+                width: 13px;
+                height: 13px;
+                top: 7px;
+                left: 7px;
+            }
+        }
+
+        .illustratorObj {
+            left: 30px;
+
+            &:before {
+                content: "";
+                background: url("../img/illustrator_Icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .steamObj {
+            left: 60px;
+
+            &:before {
+                content: "";
+                background: url("../img/steam_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .chromeObj {
+            width: 120px;
+            left: 100px;
+            cursor: pointer;
+
+            &:before {
+                content: "";
+                background: url("../img/chrome_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .phpstormObj {
+            width: 120px;
+            left: 220px;
+            background: #333;
+            cursor: pointer;
+
+            &:before {
+                content: "";
+                background: url("../img/phpstorm_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .photoshopObj {
+            width: 120px;
+            left: 340px;
+            background: #333;
+            cursor: pointer;
+
+            &:before {
+                content: "";
+                background: url("../img/photoshop_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .gitbashObj {
+            width: 120px;
+            left: 460px;
+            background: #333;
+            cursor: pointer;
+
+            &:before {
+                content: "";
+                background: url("../img/gitbash_icon.png") no-repeat center center;
+                background-size: contain;
+            }
+        }
+
+        .timeObj {
+            width: 151px;
+            left: 578px;
+            background: #333;
+            margin-right: 10px;
+
+            &:before {
+                content: "";
+                background: url("") no-repeat center center;
+                background-size: contain;
+                left: -8px;
+            }
+        }
+
+        .objActive {
+            background: #585858;
+        }
+    }
+}

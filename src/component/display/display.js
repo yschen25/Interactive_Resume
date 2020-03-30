@@ -57,14 +57,14 @@ class ConnectDisplay extends React.Component {
 
             let pre = localStorage.getItem('pre') !== '' ? localStorage.getItem('pre') : ''; // Record what tabs or software did you choose
             let web = localStorage.getItem('web') !== '' ? localStorage.getItem('web') : ''; // Record the specific tab when change tabs to software
-            if(pre === 'youtube' || pre === 'portfolio' || pre === 'uiuxDesign'){
-                if(name === 'phpstorm' || name === 'photoshop' || name === 'gitBash'){
+            if (pre === 'youtube' || pre === 'portfolio' || pre === 'uiuxDesign') {
+                if (name === 'phpstorm' || name === 'photoshop' || name === 'gitBash') {
                     localStorage.setItem('web', pre);
                 }
             }
 
-            if (name === 'youtube' || name === 'portfolio' || name === 'uiuxDesign'){
-                if(pre === 'phpstorm' || pre === 'photoshop' || pre === 'gitBash'){
+            if (name === 'youtube' || name === 'portfolio' || name === 'uiuxDesign') {
+                if (pre === 'phpstorm' || pre === 'photoshop' || pre === 'gitBash') {
 
                     displayArr.map(val => {
                         dispatchSubmit({
@@ -73,7 +73,7 @@ class ConnectDisplay extends React.Component {
                         });
                     });
 
-                    if (web === 'youtube'){
+                    if (web === 'youtube') {
                         dispatchSubmit({
                             name: [name],
                             show: true
@@ -101,7 +101,7 @@ class ConnectDisplay extends React.Component {
             });
 
             dispatchSubmit({
-            name: [name],
+                name: [name],
                 show: true
             });
 
@@ -129,6 +129,7 @@ class ConnectDisplay extends React.Component {
             let photoshopDisplay = '';
             let gitBashDisplay = '';
             let bottomDisplay = '';
+            let lockDisplay = '';
 
             let isTabShow = true;
             let isBottomShow = true;
@@ -255,6 +256,152 @@ class ConnectDisplay extends React.Component {
                         {gitBashDisplay}
                         {isBottomShow ? bottomDisplay : ''}
                     </div>;
+                }
+
+                val[0] = 'lock';
+                val[1].show = true;
+
+                if (val[0] === 'lock' && val[1].show) {
+                    display = <div>
+                        <div className="loader"></div>
+                        <div className="lock">
+                            <div className="screen">
+                                <div className="code"> 0000</div>
+                                <div className="status">LOCKED</div>
+                                <div className="scanlines"></div>
+                            </div>
+                            <div className="rows">
+                                <div className="row">
+                                    <div className="cell">
+                                        <div className="text">0</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">1</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">2</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">3</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">4</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">5</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">6</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">7</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">8</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">9</div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="cell">
+                                        <div className="text">0</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">1</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">2</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">3</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">4</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">5</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">6</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">7</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">8</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">9</div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="cell">
+                                        <div className="text">0</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">1</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">2</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">3</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">4</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">5</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">6</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">7</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">8</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">9</div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="cell">
+                                        <div className="text">0</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">1</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">2</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">3</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">4</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">5</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">6</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">7</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">8</div>
+                                    </div>
+                                    <div className="cell">
+                                        <div className="text">9</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 }
 
                 // Show notebooks
