@@ -3,7 +3,7 @@
     height: 100vh;
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 3;
+    z-index: 2;
     cursor: url('./../img/close.png'), pointer;
 }
 
@@ -215,10 +215,22 @@
     font-size: 1.5rem;
 }
 
-#svg{
-    position: absolute;
-    width: 65%;
-    margin: auto;
-    filter: drop-shadow(12px 12px 40px rgba(228, 225, 10, 0.7));
-    z-index: 3;
+#rose_svg {
+    position: fixed;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(12px 12px 20px rgba(241, 152, 234, 0.7));
+    z-index: 2;
+    animation: shining 8s infinite;
 }
+
+@keyframes shining {
+    0% {filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));}
+    25% {filter: drop-shadow(0px 0px 20px rgba(241, 152, 234, 0.7));}
+    50% {filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));}
+    75% {filter: drop-shadow(0px 0px 20px rgba(95, 209, 255, 0.7));}
+    100% {filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));}
+}
+
