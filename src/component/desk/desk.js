@@ -1,4 +1,6 @@
 import React from 'react';
+import lock from '../../img/lock.png';
+import rose from '../../img/rose.png';
 import papers from '../../img/papers.png';
 import phone from '../../img/phone.png';
 import keyboard from '../../img/keyboard.png';
@@ -27,6 +29,8 @@ class ConnectDesk extends React.Component {
     render() {
         return (
                <div className="desk" onClick={this.changeStatus.bind(this)}>
+                   <img className="lock" data-name="lock" src={lock}/>
+                   <img className="rose" data-name="rose" src={rose}/>
                    <img className="papers" data-name="papers" src={papers} />
                    <img className="phone" data-name="phone" src={phone} />
                    <img className="keyboard" data-name="keyboard" src={keyboard} />

@@ -1,46 +1,4 @@
 
-body {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #111;
-  background: radial-gradient(#1a1a1a, black);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-body:after {
-  -webkit-animation: fade 1000ms 100ms forwards;
-          animation: fade 1000ms 100ms forwards;
-  background: #000;
-  bottom: 0;
-  content: '';
-  left: 0;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 100;
-}
-
-@-webkit-keyframes fade {
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fade {
-  100% {
-    opacity: 0;
-  }
-}
 .lock {
   background: #000;
   border-bottom: 1px solid #262626;

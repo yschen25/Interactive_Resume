@@ -46,20 +46,6 @@ body {
             left: 0;
         }
 
-        .rose {
-            width: 120px;
-            top: 450px;
-            left: 610px;
-            z-index: 2;
-        }
-
-        .lock {
-            width: 226px;
-            top: 417px;
-            left: 360px;
-            z-index: 1;
-        }
-
         .duck {
             width: 80px;
             top: 175px;
@@ -119,6 +105,20 @@ body {
         min-height: 301px;
         padding-bottom: 10%;
         background: #924b23;
+
+        .lock {
+            width: 226px;
+            top: 417px;
+            left: 360px;
+            z-index: 1;
+        }
+
+        .rose {
+            width: 120px;
+            top: 450px;
+            left: 610px;
+            z-index: 2;
+        }
 
         .papers {
             width: 420px;
