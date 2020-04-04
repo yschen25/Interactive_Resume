@@ -626,7 +626,7 @@ class ConnectDisplay extends React.Component {
             return (
                 <div key={`show-${val[0]}`}>
                     {mask}
-                    {display}
+                    <Rose/>
                 </div>
             )
         })
