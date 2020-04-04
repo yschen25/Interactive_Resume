@@ -216,7 +216,9 @@
 }
 
 #svg{
-    background-color: darkseagreen;
-    background: radial-gradient(darkseagreen 0%, black 70%);
-    width: 400px;
+    position: absolute;
+    width: 65%;
+    margin: auto;
+    filter: drop-shadow(12px 12px 40px rgba(228, 225, 10, 0.7));
+    z-index: 3;
 }
