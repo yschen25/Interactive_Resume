@@ -2,7 +2,7 @@ import React from 'react';
 import FlipPage from "react-flip-page";
 import {connect} from 'react-redux';
 import {changeStatus, submit} from "../../action";
-import Rose from "../rose/rose";
+import {Rose} from "../rose/rose";
 import Lock from "../lock/lock";
 
 class ConnectDisplay extends React.Component {

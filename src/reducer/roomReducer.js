@@ -26,11 +26,16 @@ const initState = {
             "show" : false
         }
     },
+    "rose": {
+        "blooming" :{
+            "show": true
+        },
+        "withering": {
+            "show" : false
+        },
+    },
     "messages":{}
 };
-
-
-
 
 const roomReducer = (state = initState, action) => {
     switch (action.type) {
