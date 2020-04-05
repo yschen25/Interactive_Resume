@@ -1,7 +1,6 @@
 import './css/normalize.css';
-import './scss/main.scss';
-import './scss/display.scss';
-import './scss/display_computer.scss';
+import './scss/scss';
+
 // import './scss/lock.css';
 // import './scss/flickity.css';
 // import './js/flickity.pkgd';

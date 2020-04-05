@@ -1,50 +1,31 @@
 import React from 'react';
 import InlineSVG from 'svg-inline-react';
+import bloomingRose from '../../img/blooming_rose.png';
+import witheringRose from '../../img/withering_rose.png';
 
 class Rose extends React.Component {
-    constructor(props) {
-        super(props);
-        this.makeRosebloom = this.makeRosebloom.bind(this);
-    }
-
-    makeRosebloom() {
-
-        let svg = document.getElementById('rose_svg');
-
-        let animation0 = document.getElementById('animate0');
-        svg.addEventListener('mouseenter', function(){ animation0.beginElement(); });
-        let animation1 = document.getElementById('animate1');
-        svg.addEventListener('mouseenter', function(){ animation1.beginElement(); });
-        let animation2 = document.getElementById('animate2');
-        svg.addEventListener('mouseenter', function(){ animation2.beginElement(); });
-        let animation3 = document.getElementById('animate3');
-        svg.addEventListener('mouseenter', function(){ animation3.beginElement(); });
-        let animation4 = document.getElementById('animate4');
-        svg.addEventListener('mouseenter', function(){ animation4.beginElement(); });
-        let animation5 = document.getElementById('animate5');
-        svg.addEventListener('mouseenter', function(){ animation5.beginElement(); });
-        let animation6 = document.getElementById('animate6');
-        svg.addEventListener('mouseenter', function(){ animation6.beginElement(); });
-        let animation7 = document.getElementById('animate7');
-        svg.addEventListener('mouseenter', function(){ animation7.beginElement(); });
-        let animation8 = document.getElementById('animate8');
-        svg.addEventListener('mouseenter', function(){ animation8.beginElement(); });
-        let animation9 = document.getElementById('animate9');
-        svg.addEventListener('mouseenter', function(){ animation9.beginElement(); });
-        let animation10 = document.getElementById('animate10');
-        svg.addEventListener('mouseenter', function(){ animation10.beginElement(); });
-        let animation11 = document.getElementById('animate11');
-        svg.addEventListener('mouseenter', function(){ animation11.beginElement(); });
-        let animation12 = document.getElementById('animate12');
-        svg.addEventListener('mouseenter', function(){ animation12.beginElement(); });
-        let animation13 = document.getElementById('animate13');
-        svg.addEventListener('mouseenter', function(){ animation13.beginElement(); });
-        let animation14 = document.getElementById('animate14');
-        svg.addEventListener('mouseenter', function(){ animation14.beginElement(); });
-
-    }
 
     render() {
+
+        if (document.getElementById("option_coffee") !== null) document.getElementById("option_coffee").addEventListener("click", makeRosebloom);
+        if (document.getElementById("option_water") !== null) document.getElementById("option_water").addEventListener("click", makeRoseWither);
+
+        function makeRosebloom() {
+
+            setTimeout(function () {
+                for (let i = 0; i <= 14; i++) {
+                    if (document.getElementById(`animate${i}`) !== null) document.getElementById(`animate${i}`).beginElement();
+                }
+            }, 300);
+
+            // todo
+            document.getElementById("rose").src = bloomingRose;
+        }
+
+        function makeRoseWither() {
+            document.getElementById("rose").src = witheringRose;
+        }
+
         const svgSource = `
         <svg id="rose_svg" viewBox="0 0 188 261">
             <defs>
@@ -244,11 +225,16 @@ class Rose extends React.Component {
                         keySplines="0 .06 0 .97" keyTimes="0;1" attributeName="d" dur="12000ms"
                         to="M 39.237 122.683 C 46.749 118.213 62.759 115.009 61.295 123.063 C 61.295 123.063 66.241 120.779 68.9 120.401 C 73.55 119.739 78.314 120.546 82.971 121.162 C 91.45 122.284 99.617 125.191 108.071 126.486 C 110.714 126.891 116.057 127.246 116.057 127.246 C 116.057 127.246 120.185 127.658 122.142 128.767 C 123.524 129.55 124.424 132.951 124.424 132.951 C 124.424 132.951 121.753 137.349 119.86 139.035 C 114.6 143.72 107.654 146.072 101.606 149.684 C 99.31 151.055 97.21 152.793 94.761 153.867 C 91.38 155.35 87.793 156.625 84.112 156.909 C 81.055 157.145 77.91 156.69 74.985 155.769 C 70.063 154.22 65.03 152.103 61.295 148.543 C 58.95 146.308 58.664 142.444 56.351 140.176 C 53.96 137.831 50.7 136.511 47.604 135.233 C 42.743 133.227 32.392 131.049 32.392 131.049 C 32.392 131.049 31.189 128.709 31.631 127.627 C 32.774 124.828 36.639 124.229 39.237 122.683 Z"></animate>
             </path>
-        </svg>`;
+        </svg>
+        <div class="rose_options">
+        <div id="option_coffee" class="option option_coffee">Coffee</div>
+        <div id="option_water" class="option option_water">Pure Water</div>
+        <div class="option option_text">You would like to water the rose with...?</div>
+        </div>`;
 
         return (
-            <div onMouseEnter={this.makeRosebloom}>
-                <InlineSVG src={svgSource} />
+            <div>
+                <InlineSVG src={svgSource}/>
             </div>
         )
     }

@@ -30,7 +30,7 @@ class ConnectDesk extends React.Component {
         return (
                <div className="desk" onClick={this.changeStatus.bind(this)}>
                    <img className="lock" data-name="lock" src={lock}/>
-                   <img className="rose" data-name="rose" src={rose}/>
+                   <img id="rose" className="rose" data-name="rose" src={rose}/>
                    <img className="papers" data-name="papers" src={papers} />
                    <img className="phone" data-name="phone" src={phone} />
                    <img className="keyboard" data-name="keyboard" src={keyboard} />

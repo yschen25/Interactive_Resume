@@ -4,7 +4,7 @@
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
     z-index: 2;
-    cursor: url('./../img/close.png'), pointer;
+    cursor: url('../img/close.png'), pointer;
 }
 
 .show {
@@ -215,6 +215,7 @@
     font-size: 1.5rem;
 }
 
+// Rose
 #rose_svg {
     position: fixed;
     width: 450px;
@@ -227,10 +228,60 @@
 }
 
 @keyframes shining {
-    0% {filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));}
-    25% {filter: drop-shadow(0px 0px 20px rgba(241, 152, 234, 0.7));}
-    50% {filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));}
-    75% {filter: drop-shadow(0px 0px 20px rgba(95, 209, 255, 0.7));}
-    100% {filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));}
+    0% {
+        filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));
+    }
+    25% {
+        filter: drop-shadow(0px 0px 20px rgba(241, 152, 234, 0.7));
+    }
+    50% {
+        filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));
+    }
+    75% {
+        filter: drop-shadow(0px 0px 20px rgba(95, 209, 255, 0.7));
+    }
+    100% {
+        filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));
+    }
 }
 
+.rose_options {
+    position: fixed;
+    width: 450px;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    .option {
+        position: absolute;
+        width: 170px;
+        height: 30px;
+        border-radius: 10px;
+        background: #eee;
+        line-height: 33px;
+        text-align: center;
+        font-size: 1.4rem;
+        transition: .5s;
+        cursor: pointer;
+
+        &.option_water {
+            top: 50px;
+        }
+
+        &:hover {
+            background: #78c8ca;
+        }
+
+        &.option_text {
+            position: absolute;
+            background: none;
+            width: max-content;
+            top: -50px;
+            left: 5px;
+            color: #f6f6f6;
+            font-size: 1.8rem;
+        }
+    }
+
+}
