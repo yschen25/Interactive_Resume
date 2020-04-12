@@ -21,11 +21,11 @@ class ConnectRoom extends React.Component {
         return (
             <div>
                 <Display />
-            <div className="wrapper">
-                <Wall />
-                <Desk />
-                <Text />
-            </div>
+                <div className="wrapper">
+                    <Wall />
+                    <Desk />
+                    <Text />
+                </div>
             </div>
         );
     }

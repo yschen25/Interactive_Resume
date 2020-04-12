@@ -1,9 +1,10 @@
 import React from 'react';
 import FlipPage from "react-flip-page";
 import {connect} from 'react-redux';
-import {changeStatus, submit} from "../../action";
+import {changeStatus, changeTabStatus} from "../../action";
 import {Rose} from "../rose/rose";
 import Lock from "../lock/lock";
+import Phone from "../phone/phone";
 
 class ConnectDisplay extends React.Component {
     constructor(props) {
@@ -24,12 +25,12 @@ class ConnectDisplay extends React.Component {
 
     changeStatus(e) {
 
+        // Close popup
         let data_name = e.target.getAttribute('data-name');
         let name = data_name.split('-')[1];
 
         const {dispatchChangeStatus} = this.props;
 
-        // Close popup
         dispatchChangeStatus({
             name,
             show: false
@@ -46,13 +47,13 @@ class ConnectDisplay extends React.Component {
         e.preventDefault();
 
         let inputValue = this.state.textInput ? parseInt(this.state.textInput.trim()) : '';
-        const {dispatchSubmit} = this.props;
+        const {dispatchChangeTabStatus} = this.props;
 
         let name = e.target.getAttribute('data-name');
         let displayArr = ['youtube', 'portfolio', 'uiuxDesign', 'phpstorm', 'photoshop', 'gitBash'];
         if (inputValue === 418) {
 
-            dispatchSubmit({
+            dispatchChangeTabStatus({
                 name: 'pwd',
                 show: false
             });
@@ -69,14 +70,14 @@ class ConnectDisplay extends React.Component {
                 if (pre === 'phpstorm' || pre === 'photoshop' || pre === 'gitBash') {
 
                     displayArr.map(val => {
-                        dispatchSubmit({
+                        dispatchChangeTabStatus({
                             name: [val],
                             show: false
                         });
                     });
 
                     if (web === 'youtube') {
-                        dispatchSubmit({
+                        dispatchChangeTabStatus({
                             name: [name],
                             show: true
                         });
@@ -85,7 +86,7 @@ class ConnectDisplay extends React.Component {
                         return;
                     }
 
-                    dispatchSubmit({
+                    dispatchChangeTabStatus({
                         name: [web],
                         show: true
                     });
@@ -96,13 +97,13 @@ class ConnectDisplay extends React.Component {
             }
 
             displayArr.map(val => {
-                dispatchSubmit({
+                dispatchChangeTabStatus({
                     name: [val],
                     show: false
                 });
             });
 
-            dispatchSubmit({
+            dispatchChangeTabStatus({
                 name: [name],
                 show: true
             });
@@ -269,6 +270,11 @@ class ConnectDisplay extends React.Component {
                     display = <Lock />
                 }
 
+                // Phone
+                if (val[0] === 'phone' && val[1].show) {
+                    display = <Phone />
+                }
+
                 // Show notebooks
                 // if (val[0] === 'notebooks' && val[1].show) {
                 //
@@ -292,10 +298,6 @@ class ConnectDisplay extends React.Component {
     }
 }
 
-ConnectDisplay.defaultProps = {
-    clicked: {}
-};
-
 const mapStateToProps = state => {
     return {
         data: state.room
@@ -307,8 +309,8 @@ const mapDispatchToProps = dispatch => {
         dispatchChangeStatus: selected => {
             dispatch(changeStatus(selected))
         },
-        dispatchSubmit: value => {
-            dispatch(submit(value))
+        dispatchChangeTabStatus: value => {
+            dispatch(changeTabStatus(value))
         }
     }
 };

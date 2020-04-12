@@ -13,6 +13,7 @@ import {changeStatus} from "../../action";
 
 class ConnectDesk extends React.Component {
 
+    // Click the specific object on the desk
     changeStatus(e) {
         let name = e.target.getAttribute('data-name');
 

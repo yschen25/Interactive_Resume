@@ -1,7 +1,6 @@
-import { CHANGE_STATUS, SUBMIT, ADD_MESSAGES } from '../constant/actionType';
+import { CHANGE_STATUS, CHANGE_TAB_STATUS, CHANGE_ROSE_STATUS, ADD_MESSAGES } from '../constant/actionType';
 
 const initState = {
-    "notClick": {},
     "clicked": {},
     "tab": {
         "pwd" :{
@@ -50,13 +49,24 @@ const roomReducer = (state = initState, action) => {
                     }
                 }
             };
-        case SUBMIT :
+        case CHANGE_TAB_STATUS :
             return {
                 ...state,
                 tab: {
                     ...state.tab,
                     [action.payload.name]: {
                         ...state.tab[action.payload.name],
+                        show: action.payload.show
+                    }
+                }
+            };
+        case CHANGE_ROSE_STATUS :
+            return {
+                ...state,
+                rose: {
+                    ...state.rose,
+                    [action.payload.name]: {
+                        ...state.rose[action.payload.name],
                         show: action.payload.show
                     }
                 }

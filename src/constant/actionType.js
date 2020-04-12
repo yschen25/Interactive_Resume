@@ -1,3 +1,4 @@
 export const CHANGE_STATUS = 'CHANGE_STATUS';
-export const SUBMIT = 'SUBMIT';
+export const CHANGE_TAB_STATUS = 'CHANGE_TAB_STATUS';
+export const CHANGE_ROSE_STATUS = 'CHANGE_ROSE_STATUS';
 export const ADD_MESSAGES = 'ADD_MESSAGES';

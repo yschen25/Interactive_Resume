@@ -380,9 +380,9 @@ body {
       left: 360px;
       z-index: 1; }
     .wrapper .desk .rose {
-      width: 120px;
-      top: 450px;
-      left: 610px;
+      width: 200px;
+      top: 400px;
+      left: 580px;
       z-index: 1; }
     .wrapper .desk .papers {
       width: 420px;
@@ -651,7 +651,7 @@ body {
   text-align: center;
   font-size: 1.5rem; }
 
-#rose_svg {
+.rose_svg {
   position: fixed;
   width: 450px;
   top: 50%;
@@ -663,6 +663,11 @@ body {
   z-index: 2;
   -webkit-animation: shining 8s infinite;
           animation: shining 8s infinite; }
+  .rose_svg.withering {
+    -webkit-filter: drop-shadow(12px 12px 20px rgba(142, 139, 142, 0.7));
+            filter: drop-shadow(12px 12px 20px rgba(142, 139, 142, 0.7));
+    -webkit-animation: none;
+            animation: none; }
 
 @-webkit-keyframes shining {
   0% {
@@ -697,6 +702,40 @@ body {
   100% {
     -webkit-filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7));
             filter: drop-shadow(0 0 40px rgba(214, 214, 214, 0.7)); } }
+
+.rose_options {
+  position: fixed;
+  width: 450px;
+  top: 55%;
+  left: 70%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2; }
+  .rose_options .option {
+    position: absolute;
+    width: 170px;
+    height: 30px;
+    border-radius: 10px;
+    background: #eee;
+    line-height: 33px;
+    text-align: center;
+    font-size: 1.4rem;
+    transition: .5s;
+    cursor: pointer; }
+    .rose_options .option.option_water {
+      top: 50px; }
+    .rose_options .option:hover {
+      background: #78c8ca; }
+    .rose_options .option.option_text {
+      position: absolute;
+      background: none;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      top: -50px;
+      left: 5px;
+      color: #f6f6f6;
+      font-size: 1.8rem; }
 
 .show-computer {
   font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;

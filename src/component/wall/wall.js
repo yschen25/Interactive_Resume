@@ -17,6 +17,7 @@ import rightBooks from '../../img/right_books.png';
 
 class ConnectWall extends React.Component {
 
+    // Click the specific object on the wall
     changeStatus(e) {
         let name = e.target.getAttribute('data-name');
         console.log('wall.js / click', name);
