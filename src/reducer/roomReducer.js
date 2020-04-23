@@ -1,39 +1,44 @@
-import { CHANGE_STATUS, CHANGE_TAB_STATUS, CHANGE_ROSE_STATUS, ADD_MESSAGES } from '../constant/actionType';
+import {CHANGE_STATUS, CHANGE_TAB_STATUS, CHANGE_ROSE_STATUS, CHANGE_PHONE_STATUS, ADD_MESSAGES} from '../constant/actionType';
 
 const initState = {
     "clicked": {},
     "tab": {
-        "pwd" :{
+        "pwd": {
             "show": true
         },
         "youtube": {
-            "show" : false
+            "show": false
         },
         "portfolio": {
-            "show" : false
+            "show": false
         },
         "uiuxDesign": {
-            "show" : false
+            "show": false
         },
-        "phpstorm":{
-            "show" : false
+        "phpstorm": {
+            "show": false
         },
-        "photoshop":{
-            "show" : false
+        "photoshop": {
+            "show": false
         },
-        "gitBash":{
-            "show" : false
+        "gitBash": {
+            "show": false
         }
     },
     "rose": {
-        "blooming" :{
+        "blooming": {
             "show": true
         },
         "withering": {
-            "show" : false
+            "show": false
         },
     },
-    "messages":{}
+    "phone": {
+        "isInputSending": {
+            "show": false
+        }
+    },
+    "messages": {}
 };
 
 const roomReducer = (state = initState, action) => {
@@ -71,10 +76,21 @@ const roomReducer = (state = initState, action) => {
                     }
                 }
             };
+        case CHANGE_PHONE_STATUS :
+            return {
+                ...state,
+                phone: {
+                    ...state.phone,
+                    [action.payload.name]: {
+                        ...state.phone[action.payload.name],
+                        show: action.payload.show
+                    }
+                }
+            };
         case  ADD_MESSAGES:
             return {
                 ...state,
-                messages:action.payload.messages
+                messages: action.payload.messages
             };
         default:
             return state;

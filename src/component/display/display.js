@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {changeStatus, changeTabStatus} from "../../action";
 import {Rose} from "../rose/rose";
 import Lock from "../lock/lock";
-import Phone from "../phone/phone";
+import {Phone} from "../phone/phone";
 
 class ConnectDisplay extends React.Component {
     constructor(props) {
@@ -262,17 +262,17 @@ class ConnectDisplay extends React.Component {
 
                 // Rose
                 if (val[0] === 'rose' && val[1].show) {
-                    display = <Rose />
+                    display = <Rose/>
                 }
 
                 // Lock
                 if (val[0] === 'lock' && val[1].show) {
-                    display = <Lock />
+                    display = <Lock/>
                 }
 
                 // Phone
                 if (val[0] === 'phone' && val[1].show) {
-                    display = <Phone />
+                    display = <Phone/>
                 }
 
                 // Show notebooks

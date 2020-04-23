@@ -1,6 +1,8 @@
 import React from 'react';
+import {changePhoneStatus} from "../../action";
+import {connect} from "react-redux";
 
-class Phone extends React.Component {
+class ConnectPhone extends React.Component {
     constructor(props) {
         super(props);
         this.sendMessage = this.sendMessage.bind(this);
@@ -10,11 +12,11 @@ class Phone extends React.Component {
         let type = e.target.getAttribute('data-name');
         let text = e.target.textContent;
         let chatList = document.getElementById('chatList');
+        let isTextDisable = true;
         console.log('mobile', type, text);
 
         // Show the questions on the screen
         chatList.innerHTML += `<li class="userInput"><span>${text}</span></li>`;
-
 
         let height = chatList.style.height;
 
@@ -22,8 +24,25 @@ class Phone extends React.Component {
 
         console.log('response', response);
 
+        const {dispatchChangePhoneStatus} = this.props;
+
+
+        dispatchChangePhoneStatus({
+            name: 'isInputSending',
+            show: true
+        });
+
+        setTimeout(function () {
+            dispatchChangePhoneStatus({
+                name: 'isInputSending',
+                show: false
+            });
+
+        }, 500);
+
         setTimeout(function () {
             chatList.innerHTML += `<li class="content"><span>${response}</span></li>`;
+            // isTextDisable = false;
 
         }, 1000);
     }
@@ -70,6 +89,17 @@ class Phone extends React.Component {
     }
 
     render() {
+
+        let isInputSending = false;
+
+        const {data} = this.props;
+        Object.entries(data.phone).map((val) => {
+
+            if (val[0] === 'isInputSending' && val[1].show) {
+                isInputSending = true;
+            }
+        })
+
         return (
             <div className="show-phone">
                 <div className="phoneCamera"></div>
@@ -84,7 +114,7 @@ class Phone extends React.Component {
                         <div className="icons camera"><i className="fa fa-camera-retro"></i></div>
                         <div className="inputBlock">
                             <input id="msgInput" type="text" placeholder="Type a message" disabled/>
-                            <p className="inputSending send">Text sending...</p>
+                            <p className={`${isInputSending ? 'act' : ''} inputSending send`}>Text sending...</p>
                         </div>
                         <div className="icons plane"><i className="fa fa-paper-plane"></i></div>
                     </div>
@@ -112,4 +142,19 @@ class Phone extends React.Component {
     }
 }
 
-export default Phone;
+
+const mapStateToProps = state => {
+    return {
+        data: state.room
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        dispatchChangePhoneStatus: value => {
+            dispatch(changePhoneStatus(value))
+        }
+    }
+};
+
+export const Phone = connect(mapStateToProps, mapDispatchToProps)(ConnectPhone);
