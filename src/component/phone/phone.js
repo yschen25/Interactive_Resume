@@ -14,7 +14,7 @@ class ConnectPhone extends React.Component {
         let type = e.target.getAttribute('data-name');
         let text = e.target.textContent;
         let chatList = document.getElementById('chatList');
-        
+
         // Show the questions on the screen
         chatList.innerHTML += `<li class="userInput"><span>${text}</span></li>`;
 
@@ -110,6 +110,7 @@ class ConnectPhone extends React.Component {
         let isTextDisable = false;
         let isInputSending = false;
 
+        // The animation and movement during typing
         const {data} = this.props;
         Object.entries(data.phone).map((val) => {
 
@@ -164,7 +165,6 @@ class ConnectPhone extends React.Component {
         )
     }
 }
-
 
 const mapStateToProps = state => {
     return {

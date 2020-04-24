@@ -1,4 +1,4 @@
-import {CHANGE_STATUS, CHANGE_TAB_STATUS, CHANGE_ROSE_STATUS, CHANGE_PHONE_STATUS, ADD_MESSAGES} from '../constant/actionType';
+import {CHANGE_STATUS, CHANGE_TAB_STATUS, CHANGE_ROSE_STATUS, CHANGE_PHONE_STATUS, CHANGE_HINT_STATUS, ADD_MESSAGES} from '../constant/actionType';
 
 const initState = {
     "clicked": {},
@@ -38,6 +38,11 @@ const initState = {
             "show": false
         },
         "isInputSending": {
+            "show": false
+        }
+    },
+    "capoo": {
+        "isHintShow": {
             "show": false
         }
     },
@@ -86,6 +91,17 @@ const roomReducer = (state = initState, action) => {
                     ...state.phone,
                     [action.payload.name]: {
                         ...state.phone[action.payload.name],
+                        show: action.payload.show
+                    }
+                }
+            };
+        case CHANGE_HINT_STATUS :
+            return {
+                ...state,
+                capoo: {
+                    ...state.capoo,
+                    [action.payload.name]: {
+                        ...state.capoo[action.payload.name],
                         show: action.payload.show
                     }
                 }
