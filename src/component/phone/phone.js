@@ -58,45 +58,49 @@ class ConnectPhone extends React.Component {
                 name: 'isTextDisable',
                 show: false
             });
-
-            this.chatRoom.current.scrollTo(0, height);
-
         }, 1000);
     }
 
-    transferType(type) {
-        let response = "Please wait";
+    static transferType(type) {
+        let response = '';
         switch (type) {
-            case 'england':
-                response = 'UK is a major economic and technology center, there are plenty of opportunities, ' +
-                    'and home to some of the world’s biggest and most dynamic companies. ' +
-                    'I have been to United Kingdom before,' +
-                    ' people has beautiful accent and good taste in fashion, they are are nicely. ' +
-                    'it’s a country make my want to stay, there also many impressed landscape such as London eye, ' +
-                    'stonehenge, And the afternoon tea is wonderful!';
+            case 'intro':
+                response = 'I have 3+ years experiences in front-end, back-end and designing websites. ' +
+                'I have spearheaded building a new official website from the old one when nobody wanted to take the responsibility, and I cooperate and communicate                   with team members smoothly, finally make website online, the clients are really appreciate my effort. ' +
+                'I also proactively improve company work environment such as held a series training classes, write inter message board to help employee can contact to                boss directly. I love to write side-project and review code with my colleagues in my spare time. My supervisors always notes that he impressed my                     strong logic and enthusiasm for the job. ' +
+                'I have been be an exchange student in Germany, I need to deal with plenty of things alone, that means I can work under great pressures.';
                 break;
-            case 'greeting':
-                response = 'I am good, and you?';
+            case 'abroad':
+                response = 'I am eager to take challenges like how to work abroad, how to communicate with people in a foreign language, ' +
+                    'I think what makes life sparkles because there are plenty of challenges are waiting for me and I have chance to make progress, ' +
+                    'I wish I can say "What a ride!" In the end of my life.\n';
                 break;
-            case 'job':
-                response = 'I have 3 years experiences in front-end, back-end and design web, ' +
-                    'have spearheaded building a new web from the old one for two times, can get into' +
-                    ' job soon and get started quickly. I also have excellent communication skills by ' +
-                    'Soho and business trip experience. My supervisors always notes that he impressed ' +
-                    'my strong logic and enthusiasm for the job. I have been to an exchange student in Germany, ' +
-                    'used to work under pressures and have great adaptability.Proficient in HTML5, CSS3, SCSS, ' +
-                    'JavaScript.js, jQuery, React.js, ES6, RWD, Photoshop, Illustrator, Webpack, NPM and I also write PHP, ' +
-                    'MySQL, knowing how to use Git.';
+            case 'swot':
+                response = 'Strengths : I am extremely curious, ambitious and proactive, there are several examples that come to my mind, ' +
+                    'I spearheaded revised website actively. held git training courses and wrote technic documents to reduce problem occurs on the work, ' +
+                    'I also improved working process by writing gitlab extension, ' +
+                    'helped team evaluated story points by writing scrum poker which was wrote by react.' +
+                    'Weaknesses : I usually spend too much time check over my work again and again, ' +
+                    'for example there are an urgent campaign page needs to be developed' +
+                    ' within 4 hours,  I insist to make this issue not only complete and also has clean code before the deadline,  but I were exhausted.' +
+                    'There are many functions that I don’t need to develop in this time. ' +
+                    'Now I can control myself and realize that "A bird in the hand is worth two in the bush."\n';
                 break;
-            case 'liquor':
-                response = 'Yes, I like it. Especially for Glühwein, Radler and Cocktail.';
+            case 'disagreement':
+                response = 'I am shine in front-end & bake-end programing, designing and communicating.';
                 break;
-            case 'from':
-                response = 'I come from Taiwan where you can find convenience stores everywhere, ' +
-                    'we also have night market a place to try out the various tasty snacks, not to mention the bubble tea!';
+            case 'stress':
+                response = 'I\'m very skilled at balancing multiple projects and meeting deadlines, ' +
+                    'once I had three large things due in the same month, let new official web online, ' +
+                    'write campaign pages and deal with bugs on old web, that’s a lots of pressures. ' +
+                    'However, Rather than focusing on feeling stressed, I focus on the task first, ' +
+                    'I created a schedule that detailed how I split each things into small assignments, ' +
+                    'then finish them by their priority. Finally customers are really appreciated me,  and I really enjoy it! \n';
                 break;
             case 'hire':
-                response = 'I am shine in front-end & bake-end programing, designing and communicating.';
+                response = 'I have 3 years experiences in front-end, back-end and design web, ' +
+                    'have spearheaded building a new web from the old one for two times, can get ' +
+                    'into job soon and get started quickly. I also have excellent communication skills by soho and business trip experience.\n';
                 break;
             default:
                 response = "The line is busy, please wait.";
@@ -142,19 +146,19 @@ class ConnectPhone extends React.Component {
                         <div className={`${isTextDisable ? 'act sending' : ''} icons plane`}><i className="fa fa-paper-plane"></i></div>
                     </div>
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="england" onClick={this.sendMessage.bind(this)}>Tell Me About
+                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="intro" onClick={this.sendMessage.bind(this)}>Tell Me About
                     Yourself.
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="from" onClick={this.sendMessage.bind(this)}>Why Do You Want to
+                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="abroad" onClick={this.sendMessage.bind(this)}>Why Do You Want to
                     Work Abroad ?
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="greeting" onClick={this.sendMessage.bind(this)}>Your Strengths
+                <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="swot" onClick={this.sendMessage.bind(this)}>Your Strengths
                     And Weaknesses ?
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="job" onClick={this.sendMessage.bind(this)}>How Did You Handle The
+                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="disagreement" onClick={this.sendMessage.bind(this)}>How Did You Handle The
                     Disagreement ?
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="liquor" onClick={this.sendMessage.bind(this)}>How Do You Handle
+                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="stress" onClick={this.sendMessage.bind(this)}>How Do You Handle
                     Stress ?
                 </div>
                 <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="hire" onClick={this.sendMessage.bind(this)}>Why Should We Hire
