@@ -59,7 +59,7 @@ class ConnectPhone extends React.Component {
                 show: false
             });
 
-            // this.chatRoom.current.scrollTo(0, height);
+            this.chatRoom.current.scrollTo(0, height);
 
         }, 1000);
     }
