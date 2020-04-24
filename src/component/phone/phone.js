@@ -14,15 +14,11 @@ class ConnectPhone extends React.Component {
         let type = e.target.getAttribute('data-name');
         let text = e.target.textContent;
         let chatList = document.getElementById('chatList');
-
-        console.log('mobile', type, text);
-
+        
         // Show the questions on the screen
         chatList.innerHTML += `<li class="userInput"><span>${text}</span></li>`;
 
         let height = this.chatList.current.offsetHeight;
-
-        console.log('height', height);
 
         this.chatRoom.current.scrollTo({
             top: height,
@@ -61,7 +57,7 @@ class ConnectPhone extends React.Component {
         }, 1000);
     }
 
-    static transferType(type) {
+    transferType(type) {
         let response = '';
         switch (type) {
             case 'intro':
