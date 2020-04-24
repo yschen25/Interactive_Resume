@@ -6,26 +6,37 @@ class ConnectPhone extends React.Component {
     constructor(props) {
         super(props);
         this.sendMessage = this.sendMessage.bind(this);
+        this.chatRoom = React.createRef();
+        this.chatList = React.createRef();
     }
 
     sendMessage(e) {
         let type = e.target.getAttribute('data-name');
         let text = e.target.textContent;
         let chatList = document.getElementById('chatList');
-        let isTextDisable = true;
+
         console.log('mobile', type, text);
 
         // Show the questions on the screen
         chatList.innerHTML += `<li class="userInput"><span>${text}</span></li>`;
 
-        let height = chatList.style.height;
+        let height = this.chatList.current.offsetHeight;
+
+        console.log('height', height);
+
+        this.chatRoom.current.scrollTo({
+            top: height,
+            behavior: 'smooth',
+        });
 
         let response = this.transferType(type);
 
-        console.log('response', response);
-
         const {dispatchChangePhoneStatus} = this.props;
 
+        dispatchChangePhoneStatus({
+            name: 'isTextDisable',
+            show: true
+        });
 
         dispatchChangePhoneStatus({
             name: 'isInputSending',
@@ -42,7 +53,13 @@ class ConnectPhone extends React.Component {
 
         setTimeout(function () {
             chatList.innerHTML += `<li class="content"><span>${response}</span></li>`;
-            // isTextDisable = false;
+
+            dispatchChangePhoneStatus({
+                name: 'isTextDisable',
+                show: false
+            });
+
+            // this.chatRoom.current.scrollTo(0, height);
 
         }, 1000);
     }
@@ -90,22 +107,28 @@ class ConnectPhone extends React.Component {
 
     render() {
 
+        let isTextDisable = false;
         let isInputSending = false;
 
         const {data} = this.props;
         Object.entries(data.phone).map((val) => {
 
+            if (val[0] === 'isTextDisable' && val[1].show) {
+                isTextDisable = true;
+            }
+
             if (val[0] === 'isInputSending' && val[1].show) {
                 isInputSending = true;
             }
-        })
+
+        });
 
         return (
             <div className="show-phone">
                 <div className="phoneCamera"></div>
                 <div className="chatBlock">
-                    <div className="chatRoom">
-                        <ol id="chatList" className="chatList">
+                    <div className="chatRoom" ref={this.chatRoom}>
+                        <ol id="chatList" className="chatList" ref={this.chatList}>
                             <li><span>Hello !</span></li>
                             <li><span>I am Yi-Shiuan Chen</span></li>
                         </ol>
@@ -116,25 +139,25 @@ class ConnectPhone extends React.Component {
                             <input id="msgInput" type="text" placeholder="Type a message" disabled/>
                             <p className={`${isInputSending ? 'act' : ''} inputSending send`}>Text sending...</p>
                         </div>
-                        <div className="icons plane"><i className="fa fa-paper-plane"></i></div>
+                        <div className={`${isTextDisable ? 'act sending' : ''} icons plane`}><i className="fa fa-paper-plane"></i></div>
                     </div>
                 </div>
-                <div className="text" data-name="england" onClick={this.sendMessage.bind(this)}>Tell Me About
+                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="england" onClick={this.sendMessage.bind(this)}>Tell Me About
                     Yourself.
                 </div>
-                <div className="text text2" data-name="from" onClick={this.sendMessage.bind(this)}>Why Do You Want to
+                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="from" onClick={this.sendMessage.bind(this)}>Why Do You Want to
                     Work Abroad ?
                 </div>
-                <div className="text text3" data-name="greeting" onClick={this.sendMessage.bind(this)}>Your Strengths
+                <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="greeting" onClick={this.sendMessage.bind(this)}>Your Strengths
                     And Weaknesses ?
                 </div>
-                <div className="text" data-name="job" onClick={this.sendMessage.bind(this)}>How Did You Handle The
+                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="job" onClick={this.sendMessage.bind(this)}>How Did You Handle The
                     Disagreement ?
                 </div>
-                <div className="text2 text" data-name="liquor" onClick={this.sendMessage.bind(this)}>How Do You Handle
+                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="liquor" onClick={this.sendMessage.bind(this)}>How Do You Handle
                     Stress ?
                 </div>
-                <div className="text text3" data-name="hire" onClick={this.sendMessage.bind(this)}>Why Should We Hire
+                <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="hire" onClick={this.sendMessage.bind(this)}>Why Should We Hire
                     You ?
                 </div>
             </div>

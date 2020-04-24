@@ -34,6 +34,9 @@ const initState = {
         },
     },
     "phone": {
+        "isTextDisable": {
+            "show": false
+        },
         "isInputSending": {
             "show": false
         }
