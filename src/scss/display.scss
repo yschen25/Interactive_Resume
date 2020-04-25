@@ -204,6 +204,7 @@
     font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
     position: fixed !important;
     width: 800px !important;
+    height: 500px !important;
     margin: auto;
     top: 0;
     bottom: 0;
@@ -215,8 +216,8 @@
 
     .msgPic {
         border-radius: 50%;
-        width: 300px;
-        margin-top: 20px;
+        width: 150px;
+        margin-top: 50px;
     }
 
     p{

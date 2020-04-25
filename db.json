@@ -11,9 +11,11 @@
   },
   "messages": {
     "Joe": {
+      "sex" : 2,
       "text": "what a awesome website! Wish I can meet the author, she's my god now."
     },
     "Dino": {
+      "sex" : 1,
       "text": "The author is the greatest person I have ever met. She is enthusiastic for coding, enhance the developing environment proactively."
     }
   }

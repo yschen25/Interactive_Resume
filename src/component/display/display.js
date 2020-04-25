@@ -5,7 +5,8 @@ import {changeStatus, changeTabStatus} from "../../action";
 import {Rose} from "../rose/rose";
 import Lock from "../lock/lock";
 import {Phone} from "../phone/phone";
-import test from '../../img/avatar.png';
+import avatar1 from "../../img/avatar1.png";
+import avatar2 from "../../img/avatar2.png";
 
 class ConnectDisplay extends React.Component {
     constructor(props) {
@@ -277,10 +278,10 @@ class ConnectDisplay extends React.Component {
                 }
                 // Show notebooks
                 if (val[0] === 'notebooks' && val[1].show) {
-
+                    
                     display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#ffebeb" className="show-notebooks">
                         {Object.entries(data.messages).map((val) => <article key={val[0]}>
-                            <img className="msgPic" src={test} />
+                            {val[1].sex === 1 ? <img className="msgPic" src={avatar1}/> : <img className="msgPic" src={avatar2}/>}
                             <h1>Name : {val[0]}</h1>
                             <p>{val[1].text}</p>
                         </article>)}
