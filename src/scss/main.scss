@@ -66,10 +66,18 @@ body {
         }
 
         .hint {
-            display: block;
+            position: fixed;
             width: 220px;
-            top: 10px;
-            left: 700px;
+            top: 40px;
+            left: 732px;
+
+            p{
+                position: absolute;
+                top: 10px;
+                left: 80px;
+                font-size: 2.4rem;
+                z-index: 2;
+            }
         }
 
         .computer {

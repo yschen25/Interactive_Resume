@@ -68,6 +68,8 @@ class ConnectWall extends React.Component {
 
         });
 
+        isHintShow = true;
+
         return (
 
             <div className="wall"
@@ -79,7 +81,7 @@ class ConnectWall extends React.Component {
                 <img className="duck" data-name="duck" src={duck}/>
                 <img className="capoo" data-name="capoo" src={capoo} data-count={this.state.count}
                      onClick={this.countClick.bind(this)}/>
-                {isHintShow ? <img className="hint" src={hint}/> : ''}
+                {isHintShow ? <div className="hint"><p>3669</p><img src={hint}/></div> : ''}
                 <img className="computer" data-name="computer" src={computer}/>
                 <img className="stick" data-name="stick1" src={stick1}/>
                 <img className="stick stick2" data-name="stick2" src={stick2}/>
