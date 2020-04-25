@@ -5,7 +5,7 @@ import {changeStatus, changeTabStatus} from "../../action";
 import {Rose} from "../rose/rose";
 import Lock from "../lock/lock";
 import {Phone} from "../phone/phone";
-import test from '../../img/test.jpg';
+import test from '../../img/avatar.png';
 
 class ConnectDisplay extends React.Component {
     constructor(props) {
