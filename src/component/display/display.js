@@ -3,8 +3,9 @@ import FlipPage from "react-flip-page";
 import {connect} from 'react-redux';
 import {changeStatus, changeTabStatus} from "../../action";
 import {Rose} from "../rose/rose";
-import Lock from "../lock/lock";
+// import Lock from "../lock/lock";
 import {Phone} from "../phone/phone";
+import {MessageBoard} from "../messageBoard/messageBoard";
 import avatar1 from "../../img/avatar1.png";
 import avatar2 from "../../img/avatar2.png";
 
@@ -262,31 +263,43 @@ class ConnectDisplay extends React.Component {
                     </div>;
                 }
 
-                // Rose
+                // Show rose
                 if (val[0] === 'rose' && val[1].show) {
                     display = <Rose/>
                 }
 
-                // Lock
+                // Show lock
                 if (val[0] === 'lock' && val[1].show) {
                     display = <Lock/>
                 }
 
-                // Phone
+                // Show phone
                 if (val[0] === 'phone' && val[1].show) {
                     display = <Phone/>
                 }
+
                 // Show notebooks
                 if (val[0] === 'notebooks' && val[1].show) {
-                    
-                    display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#ffebeb" className="show-notebooks">
+
+                    display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#fffbe8" className="show-notebooks">
                         {Object.entries(data.messages).map((val) => <article key={val[0]}>
                             {val[1].sex === 1 ? <img className="msgPic" src={avatar1}/> : <img className="msgPic" src={avatar2}/>}
                             <h1>Name : {val[0]}</h1>
                             <p>{val[1].text}</p>
+                            <div className="msgBtn">Leave a Message</div>
                         </article>)}
                     </FlipPage>
                 }
+
+
+                val[0] = 'messageBoard';
+                val[1].show = true;
+
+                // Show messageBoard
+                // if (val[0] === 'messageBoard' && val[1].show) {
+
+                    display = <MessageBoard />;
+                // }
 
                 mask =
                     <div className="mask " data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;

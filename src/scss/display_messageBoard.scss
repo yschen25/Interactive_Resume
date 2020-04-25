@@ -1,0 +1,65 @@
+.show-messageBoard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    font-size: 1.2rem;
+    padding: 20px;
+    background: #a3d0da;
+
+    h1 {
+        text-align: center;
+    }
+
+    .desc {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .msg {
+        font-size: 1.4rem;
+        margin-top: 20px;
+
+        #name {
+            width: 250px;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 10px;
+            border: none;
+            font-size: 1.4rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            padding: 10px;
+            border: none;
+            width: 680px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            top: 300px;
+            font-size: 1.4rem;
+            resize: none;
+            caret-color: transparent;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .pen {
+            position: fixed;
+            width: 50px;
+            top: 280px;
+            left: 30px;
+            z-index: 3;
+        }
+    }
+}

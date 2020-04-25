@@ -7,20 +7,20 @@
     height: 600px;
     margin: auto;
     background: #0d151d;
-    box-shadow :5px 5px 0 #768693;
+    box-shadow: 5px 5px 0 #768693;
     color: #474c57;
     border: 0 solid #0d151d;
     border-width: 45px 15px 60px;
-    border-radius :20px;
+    border-radius: 20px;
     z-index: 2;
     font-family: "Open Sans", "Trebuchet MS", Arial, 'PMingLiU', sans-serif;
 
     .phoneCamera {
         width: 20px;
         height: 20px;
-        box-shadow :0 0 1px 3px #a09f9f inset;
+        box-shadow: 0 0 1px 3px #a09f9f inset;
         background: #fff;
-        border-radius:100%;
+        border-radius: 100%;
         position: absolute;
         top: -31px;
         left: 8%;
@@ -54,7 +54,7 @@
 
                     span {
                         background-color: #1abc9c;
-                        border-radius :3px;
+                        border-radius: 3px;
                         color: #fff;
                         display: inline-block;
                         font-size: 1rem;
@@ -100,11 +100,11 @@
 
                 &.plane {
                     cursor: default;
-                    opacity :.25;
+                    opacity: .25;
 
                     &.act {
                         color: #16a085;
-                        opacity :1;
+                        opacity: 1;
                     }
 
                     &.err {
@@ -161,10 +161,10 @@
         display: inline-block;
         background: #39c0d6;
         padding: 6px 10px;
-        border-radius :15px;
+        border-radius: 15px;
         margin: 15px 5px 1px;
         color: #fff;
-        box-shadow :2px 2px 0 #21776b;
+        box-shadow: 2px 2px 0 #21776b;
         float: left;
         cursor: pointer;
 
@@ -178,11 +178,11 @@
 
     .text2 {
         background: #be89d4;
-        box-shadow :2px 2px 0 #9a547a;
+        box-shadow: 2px 2px 0 #9a547a;
     }
 
     .text3 {
         background: #eca84c;
-        box-shadow :2px 2px 0 #ec9018;
+        box-shadow: 2px 2px 0 #ec9018;
     }
 }
