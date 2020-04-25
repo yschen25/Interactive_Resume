@@ -1,11 +1,13 @@
 import React from 'react';
+import './howler';
+import './flickity.pkgd';
 
 class Lock extends React.Component{
     render(){
         return(
             <div>
                 <div className="loader"></div>
-                <div className="lock">
+                <div className="lock lock1">
                     <div className="screen">
                         <div className="code"> 0000</div>
                         <div className="status">LOCKED</div>

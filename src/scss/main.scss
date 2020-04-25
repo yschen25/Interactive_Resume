@@ -1,6 +1,7 @@
 body {
     font-family: "Indie Flower", "Trebuchet MS", "Comic Sans MS", "Constantia", sans-serif;
     width: 100%;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -118,7 +119,7 @@ body {
     .desk {
         width: 100vw;
         min-height: 301px;
-        padding-bottom: 10%;
+        height: 100vh;
         background: #924b23;
 
         .lock {
