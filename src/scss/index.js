@@ -1,4 +1,7 @@
 import './main.scss';
 import './display.scss';
 import './display_computer.scss';
+import './display_phone.scss';
 import './display_lock.scss';
+import './display_rose.scss';
+

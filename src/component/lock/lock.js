@@ -7,7 +7,7 @@ class Lock extends React.Component{
         return(
             <div>
                 <div className="loader"></div>
-                <div className="lock lock1">
+                <div className="lock show-lock">
                     <div className="screen">
                         <div className="code"> 0000</div>
                         <div className="status">LOCKED</div>

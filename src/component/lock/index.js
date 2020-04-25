@@ -67,7 +67,7 @@ var Lock = function () {
     key: 'setupDom',
     value: function setupDom() {
       this.dom = {};
-      this.dom.lock = document.querySelector('.lock');
+      this.dom.lock = document.querySelector('.show-lock');
       this.dom.rows = document.querySelectorAll('.row');
       this.dom.code = document.querySelector('.code');
       this.dom.status = document.querySelector('.status');
