@@ -26,9 +26,8 @@ class ConnectDisplay extends React.Component {
         setInterval(upTime, 1000);
     }
 
-    changeStatus(e) {
-
-        // Close popup
+    // Close popup
+    closePopUp(e) {
         let data_name = e.target.getAttribute('data-name');
         let name = data_name.split('-')[1];
 
@@ -36,6 +35,21 @@ class ConnectDisplay extends React.Component {
 
         dispatchChangeStatus({
             name,
+            show: false
+        });
+    }
+
+    // Show messageBoard
+    showMessageBoard() {
+        const {dispatchChangeStatus} = this.props;
+
+        dispatchChangeStatus({
+            name: 'messageBoard',
+            show: true
+        });
+
+        dispatchChangeStatus({
+            name: 'notebooks',
             show: false
         });
     }
@@ -142,7 +156,7 @@ class ConnectDisplay extends React.Component {
 
                 // Display other objects
                 display = <div className={`show show-${val[0]}`} data-name={`show-${val[0]}`}
-                               onClick={this.changeStatus.bind(this)}></div>;
+                               onClick={this.closePopUp.bind(this)}></div>;
 
                 if (val[0] === 'computer' && val[1].show) {
 
@@ -286,23 +300,17 @@ class ConnectDisplay extends React.Component {
                             {val[1].sex === 1 ? <img className="msgPic" src={avatar1}/> : <img className="msgPic" src={avatar2}/>}
                             <h1>Name : {val[0]}</h1>
                             <p>{val[1].text}</p>
-                            <div className="msgBtn">Leave a Message</div>
+                            <div className="msgBtn" onClick={this.showMessageBoard.bind(this)}>Leave a Message</div>
                         </article>)}
                     </FlipPage>
                 }
 
-
-                val[0] = 'messageBoard';
-                val[1].show = true;
-
                 // Show messageBoard
-                // if (val[0] === 'messageBoard' && val[1].show) {
-
+                if (val[0] === 'messageBoard' && val[1].show) {
                     display = <MessageBoard />;
-                // }
+                }
 
-                mask =
-                    <div className="mask " data-name={`show-${val[0]}`} onClick={this.changeStatus.bind(this)}></div>;
+                mask = <div className="mask " data-name={`show-${val[0]}`} onClick={this.closePopUp.bind(this)}></div>;
             }
 
             return (

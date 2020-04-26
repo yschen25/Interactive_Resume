@@ -24,7 +24,7 @@ class ConnectWall extends React.Component {
     }
 
     // Click the specific object on the wall
-    changeStatus(e) {
+    openPopUp(e) {
         let name = e.target.getAttribute('data-name');
         console.log('wall.js / click', name);
 
@@ -73,7 +73,7 @@ class ConnectWall extends React.Component {
         return (
 
             <div className="wall"
-                 onClick={this.changeStatus.bind(this)}> {/*<div className="wall" onClick={(e) => this.changeStatus(e)}>*/}
+                 onClick={this.openPopUp.bind(this)}> {/*<div className="wall" onClick={(e) => this.changeStatus(e)}>*/}
                 <img className="pic" data-name="pic1" src={pic1}/>
                 <img className="pic pic2" data-name="pic2" src={pic2}/>
                 <img className="pic pic3" data-name="pic3" src={pic3}/>

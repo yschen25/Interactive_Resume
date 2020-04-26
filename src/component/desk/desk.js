@@ -14,7 +14,7 @@ import {changeStatus} from "../../action";
 class ConnectDesk extends React.Component {
 
     // Click the specific object on the desk
-    changeStatus(e) {
+    openPopUp(e) {
         let name = e.target.getAttribute('data-name');
 
         // Show popup
@@ -29,10 +29,10 @@ class ConnectDesk extends React.Component {
 
     render() {
         return (
-               <div className="desk" onClick={this.changeStatus.bind(this)}>
+               <div className="desk" onClick={this.openPopUp.bind(this)}>
                    <img className="lock" data-name="lock" src={lock}/>
                    <img id="rose" className="rose" data-name="rose" src={rose}/>
-                   <img className="papers" data-name="papers" src={papers} />
+                   <img className="papers" data-name="messageBoard" src={papers} />
                    <img className="phone" data-name="phone" src={phone} />
                    <img className="keyboard" data-name="keyboard" src={keyboard} />
                    <img className="mouse" data-name="mouse" src={mouse} />
