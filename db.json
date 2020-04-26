@@ -17,6 +17,10 @@
     "Dino": {
       "sex" : 1,
       "text": "The author is the greatest person I have ever met. She is enthusiastic for coding, enhance the developing environment proactively."
-    }
+    },
+    "Leo": {
+      "sex" : 3,
+      "text": "Very creative! Can't wait for next portfolio."
+    },
   }
 }

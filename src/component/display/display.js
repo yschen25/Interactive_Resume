@@ -6,8 +6,9 @@ import {Rose} from "../rose/rose";
 // import Lock from "../lock/lock";
 import {Phone} from "../phone/phone";
 import {MessageBoard} from "../messageBoard/messageBoard";
-import avatar1 from "../../img/avatar1.png";
-import avatar2 from "../../img/avatar2.png";
+import man from "../../img/avatar1.png";
+import woman from "../../img/avatar2.png";
+import hamster from "../../img/avatar3.png";
 
 class ConnectDisplay extends React.Component {
     constructor(props) {
@@ -295,9 +296,19 @@ class ConnectDisplay extends React.Component {
                 // Show notebooks
                 if (val[0] === 'notebooks' && val[1].show) {
 
+                    let img = <img className="msgPic" src={man}/>;
+                    
+                    if (val[1].sex === 2) {
+                        img = <img className="msgPic" src={woman}/>;
+                    }
+
+                    if (val[1].sex === 3) {
+                        img = <img className="msgPic" src={hamster}/>;
+                    }
+
                     display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#fffbe8" className="show-notebooks">
                         {Object.entries(data.messages).map((val) => <article key={val[0]}>
-                            {val[1].sex === 1 ? <img className="msgPic" src={avatar1}/> : <img className="msgPic" src={avatar2}/>}
+                            {img}
                             <h1>Name : {val[0]}</h1>
                             <p>{val[1].text}</p>
                             <div className="msgBtn" onClick={this.showMessageBoard.bind(this)}>Leave a Message</div>

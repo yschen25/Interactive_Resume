@@ -1,6 +1,9 @@
 import React from 'react';
 import {connect} from "react-redux";
 import pen from "../../img/pen.png";
+import man from "../../img/avatar1.png";
+import woman from "../../img/avatar2.png";
+import hamster from "../../img/avatar3.png";
 
 class ConnectMessageBoard extends React.Component {
     constructor(props) {
@@ -85,6 +88,10 @@ class ConnectMessageBoard extends React.Component {
                 <div className="msg">
                     <label htmlFor="name">Name : </label>
                     <input id="name" name="name" autoFocus autoComplete="off" placeholder="Your name here"/>
+                    <label htmlFor="avatar">Avatar : </label>
+                        <input type="radio" className="avatar" id="man" name="avatar" /><label htmlFor="man"><img src={man} /></label>
+                        <input type="radio" className="avatar" id="woman" name="avatar" /><label htmlFor="woman"><img src={woman} /></label>
+                        <input type="radio" className="avatar" id="hamster" name="avatar" /><label htmlFor="hamster"><img src={hamster} /></label>
                     <img id="pen" className="pen" src={pen}/>
                     <textarea id="textarea" cols="40" rows="7" data-count={this.state.count}
                               onFocus={this.focus.bind(this)} onBlur={this.blur.bind(this)}

@@ -31,10 +31,20 @@
             padding-left: 10px;
             border: none;
             font-size: 1.4rem;
+            margin-right: 50px;
 
             &:focus {
                 outline: none;
             }
+        }
+
+        .avatar{
+            margin: auto 10px;
+        }
+
+        img {
+            width: 30px;
+            vertical-align: bottom;
         }
 
         textarea {
