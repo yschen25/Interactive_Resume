@@ -296,9 +296,10 @@ class ConnectDisplay extends React.Component {
                 // Show notebooks
                 if (val[0] === 'notebooks' && val[1].show) {
 
-                    display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#fffbe8" className="show-notebooks">
+                    display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#fffbe8"
+                                        className="show-notebooks">
                         {Object.entries(data.messages).map((val) => <article key={val[0]}>
-                            { (() => {
+                            {(() => {
                                 if (val[1].sex === 1) return <img className="msgPic" src={man}/>;
                                 if (val[1].sex === 2) return <img className="msgPic" src={woman}/>;
                                 else return <img className="msgPic" src={hamster}/>;
@@ -312,7 +313,7 @@ class ConnectDisplay extends React.Component {
 
                 // Show messageBoard
                 if (val[0] === 'messageBoard' && val[1].show) {
-                    display = <MessageBoard />;
+                    display = <MessageBoard/>;
                 }
 
                 mask = <div className="mask " data-name={`show-${val[0]}`} onClick={this.closePopUp.bind(this)}></div>;

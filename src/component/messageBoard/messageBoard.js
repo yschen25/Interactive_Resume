@@ -105,14 +105,16 @@ class ConnectMessageBoard extends React.Component {
                     <label htmlFor="name">Name : </label>
                     <input id="name" name="name" autoFocus autoComplete="off" placeholder="Your name here"/>
                     <label htmlFor="avatar">Avatar : </label>
-                        <input type="radio" className="avatar" id="man" name="avatar" /><label htmlFor="man"><img src={man} /></label>
-                        <input type="radio" className="avatar" id="woman" name="avatar" /><label htmlFor="woman"><img src={woman} /></label>
-                        <input type="radio" className="avatar" id="hamster" name="avatar" /><label htmlFor="hamster"><img src={hamster} /></label>
+                    <input type="radio" className="avatar" id="man" name="avatar"/><label htmlFor="man"><img src={man}/></label>
+                    <input type="radio" className="avatar" id="woman" name="avatar"/><label htmlFor="woman"><img
+                    src={woman}/></label>
+                    <input type="radio" className="avatar" id="hamster" name="avatar"/><label htmlFor="hamster"><img
+                    src={hamster}/></label>
                     <img id="pen" className="pen" src={pen}/>
                     <textarea id="textarea" cols="40" rows="7" data-count={this.state.count}
                               onFocus={this.focus.bind(this)} onBlur={this.blur.bind(this)}
                               onKeyPress={this.typeMessage.bind(this)}></textarea>
-                    <div className="msgBtn" onClick={this.showMessages.bind(this)} >See the Messages</div>
+                    <div className="msgBtn" onClick={this.showMessages.bind(this)}>See the Messages</div>
                 </div>
             </div>
         )
