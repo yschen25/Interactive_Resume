@@ -1,4 +1,5 @@
 .show-messageBoard {
+    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -16,13 +17,13 @@
     }
 
     .desc {
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 1.5;
     }
 
     .msg {
         font-size: 1.4rem;
-        margin-top: 20px;
+        margin-top: 60px;
 
         #name {
             width: 250px;
@@ -72,6 +73,40 @@
             left: 30px;
             z-index: 3;
             display: none;
+        }
+
+        .msgBtn {
+            position: absolute;
+            width: 250px;
+            height: 45px;
+            background: #4874b7;
+            font-size: 1.4rem;
+            line-height: 45px;
+            text-align: left;
+            text-indent: 30px;
+            bottom: -33px;
+            right: -35px;
+            border-radius: 25px;
+            color: #fbfbfb;
+            box-shadow: 2px 2px 0 #2d528c;
+            cursor: pointer;
+
+            &:after{
+                content: "\f054";
+                font-family: FontAwesome;
+                position: absolute;
+                right : 25px;
+                font-size: 1rem;
+            }
+
+            &:hover:after{
+                animation: move .7s infinite;
+            }
+
+            @keyframes move {
+                0%{ right : 25px;}
+                100%{ right : 15px;}
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
+import {changeStatus, changeTabStatus} from "../../action";
 import pen from "../../img/pen.png";
 import man from "../../img/avatar1.png";
 import woman from "../../img/avatar2.png";
@@ -80,6 +81,21 @@ class ConnectMessageBoard extends React.Component {
         }
     }
 
+    // Show messageBoard
+    showMessages() {
+        const {dispatchChangeStatus} = this.props;
+
+        dispatchChangeStatus({
+            name: 'notebooks',
+            show: true
+        });
+
+        dispatchChangeStatus({
+            name: 'messageBoard',
+            show: false
+        });
+    }
+
     render() {
         return (
             <div className="show-messageBoard">
@@ -96,6 +112,7 @@ class ConnectMessageBoard extends React.Component {
                     <textarea id="textarea" cols="40" rows="7" data-count={this.state.count}
                               onFocus={this.focus.bind(this)} onBlur={this.blur.bind(this)}
                               onKeyPress={this.typeMessage.bind(this)}></textarea>
+                    <div className="msgBtn" onClick={this.showMessages.bind(this)} >See the Messages</div>
                 </div>
             </div>
         )
@@ -109,7 +126,11 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-
+    return {
+        dispatchChangeStatus: selected => {
+            dispatch(changeStatus(selected))
+        }
+    }
 };
 
-export const MessageBoard = connect(mapStateToProps, null)(ConnectMessageBoard);
+export const MessageBoard = connect(mapStateToProps, mapDispatchToProps)(ConnectMessageBoard);

@@ -296,19 +296,13 @@ class ConnectDisplay extends React.Component {
                 // Show notebooks
                 if (val[0] === 'notebooks' && val[1].show) {
 
-                    let img = <img className="msgPic" src={man}/>;
-                    
-                    if (val[1].sex === 2) {
-                        img = <img className="msgPic" src={woman}/>;
-                    }
-
-                    if (val[1].sex === 3) {
-                        img = <img className="msgPic" src={hamster}/>;
-                    }
-
                     display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#fffbe8" className="show-notebooks">
                         {Object.entries(data.messages).map((val) => <article key={val[0]}>
-                            {img}
+                            { (() => {
+                                if (val[1].sex === 1) return <img className="msgPic" src={man}/>;
+                                if (val[1].sex === 2) return <img className="msgPic" src={woman}/>;
+                                else return <img className="msgPic" src={hamster}/>;
+                            })()}
                             <h1>Name : {val[0]}</h1>
                             <p>{val[1].text}</p>
                             <div className="msgBtn" onClick={this.showMessageBoard.bind(this)}>Leave a Message</div>
