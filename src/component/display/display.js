@@ -3,7 +3,7 @@ import FlipPage from "react-flip-page";
 import {connect} from 'react-redux';
 import {changeStatus, changeTabStatus} from "../../action";
 import {Rose} from "../rose/rose";
-// import Lock from "../lock/lock";
+import Lock from "../lock/lock";
 import {Phone} from "../phone/phone";
 import {MessageBoard} from "../messageBoard/messageBoard";
 import man from "../../img/avatar1.png";

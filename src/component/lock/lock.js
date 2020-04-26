@@ -1,8 +1,13 @@
 import React from 'react';
 import './howler';
-import './flickity.pkgd';
+import LockLock from './index';
 
 class Lock extends React.Component{
+
+    componentDidMount() {
+        new LockLock();
+    }
+
     render(){
         return(
             <div>
