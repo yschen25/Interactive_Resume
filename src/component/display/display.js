@@ -300,9 +300,9 @@ class ConnectDisplay extends React.Component {
                                         className="show-notebooks">
                         {Object.entries(data.messages).map((val) => <article key={val[0]}>
                             {(() => {
-                                if (val[1].sex === 1) return <img className="msgPic" src={man}/>;
                                 if (val[1].sex === 2) return <img className="msgPic" src={woman}/>;
-                                else return <img className="msgPic" src={hamster}/>;
+                                if (val[1].sex === 3) return <img className="msgPic" src={hamster}/>;
+                                else return <img className="msgPic" src={man}/>;
                             })()}
                             <h1>Name : {val[0]}</h1>
                             <p>{val[1].text}</p>
