@@ -1,15 +1,17 @@
 import React from 'react';
 import './howler';
-import LockLock from './index';
+import lockFunction from './lockFunction';
 
-class Lock extends React.Component{
+class Lock extends React.Component {
 
     componentDidMount() {
-        new LockLock();
+        let lock = new lockFunction();
+        let isOpen = lock.open();
+        console.log(isOpen);
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <div className="lock show-lock">
                     <div className="screen">
