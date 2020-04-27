@@ -2,27 +2,29 @@
   "notClick": {},
   "clicked": {},
   "tab": {
-    "pwd" :{
+    "pwd": {
       "show": true
     },
     "youtube": {
-      "show" : false
+      "show": false
     }
   },
-  "messages": {
-    "Joe": {
-      "sex" : 2,
+  "messages": [
+    {
+      "name": "Joe",
+      "sex": 2,
       "text": "what a awesome website! Wish I can meet the author, she's my god now."
     },
-    "Dino": {
-      "sex" : 1,
+    {
+      "name": "Dino",
+      "sex": 1,
       "text": "The author is the greatest person I have ever met. She is enthusiastic for coding, enhance the developing environment proactively."
     },
-    "Leo": {
-      "sex" : 3,
+    {
+      "name": "Leo",
+      "sex": 3,
       "text": "Very creative! Can't wait for next portfolio."
     }
-  }
+  ]
 }
 
-// todo messages obj => array, change name
