@@ -292,9 +292,17 @@ class ConnectDisplay extends React.Component {
                 if (val[0] === 'phone' && val[1].show) {
                     display = <Phone/>
                 }
+                
+                // When message is null or empty
+                if (data.messages === null || data.messages === '') {
+                    display = <div>
+                        <p className="noMsg">Be the first person who leave message !!!!!!</p>
+                        <MessageBoard/>
+                    </div>;
+                }
 
                 // Show notebooks
-                if (val[0] === 'notebooks' && val[1].show) {
+                if (val[0] === 'notebooks' && val[1].show && data.messages !== null && data.messages !== '') {
 
                     display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#fffbe8"
                                         className="show-notebooks">

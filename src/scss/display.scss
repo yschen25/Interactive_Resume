@@ -242,11 +242,11 @@
         box-shadow: 2px 2px 0 #ca650e;
         cursor: pointer;
 
-        &:after{
+        &:after {
             content: "\f054";
             font-family: FontAwesome;
             position: absolute;
-            right : 30px;
+            right: 30px;
             font-size: 1rem;
         }
 
@@ -256,15 +256,31 @@
             right: 12px;
         }
 
-        &:hover:after{
+        &:hover:after {
             animation: move .7s infinite;
         }
 
         @keyframes move {
-            0%{ right : 30px;}
-            100%{ right : 15px;}
+            0% {
+                right: 30px;
+            }
+            100% {
+                right: 15px;
+            }
         }
     }
+}
+
+.noMsg {
+    position: fixed;
+    text-align: center;
+    color: #d7dbdb;
+    font-size: 2rem;
+    top: 145px;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    z-index: 3;
 }
 
 .disable {
