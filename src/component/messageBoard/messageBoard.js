@@ -138,8 +138,10 @@ class ConnectMessageBoard extends React.Component {
 
         // todo Chinese limit
 
+        // todo if no message
+
         // todo Send message
-        axios.post('./../api/sendMessage.php', {
+        axios.post('https://www.yschen25.com/portfolio/Interactive_Resume/api/sendMessage.php', {
             name: name,
             sex: sex,
             msg: textarea
