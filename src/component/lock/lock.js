@@ -17,7 +17,6 @@ class Lock extends React.Component {
                     <div className="screen">
                         <div className="code"> 0000</div>
                         <div className="status">LOCKED</div>
-                        <div className="scanlines"></div>
                     </div>
                     <div className="rows">
                         <div className="row">

@@ -37,22 +37,12 @@
     .text {
         color: #fff;
         font-family: 'Orbitron', monospace;
-        font-size: 1.4rem;
+        font-size: 0.8rem;
         font-weight: 500;
         line-height: 56px;
         opacity: 0.3;
-        transform: scale(0.55);
         transition-duration: 150ms;
         transition-property: color, opacity, text-shadow, transform;
-    }
-
-    .is-selected .text {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    .verified .is-selected .text {
-        color: #0f0;
     }
 
     .rows {
@@ -128,6 +118,15 @@
     }
 }
 
+.is-selected .text {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+.verified .is-selected .text {
+    color: #0f0;
+}
+
 .screen {
     background: #000;
     height: 40px;
@@ -155,19 +154,6 @@
         color: #f00;
         right: 0;
         text-shadow: 0 0 15px #f00;
-    }
-
-    .scanlines {
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0.04)), color-stop(50%, rgba(0, 0, 0, 0.1)));
-        background: linear-gradient(rgba(255, 255, 255, 0.04) 50%, rgba(0, 0, 0, 0.1) 50%);
-        background-size: 100% 2px;
-        bottom: 1px;
-        left: 0;
-        pointer-events: none;
-        position: absolute;
-        right: 1px;
-        top: 1px;
-        z-index: 1;
     }
 }
 
