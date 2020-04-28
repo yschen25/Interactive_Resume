@@ -5,6 +5,7 @@ import pen from "../../img/pen.png";
 import man from "../../img/avatar1.png";
 import woman from "../../img/avatar2.png";
 import hamster from "../../img/avatar3.png";
+import axios from "axios/index";
 
 class ConnectMessageBoard extends React.Component {
     constructor(props) {
@@ -136,7 +137,27 @@ class ConnectMessageBoard extends React.Component {
         console.log('textarea', textarea);
 
         // todo Chinese
-        // todo Send message success
+
+        // todo Send message
+        axios.post('https://my-json-server.typicode.com/yschen25/Interactive_resume/db', {
+            name: name,
+            sex: sex,
+            msg: textarea
+        }).then(response => {
+
+            console.log('response', response);
+
+            if (response.status) {
+
+                alert('Message send success!');
+
+                setTimeout(function () {
+                    location.reload();
+                }, 3000);
+            }
+
+        })
+            .catch(error => console.log(error));
     }
 
     render() {

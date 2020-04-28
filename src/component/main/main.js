@@ -12,6 +12,7 @@ class ConnectRoom extends React.Component {
     componentDidMount(){
         const { dispatchAddMessages } = this.props;
 
+        // todo Get message
         axios.get('https://my-json-server.typicode.com/yschen25/Interactive_resume/db')
             .then(response => dispatchAddMessages(response.data))
             .catch(error => console.log(error));
