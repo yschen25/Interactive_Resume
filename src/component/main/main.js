@@ -13,7 +13,7 @@ class ConnectRoom extends React.Component {
         const { dispatchAddMessages } = this.props;
 
         // todo Get message
-        axios.get('https://my-json-server.typicode.com/yschen25/Interactive_resume/db')
+        axios.get('./../api/queryMessage.php')
             .then(response => dispatchAddMessages(response.data))
             .catch(error => console.log(error));
     }

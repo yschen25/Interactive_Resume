@@ -139,7 +139,7 @@ class ConnectMessageBoard extends React.Component {
         // todo Chinese limit
 
         // todo Send message
-        axios.post('https://my-json-server.typicode.com/yschen25/Interactive_resume/db', {
+        axios.post('./../api/sendMessage.php', {
             name: name,
             sex: sex,
             msg: textarea
