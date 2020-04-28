@@ -4630,7 +4630,6 @@ var lockFunction = function () {
         this.setupAudio();
         this.onResize();
         this.listen();
-        this.open();
     }
 
     _createClass(Lock, [{
@@ -4662,6 +4661,7 @@ var lockFunction = function () {
                 this.dom.lock.classList.add('verified');
                 this.dom.status.textContent = 'UNLOCKED';
                 this.sounds.success.play();
+                this.dom.isPass.value = true;
 
             } else {
                 this.dom.lock.classList.remove('verified');
@@ -4670,9 +4670,8 @@ var lockFunction = function () {
                     this.sounds.fail.play();
                 }
                 this.verified = false;
+                this.dom.isPass.value = false;
             }
-
-            this.open(this.verified);
         }
     }, {
         key: 'getCode',
@@ -4692,6 +4691,7 @@ var lockFunction = function () {
             this.dom.lock = document.querySelector('.show-lock');
             this.dom.rows = document.querySelectorAll('.row');
             this.dom.code = document.querySelector('.code');
+            this.dom.isPass = document.querySelector('.isPass');
             this.dom.status = document.querySelector('.status');
         }
     }, {
@@ -4784,14 +4784,7 @@ var lockFunction = function () {
                 _loop2(i, len);
             }
         }
-    },
-        {
-            key: 'open',
-            value: function open(verified) {
-                return verified;
-            }
-        }
-    ]);
+    }]);
 
     return Lock;
 }();

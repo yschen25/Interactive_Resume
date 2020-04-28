@@ -116,6 +116,17 @@
         opacity: 1;
         transition-duration: 64ms;
     }
+
+    p {
+        position: fixed;
+        text-align: center;
+        color: #d7dbdb;
+        font-size: 1.8rem;
+        top: 255px;
+        left: 50%;
+        width: 500px;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .is-selected .text {
@@ -336,7 +347,6 @@
     cursor: pointer;
     transform: translateY(-50%);
 }
-
 
 .flickity-prev-next-button:focus {
     outline: none;

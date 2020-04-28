@@ -68,8 +68,6 @@ class ConnectWall extends React.Component {
 
         });
 
-        isHintShow = true;
-
         return (
 
             <div className="wall"

@@ -18,35 +18,40 @@ class ConnectDesk extends React.Component {
         let name = e.target.getAttribute('data-name');
 
         // Show popup
-        if(name !== null ){
+        if (name !== null) {
             const {dispatchChangeStatus} = this.props;
             dispatchChangeStatus({
                 name,
                 show: true
             });
         }
+
+        // Hide the shining animation after click rose
+        if (name === 'rose') {
+            document.querySelector('.rose').style.animation = 'none';
+        }
     }
 
     render() {
         return (
-               <div className="desk" onClick={this.openPopUp.bind(this)}>
-                   <img className="lock" data-name="lock" src={lock}/>
-                   <img id="rose" className="rose" data-name="rose" src={rose}/>
-                   <img className="papers" data-name="messageBoard" src={papers} />
-                   <img className="phone" data-name="phone" src={phone} />
-                   <img className="keyboard" data-name="keyboard" src={keyboard} />
-                   <img className="mouse" data-name="mouse" src={mouse} />
-                   <img className="coffee" data-name="coffee" src={coffee} />
-                   <img className="octocat" data-name="octocat" src={octocat} />
-                   <img className="notebooks" data-name="notebooks" src={notebooks} />
-               </div>
+            <div className="desk" onClick={this.openPopUp.bind(this)}>
+                <img className="lock" data-name="lock" src={lock}/>
+                <img id="rose" className="rose" data-name="rose" src={rose}/>
+                <img className="papers" data-name="messageBoard" src={papers}/>
+                <img className="phone" data-name="phone" src={phone}/>
+                <img className="keyboard" data-name="keyboard" src={keyboard}/>
+                <img className="mouse" data-name="mouse" src={mouse}/>
+                <img className="coffee" data-name="coffee" src={coffee}/>
+                <img className="octocat" data-name="octocat" src={octocat}/>
+                <img className="notebooks" data-name="notebooks" src={notebooks}/>
+            </div>
         );
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        dispatchChangeStatus : selected => {
+        dispatchChangeStatus: selected => {
             dispatch(changeStatus(selected))
         }
     }

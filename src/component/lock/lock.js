@@ -5,15 +5,23 @@ import lockFunction from './lockFunction';
 class Lock extends React.Component {
 
     componentDidMount() {
-        let lock = new lockFunction();
-        let isOpen = lock.open();
-        console.log(isOpen);
+        new lockFunction();
+    }
+
+    componentDidUpdate() {
+        let isPass = document.querySelector('.isPass').value;
+
+        // Show rose
+        if (isPass) {
+            document.querySelector('.rose').style.display = 'block' ;
+        }
     }
 
     render() {
         return (
             <div>
                 <div className="lock show-lock">
+                    <input type="hidden" className="isPass"/>
                     <div className="screen">
                         <div className="code"> 0000</div>
                         <div className="status">LOCKED</div>
@@ -148,6 +156,7 @@ class Lock extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <p>Ask capoo for the password</p>
                 </div>
             </div>
         )
