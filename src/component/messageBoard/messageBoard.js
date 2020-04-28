@@ -141,7 +141,7 @@ class ConnectMessageBoard extends React.Component {
         // todo if no message
 
         // todo Send message
-        axios.post('https://www.yschen25.com/portfolio/Interactive_Resume/api/sendMessage.php', {
+        axios.post('./api/sendMessage.php', {
             name: name,
             sex: sex,
             msg: textarea
@@ -152,10 +152,8 @@ class ConnectMessageBoard extends React.Component {
             if (response.status) {
 
                 alert('Message send success!');
+                // location.reload();
 
-                setTimeout(function () {
-                    location.reload();
-                }, 3000);
             }
 
         })
