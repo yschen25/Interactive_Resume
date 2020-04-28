@@ -304,7 +304,7 @@ class ConnectDisplay extends React.Component {
                                 if (val[1].sex === 3) return <img className="msgPic" src={hamster}/>;
                                 else return <img className="msgPic" src={man}/>;
                             })()}
-                            <h1>Name : {val[0]}</h1>
+                            <h1>Name : {val[1].name}</h1>
                             <p>{val[1].text}</p>
                             <div className="msgBtn" onClick={this.showMessageBoard.bind(this)}>Leave a Message</div>
                         </article>)}
