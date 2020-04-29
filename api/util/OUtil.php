@@ -4,7 +4,7 @@ class OUtil
 {
     public static function isAjax()
     {
-        return (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && (strtolower(getenv('HTTP_X_REQUESTED_WITH')) === 'xmlhttprequest'));
+        return (isset($_SERVER['X-Requested-With']) && (strtolower(getenv('X_REQUESTED_WITH')) === 'XMLHttpRequest'));
     }
 
     public static function responseJson($result)

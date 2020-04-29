@@ -12,7 +12,7 @@ class Lock extends React.Component {
         let isPass = document.querySelector('.isPass').value;
 
         // Show rose
-        if (isPass) {
+        if (isPass === 'true') {
             document.querySelector('.rose').style.display = 'block' ;
         }
     }

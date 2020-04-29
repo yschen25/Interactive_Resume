@@ -1,19 +1,22 @@
 import React from 'react';
 import axios from 'axios';
-import { connect } from 'react-redux';
-import { addMessages } from '../../action';
-import { Display } from '../display/display';
-import { Wall } from '../wall/wall';
-import { Desk } from '../desk/desk';
+import {connect} from 'react-redux';
+import {addMessages} from '../../action';
+import {Display} from '../display/display';
+import {Wall} from '../wall/wall';
+import {Desk} from '../desk/desk';
 import Text from '../text/text'
 
 class ConnectRoom extends React.Component {
 
-    componentDidMount(){
-        const { dispatchAddMessages } = this.props;
+    componentDidMount() {
+        const {dispatchAddMessages} = this.props;
 
         // todo Get message
-        axios.get('./api/queryMessage.php')
+        axios.get('./api/queryMessage.php',
+            {
+                headers: {'Accept': 'application/json'},
+            })
             .then(response => dispatchAddMessages(response.data))
             .catch(error => console.log(error));
     }
@@ -21,11 +24,11 @@ class ConnectRoom extends React.Component {
     render() {
         return (
             <div>
-                <Display />
+                <Display/>
                 <div className="wrapper">
-                    <Wall />
-                    <Desk />
-                    <Text />
+                    <Wall/>
+                    <Desk/>
+                    <Text/>
                 </div>
             </div>
         );
@@ -33,7 +36,7 @@ class ConnectRoom extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    dispatchAddMessages: (text) =>{
+    dispatchAddMessages: (text) => {
         dispatch(addMessages(text));
     }
 });

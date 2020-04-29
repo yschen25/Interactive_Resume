@@ -16,12 +16,6 @@ class sendMessage
 
     public function onAjax()
     {
-        echo $_POST['name'];
-        echo $_POST['sex'];
-        echo $_POST['msg'];
-
-        exit();
-
         $name = $_POST['name'];
         $sex = $_POST['sex'];
         $msg = $_POST['msg'];
@@ -35,7 +29,7 @@ class sendMessage
             );
         }
 
-        if (empty($message)) {
+        if (empty($msg)) {
             OUtil::responseJson(
                 array(
                     'status' => false,

@@ -32,7 +32,7 @@
 .show-pic1,
 .show-pic2,
 .show-pic3 {
-    background: url('./../img/show_pic1.png') no-repeat center center;
+    background: url('../img/show_pic1.png') no-repeat center center;
     width: 500px;
     height: 650px;
     background-size: contain;
@@ -44,7 +44,7 @@
 }
 
 .show-pic2 {
-    background: url('./../img/show_pic2.png') no-repeat center center;
+    background: url('../img/show_pic2.png') no-repeat center center;
     width: 700px;
     height: 500px;
     background-size: contain;
@@ -56,7 +56,7 @@
 }
 
 .show-pic3 {
-    background: url('./../img/show_pic3.png') no-repeat center center;
+    background: url('../img/show_pic3.png') no-repeat center center;
     height: 700px;
     background-size: contain;
     top: -120px;
@@ -269,6 +269,14 @@
             }
         }
     }
+}
+
+.show-certificate {
+    background: url('../img/show_certificate.png') no-repeat center center;
+    width: 800px;
+    height: 800px;
+    background-size: contain;
+    top: -150px;
 }
 
 .noMsg {

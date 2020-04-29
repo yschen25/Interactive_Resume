@@ -1,7 +1,6 @@
 const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const config = require('./webpack.base.config.js'); // Merge base webpack config
 
 module.exports = merge(config, {
@@ -26,10 +25,6 @@ module.exports = merge(config, {
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: [`${__dirname}/dist`],
             verbose: true,
-        }),
-        // Bundle the style script isolated and insert it to html
-        new MiniCssExtractPlugin({
-            filename: 'dist/css/bundle.[hash].css'
         })
     ],
     performance: {

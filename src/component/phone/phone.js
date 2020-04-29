@@ -61,7 +61,7 @@ class ConnectPhone extends React.Component {
         let response = '';
         switch (type) {
             case 'intro':
-                response = 'I have 3+ years experiences in front-end, back-end and designing websites. ' +
+                response = 'I have 3 years experiences in front-end, back-end and designing websites. ' +
                 'I have spearheaded building a new official website from the old one when nobody wanted to take the responsibility, and I cooperate and communicate                   with team members smoothly, finally make website online, the clients are really appreciate my effort. ' +
                 'I also proactively improve company work environment such as held a series training classes, write inter message board to help employee can contact to                boss directly. I love to write side-project and review code with my colleagues in my spare time. My supervisors always notes that he impressed my                     strong logic and enthusiasm for the job. ' +
                 'I have been be an exchange student in Germany, I need to deal with plenty of things alone, that means I can work under great pressures.';

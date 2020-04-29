@@ -1,8 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-let isDev = process.env.NODE_ENV === "dev";
 
 module.exports = {
     entry: {
@@ -56,7 +53,7 @@ module.exports = {
                    but before other preprocessor loaders like e.g sass|less|stylus-loader */
                 test: /\.(css|scss|sass)$/,
                 use: [
-                    isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    'style-loader',
                     'css-loader',
                     'postcss-loader',
                     'sass-loader'

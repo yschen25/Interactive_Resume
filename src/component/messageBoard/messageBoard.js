@@ -136,16 +136,20 @@ class ConnectMessageBoard extends React.Component {
         console.log('sex', sex);
         console.log('textarea', textarea);
 
-        // todo Chinese limit
-
-        // todo if no message
-
         // todo Send message
-        axios.post('./api/sendMessage.php', {
-            name: name,
-            sex: sex,
-            msg: textarea
-        }).then(response => {
+        axios.post('./api/sendMessage.php',
+            {
+                data: {
+                    name: name,
+                    sex: sex,
+                    msg: textarea
+                },
+                responseType: 'json',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Content-Type': 'application/json'
+                },
+            }).then(response => {
 
             console.log('response', response);
 
@@ -153,11 +157,32 @@ class ConnectMessageBoard extends React.Component {
 
                 alert('Message send success!');
                 // location.reload();
-
             }
 
-        })
-            .catch(error => console.log(error));
+        }).catch(error => console.log(error));
+
+
+        // let data = {
+        //     name: name,
+        //     sex: sex,
+        //     msg: textarea
+        // };
+        //
+        // axios({
+        //     url: "./api/sendMessage.php",
+        //     method: "POST",
+        //     headers: {
+        //         'X-Requested-With': 'XMLHttpRequest',
+        //         "Content-Type": "application/json",
+        //     },
+        //     data: data
+        // }).then(response => {
+        //     console.log(response)
+        // }).catch(error => {
+        //     console.log(error);
+        // });
+
+        // todo Chinese limit
     }
 
     render() {

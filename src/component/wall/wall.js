@@ -13,7 +13,7 @@ import computer from '../../img/computer.png';
 import stick1 from '../../img/stick1.png';
 import stick2 from '../../img/stick2.png';
 import stick3 from '../../img/stick3.png';
-import calender from '../../img/calender.png';
+import certificate from '../../img/certificate.png';
 import rightBooks from '../../img/right_books.png';
 
 class ConnectWall extends React.Component {
@@ -84,7 +84,7 @@ class ConnectWall extends React.Component {
                 <img className="stick" data-name="stick1" src={stick1}/>
                 <img className="stick stick2" data-name="stick2" src={stick2}/>
                 <img className="stick stick3" data-name="stick3" src={stick3}/>
-                <img className="calender" data-name="calender" src={calender}/>
+                <img className="certificate" data-name="certificate" src={certificate}/>
                 <img className="rightBooks" data-name="rightBooks" src={rightBooks}/>
             </div>
         );
