@@ -295,7 +295,7 @@ class ConnectDisplay extends React.Component {
 
                 // When there is no message
                 if (val[0] === 'notebooks' && val[1].show) {
-                    if (data.messages === null || data.messages === '' || Object.keys(data.messages).length === 0) {
+                    if (data.messages === null || data.messages === '' || data.messages === undefined) {
                         display = <div>
                             <p className="noMsg">Be the first person who leave message !!!!!!</p>
                             <MessageBoard/>
@@ -304,7 +304,7 @@ class ConnectDisplay extends React.Component {
                 }
 
                 // Show notebooks
-                if (val[0] === 'notebooks' && val[1].show && data.messages !== null && data.messages !== '' && Object.keys(data.messages).length !== 0) {
+                if (val[0] === 'notebooks' && val[1].show && data.messages !== null && data.messages !== '' && data.messages !== undefined) {
 
                     display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#fffbe8"
                                         className="show-notebooks">

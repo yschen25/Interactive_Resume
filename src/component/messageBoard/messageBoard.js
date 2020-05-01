@@ -132,55 +132,31 @@ class ConnectMessageBoard extends React.Component {
             return;
         }
 
-        console.log('name', name);
-        console.log('sex', sex);
-        console.log('textarea', textarea);
+        let data = new FormData();
+        data.set("name", name);
+        data.set("sex", sex);
+        data.set("msg", textarea);
+
+        const config  = {
+            headers : {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        };
 
         // todo Send message
-        axios.post('./api/sendMessage.php',
-            {
-                data: {
-                    name: name,
-                    sex: sex,
-                    msg: textarea
-                },
-                responseType: 'json',
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'Content-Type': 'application/json'
-                },
-            }).then(response => {
+        axios.post('./api/sendMessage.php', data, config
+        ).then(response => {
 
-            console.log('response', response);
+                console.log('response', response);
 
-            if (response.status) {
+                if (response.status) {
 
-                alert('Message send success!');
-                // location.reload();
-            }
+                    alert('Message send success!');
+                    // location.reload();
+                }
 
-        }).catch(error => console.log(error));
-
-
-        // let data = {
-        //     name: name,
-        //     sex: sex,
-        //     msg: textarea
-        // };
-        //
-        // axios({
-        //     url: "./api/sendMessage.php",
-        //     method: "POST",
-        //     headers: {
-        //         'X-Requested-With': 'XMLHttpRequest',
-        //         "Content-Type": "application/json",
-        //     },
-        //     data: data
-        // }).then(response => {
-        //     console.log(response)
-        // }).catch(error => {
-        //     console.log(error);
-        // });
+            }).catch(error => console.log(error));
 
         // todo Chinese limit
     }

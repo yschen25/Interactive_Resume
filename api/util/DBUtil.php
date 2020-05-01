@@ -24,7 +24,9 @@ class DBUtil
      */
     public function sendMessage($userName, $sex, $msg)
     {
-        $sql = "INSERT INTO `interactive_resume_message` (`no`, `name`, `sex`, `msg`, `time`) VALUES (:userName, :msg, :ip, :time)";
+        date_default_timezone_set("Asia/Taipei");
+
+        $sql = "INSERT INTO `interactive_resume_message` (`name`, `sex`, `msg`, `time`) VALUES (:userName, :sex, :msg, :time)";
         $sql = self::$DB->prepare($sql);
         $sql->bindValue(':userName', $userName);
         $sql->bindValue(':sex', $sex);
