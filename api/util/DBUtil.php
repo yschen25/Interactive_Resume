@@ -61,10 +61,9 @@ class DBUtil
      */
     public function queryMessage()
     {
-        $sql = "SELECT * FROM `interactive_resume_message` BY time DESC";
+        $sql = "SELECT * FROM interactive_resume_message ORDER BY time DESC";
         $sql = self::$DB->prepare($sql);
         $sql->execute();
-        $result = $sql->fetchAll();
-        return $result;
+        return $sql->fetchAll();
     }
 }

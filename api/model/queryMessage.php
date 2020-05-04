@@ -18,6 +18,7 @@ class queryMessage
     {
         $DBUtil = new DBUtil();
         $result = $DBUtil->queryMessage();
+        
         if (count($result) > 0) {
             OUtil::responseJson(
                 array(

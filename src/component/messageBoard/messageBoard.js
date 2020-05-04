@@ -137,26 +137,23 @@ class ConnectMessageBoard extends React.Component {
         data.set("sex", sex);
         data.set("msg", textarea);
 
-        const config  = {
-            headers : {
+        const config = {
+            headers: {
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
         };
 
-        // todo Send message
+        // Send message
         axios.post('./api/sendMessage.php', data, config
         ).then(response => {
 
-                console.log('response', response);
+            if (response.data.status) {
+                alert('Message send success!');
+                location.reload();
+            }
 
-                if (response.status) {
-
-                    alert('Message send success!');
-                    // location.reload();
-                }
-
-            }).catch(error => console.log(error));
+        }).catch(error => console.log(error));
 
         // todo Chinese limit
     }
@@ -168,18 +165,15 @@ class ConnectMessageBoard extends React.Component {
                 <p className="desc">Welcome all of you here to my interactive resume, wish you have fun here</p>
                 <div className="msg">
                     <label htmlFor="name">Name : </label>
-                    <input id="name" name="name" autoFocus autoComplete="off" placeholder="Your name here"/>
+                    <input id="name" name="name" maxLength="20" autoFocus autoComplete="off" placeholder="Your name here"/>
                     <label htmlFor="avatar">Avatar : </label>
-                    <input type="radio" className="avatar" id="man" name="avatar" value="1"/><label htmlFor="man"><img
-                    src={man}/></label>
+                    <input type="radio" className="avatar" id="man" name="avatar" value="1"/><label htmlFor="man"><img src={man}/></label>
                     <input type="radio" className="avatar" id="woman" name="avatar" value="2"/><label
-                    htmlFor="woman"><img
-                    src={woman}/></label>
+                    htmlFor="woman"><img src={woman}/></label>
                     <input type="radio" className="avatar" id="hamster" name="avatar" value="3"/><label
-                    htmlFor="hamster"><img
-                    src={hamster}/></label>
+                    htmlFor="hamster"><img src={hamster}/></label>
                     <img id="pen" className="pen" src={pen}/>
-                    <textarea id="textarea" cols="40" rows="5" data-count={this.state.count}
+                    <textarea id="textarea" cols="40" rows="5" maxLength="200" data-count={this.state.count}
                               onFocus={this.focus.bind(this)} onBlur={this.blur.bind(this)}
                               onKeyPress={this.typeMessage.bind(this)}></textarea>
                     <p id="warningText">There are {this.state.letter} letters left</p>

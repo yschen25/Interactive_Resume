@@ -109,7 +109,7 @@ const roomReducer = (state = initState, action) => {
         case  ADD_MESSAGES:
             return {
                 ...state,
-                messages: action.payload.messages
+                messages: action.payload
             };
         default:
             return state;

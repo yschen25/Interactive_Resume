@@ -295,7 +295,7 @@ class ConnectDisplay extends React.Component {
 
                 // When there is no message
                 if (val[0] === 'notebooks' && val[1].show) {
-                    if (data.messages === null || data.messages === '' || data.messages === undefined) {
+                    if (data.messages.result === null || data.messages.result === '' || data.messages.result === undefined) {
                         display = <div>
                             <p className="noMsg">Be the first person who leave message !!!!!!</p>
                             <MessageBoard/>
@@ -304,18 +304,18 @@ class ConnectDisplay extends React.Component {
                 }
 
                 // Show notebooks
-                if (val[0] === 'notebooks' && val[1].show && data.messages !== null && data.messages !== '' && data.messages !== undefined) {
+                if (val[0] === 'notebooks' && val[1].show && data.messages !== null && data.messages.result !== '' && data.messages.result !== undefined) {
 
                     display = <FlipPage showSwipeHint showTouchHint loopForever pageBackground="#fffbe8"
                                         className="show-notebooks">
-                        {Object.entries(data.messages).map((val) => <article key={val[0]}>
+                        {Object.entries(data.messages.result).map((val) => <article key={val[0]}>
                             {(() => {
-                                if (val[1].sex === 2) return <img className="msgPic" src={woman}/>;
-                                if (val[1].sex === 3) return <img className="msgPic" src={hamster}/>;
+                                if (val[1].sex === '2') return <img className="msgPic" src={woman}/>;
+                                if (val[1].sex === '3') return <img className="msgPic" src={hamster}/>;
                                 else return <img className="msgPic" src={man}/>;
                             })()}
                             <h1>Name : {val[1].name}</h1>
-                            <p>{val[1].text}</p>
+                            <p>{val[1].msg}</p>
                             <div className="msgBtn" onClick={this.showMessageBoard.bind(this)}>Leave a Message</div>
                         </article>)}
                     </FlipPage>

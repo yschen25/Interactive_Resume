@@ -12,12 +12,22 @@ class ConnectRoom extends React.Component {
     componentDidMount() {
         const {dispatchAddMessages} = this.props;
 
-        // todo Get message
-        axios.get('./api/queryMessage.php',
-            {
-                headers: {'Accept': 'application/json'},
+        const config = {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/json'
+            }
+        };
+
+        // Get message
+        axios.get('./api/queryMessage.php', config)
+            .then(response => {
+
+                if (response.data.status) {
+                    dispatchAddMessages(response.data)
+                }
+
             })
-            .then(response => dispatchAddMessages(response.data))
             .catch(error => console.log(error));
     }
 
