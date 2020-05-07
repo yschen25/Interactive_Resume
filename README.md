@@ -24,4 +24,9 @@ My interactive resume.
 ### **[INTERACTIVE RESUME](https://www.yschen25.com/portfolio/interactiveResume/) -> Where You Can Enter The Website**
 <img src="Interactive_Resume_01.png" alt="Interactive_Resume" title="Interactive_Resume">
 <br/>
+<br/>
+<br/>
 
+<p align="center">
+   <img src="Interactive_Resume_01.gif" alt="Interactive_Resume" title="Interactive_Resume">
+</p>
