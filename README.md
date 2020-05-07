@@ -30,3 +30,13 @@ My interactive resume.
 <p align="center">
    <img src="Interactive_Resume_01.gif" alt="Interactive_Resume" title="Interactive_Resume">
 </p>
+<br/>
+<br/>
+
+## Sources
+Using [Freepik](https://www.freepik.com/).
+<br/>
+<br/>
+
+## Demo Editor Tools
+Using [ScreenToGif](http://www.screentogif.com/) to record and [ezGIF](https://ezgif.com/) to edit.
