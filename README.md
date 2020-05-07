@@ -6,7 +6,7 @@ My interactive resume.
 ## Description
 
 <p>It's a interactive resume which created by React.js </p>
-<p>Unlike the normal resume you usually know that always listed the skills and experinences ...etc as below, this website is different that you can know me deeper by interacting with the object on my desk on the website, not only knowing me by texts. there are also a lock you can solve by the hint, you also can find lots of programmer's easter eggs, wish all of you have fun here. </p>
+<p>Unlike the normal resume you usually know that always listed the skills and experiences ...etc as below, this website is different that you can know me deeper by interacting with the object on my desk on the website, not only knowing me by texts. there are also a lock you can solve by the hint, you also can find lots of programmer's easter eggs, wish all of you have fun here. </p>
 <br/>
 
 ## Authors
