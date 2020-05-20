@@ -8,7 +8,7 @@
     width: 700px;
     height: 475px;
     margin: auto;
-    font-size: 1.2rem;
+    font-size: 80%;
     padding: 20px;
     background: #a3d0da;
 
@@ -24,9 +24,14 @@
     .msg {
         font-size: 1.4rem;
         margin-top: 60px;
+        display: flex;
+
+        .inputItem{
+            flex: 2;
+        }
 
         #name {
-            width: 250px;
+            width: 50%;
             height: 35px;
             line-height: 35px;
             padding-left: 10px;
@@ -45,7 +50,7 @@
 
         img {
             width: 30px;
-            vertical-align: bottom;
+            vertical-align: middle;
         }
 
         textarea {
@@ -78,9 +83,10 @@
         #warningText {
             position: absolute;
             left: 150px;
-            bottom: -13px;
+            bottom: -4px;
             transform: translate(-50%, -50%);
             color: #c52222;
+            font-size: 80%;
         }
 
         .submitBtn {
@@ -88,7 +94,7 @@
             width: 120px;
             height: 45px;
             background: #8b70ce;
-            font-size: 1.4rem;
+            font-size: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
             line-height: 45px;
@@ -111,7 +117,7 @@
             width: 250px;
             height: 45px;
             background: #4874b7;
-            font-size: 1.4rem;
+            font-size: 80%;
             line-height: 45px;
             text-align: left;
             text-indent: 30px;

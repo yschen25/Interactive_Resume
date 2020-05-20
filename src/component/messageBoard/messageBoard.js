@@ -164,14 +164,18 @@ class ConnectMessageBoard extends React.Component {
                 <h1>Message Board</h1>
                 <p className="desc">Welcome all of you here to my interactive resume, wish you have fun here</p>
                 <div className="msg">
-                    <label htmlFor="name">Name : </label>
-                    <input id="name" name="name" maxLength="20" autoFocus autoComplete="off" placeholder="Your name here"/>
-                    <label htmlFor="avatar">Avatar : </label>
-                    <input type="radio" className="avatar" id="man" name="avatar" value="1"/><label htmlFor="man"><img src={man}/></label>
-                    <input type="radio" className="avatar" id="woman" name="avatar" value="2"/><label
-                    htmlFor="woman"><img src={woman}/></label>
-                    <input type="radio" className="avatar" id="hamster" name="avatar" value="3"/><label
-                    htmlFor="hamster"><img src={hamster}/></label>
+                    <div className="inputItem">
+                        <label htmlFor="name">Name : </label>
+                        <input id="name" name="name" maxLength="20" autoFocus autoComplete="off" placeholder="Your name"/>
+                    </div>
+                    <div className="inputItem">
+                        <label htmlFor="avatar">Avatar : </label>
+                        <input type="radio" className="avatar" id="man" name="avatar" value="1"/><label htmlFor="man"><img src={man}/></label>
+                        <input type="radio" className="avatar" id="woman" name="avatar" value="2"/><label
+                        htmlFor="woman"><img src={woman}/></label>
+                        <input type="radio" className="avatar" id="hamster" name="avatar" value="3"/><label
+                        htmlFor="hamster"><img src={hamster}/></label>
+                    </div>
                     <img id="pen" className="pen" src={pen}/>
                     <textarea id="textarea" cols="40" rows="5" maxLength="200" data-count={this.state.count}
                               onFocus={this.focus.bind(this)} onBlur={this.blur.bind(this)}
