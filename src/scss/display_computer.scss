@@ -1,5 +1,5 @@
 .show-computer {
-    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
+    font-family: "Constantia", sans-serif;
     background: url('../img/show_computer.png') no-repeat center center;
     width: 800px;
     height: 700px;
@@ -213,7 +213,7 @@
             height: 25px;
             text-align: center;
             line-height: 25px;
-            font-size: 0.8rem;
+            font-size: 0.4rem;
             color: #fff;
             margin: 0 10px;
 
@@ -250,9 +250,10 @@
         }
 
         .chromeObj {
-            width: 120px;
+            width: 110px;
             left: 100px;
             cursor: pointer;
+            text-indent: 15px;
 
             &:before {
                 content: "";
@@ -262,10 +263,11 @@
         }
 
         .phpstormObj {
-            width: 120px;
+            width: 110px;
             left: 220px;
             background: #333;
             cursor: pointer;
+            text-indent: 15px;
 
             &:before {
                 content: "";
@@ -275,10 +277,11 @@
         }
 
         .photoshopObj {
-            width: 120px;
-            left: 340px;
+            width: 110px;
+            left: 330px;
             background: #333;
             cursor: pointer;
+            text-indent: 15px;
 
             &:before {
                 content: "";
@@ -288,10 +291,11 @@
         }
 
         .gitbashObj {
-            width: 120px;
-            left: 460px;
+            width: 110px;
+            left: 440px;
             background: #333;
             cursor: pointer;
+            text-indent: 15px;
 
             &:before {
                 content: "";
@@ -301,8 +305,8 @@
         }
 
         .timeObj {
-            width: 151px;
-            left: 578px;
+            width: 178px;
+            left: 550px;
             background: #333;
             margin-right: 10px;
 

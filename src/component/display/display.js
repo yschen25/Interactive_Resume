@@ -6,6 +6,7 @@ import {Rose} from "../rose/rose";
 import Lock from "../lock/lock";
 import {Phone} from "../phone/phone";
 import {MessageBoard} from "../messageBoard/messageBoard";
+import Certificate from "../certificate/certificate";
 import man from "../../img/avatar1.png";
 import woman from "../../img/avatar2.png";
 import hamster from "../../img/avatar3.png";
@@ -256,10 +257,10 @@ class ConnectDisplay extends React.Component {
                              data-name='phpstorm' onClick={this.submit}>Interactiv...
                         </div>
                         <div className={`${photoshopDisplay !== '' ? 'objActive' : ''} obj photoshopObj`}
-                             data-name='photoshop' onClick={this.submit}>Web Desig...
+                             data-name='photoshop' onClick={this.submit}>Web Desi...
                         </div>
                         <div className={`${gitBashDisplay !== '' ? 'objActive' : ''} obj gitbashObj`}
-                             data-name='gitBash' onClick={this.submit}>MINGW64 : ..
+                             data-name='gitBash' onClick={this.submit}>MINGW64...
                         </div>
                         <div className="obj timeObj">{this.state.time}</div>
                     </div>;
@@ -324,6 +325,11 @@ class ConnectDisplay extends React.Component {
                 // Show messageBoard
                 if (val[0] === 'messageBoard' && val[1].show) {
                     display = <MessageBoard/>;
+                }
+
+                // Show certificate
+                if (val[0] === 'certificate' && val[1].show) {
+                    display = <Certificate/>;
                 }
 
                 mask = <div className="mask " data-name={`show-${val[0]}`} onClick={this.closePopUp.bind(this)}></div>;

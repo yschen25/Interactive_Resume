@@ -17,8 +17,9 @@
     }
 
     .desc {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.5;
+        text-align: center;
     }
 
     .msg {
@@ -82,11 +83,11 @@
 
         #warningText {
             position: absolute;
-            left: 150px;
+            left: 162px;
             bottom: -4px;
             transform: translate(-50%, -50%);
             color: #c52222;
-            font-size: 90%;
+            font-size: 80%;
         }
 
         .submitBtn {
@@ -94,7 +95,7 @@
             width: 120px;
             height: 45px;
             background: #8b70ce;
-            font-size: 90%;
+            font-size: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
             line-height: 45px;
@@ -117,7 +118,7 @@
             width: 250px;
             height: 45px;
             background: #4874b7;
-            font-size: 90%;
+            font-size: 80%;
             line-height: 45px;
             text-align: left;
             text-indent: 30px;

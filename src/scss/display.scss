@@ -271,12 +271,59 @@
     }
 }
 
-.show-certificate {
+.certificateBg {
+    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif, 'Noto Sans TC';
     background: url('../img/show_certificate.png') no-repeat center center;
     width: 800px;
     height: 800px;
     background-size: contain;
-    top: -150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin: auto;
+    font-size: 95%;
+    padding: 20px;
+    overflow: hidden;
+    line-height: 1.5;
+
+    h1 {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .experiences {
+        position: absolute;
+        top: 220px;
+
+        li {
+            margin: 10px;
+        }
+    }
+
+    .skillList {
+        width: 80%;
+        position: absolute;
+        top: 440px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .contactInfo {
+        position: absolute;
+        top: 600px;
+        right: 50px;
+
+        a {
+            margin: 5px;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+        }
+    }
 }
 
 .noMsg {

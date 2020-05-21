@@ -166,7 +166,7 @@ class ConnectMessageBoard extends React.Component {
                 <div className="msg">
                     <div className="inputItem">
                         <label htmlFor="name">Name : </label>
-                        <input id="name" name="name" maxLength="20" autoFocus autoComplete="off" placeholder="Your name"/>
+                        <input id="name" name="name" maxLength="20" autoFocus autoComplete="off" placeholder="Your Name"/>
                     </div>
                     <div className="inputItem">
                         <label htmlFor="avatar">Avatar : </label>
