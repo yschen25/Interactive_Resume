@@ -4,20 +4,20 @@ class Certificate extends React.Component {
     render() {
         return (
             <div className="certificateBg">
-                <h1>Yi-Shian Chen</h1>
+                <h1>Yi-Shiuan Chen</h1>
                 <ul className="experiences item">
-                    <li>3 years experiences in front-end and back-end</li>
-                    <li>Spearhead building new official website twice</li>
-                    <li>Volunteer to hold technical training programs and write documents</li>
-                    <li>Excellent communication skills and logic by being freelancer and taking business trip</li>
-                    <li>Got best website design and RWD website reward in class</li>
+                    <li><span>3 years experiences</span> in front-end and back-end</li>
+                    <li><span>Spearhead team</span> to develop new official website twice</li>
+                    <li>Volunteer to <span>held technical training programs and write documents</span></li>
+                    <li>Excellent <span>communication skills and logic</span> by being freelancer and taking business trip</li>
+                    <li>Got <span>best website design and RWD website reward</span> in class</li>
                 </ul>
                 <div className="skillList item">
-                    <p><b>Front-End</b> : React.js, Redux, Axios, JavaScript, ES6, Styled Component, jQuery, Babel,
-                        ESlint, Jest</p>
-                    <p>Back-End : PHP, RESTful API, PHPUnit, MySQL, Phalcon</p>
-                    <p>Others : PhpStorm, Sublime, Photoshop, Illustrator, SonarQube, Docker, Web Design, UI/UX Design,
-                        Agile, SEO</p>
+                    <p><b>Front-End</b> : HTML, CSS, Flexbox, RWD, SCSS, SASS, Bootstrap, React.js, Redux,
+                        Axios, JavaScript, ES6, Styled Component, jQuery, Babel, ESlint, Jest, SPA</p>
+                    <p><b>Back-End</b> : PHP, RESTful API, PHPUnit, Phalcon, Blitz, MySQL </p>
+                    <p><b>Others</b> : Git, Webpack, NPM, Docker, PhpStorm, Sublime, Photoshop, Illustrator,
+                        SonarQube, Docker, Web Design, UI/UX Design, Agile, SEO</p>
                 </div>
                 <div className="contactInfo item">
                     <a href="https://github.com/yschen25" target="_blank">Github</a>
