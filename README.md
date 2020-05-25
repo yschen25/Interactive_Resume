@@ -33,7 +33,6 @@ My interactive resume.
    <img src="Interactive_Resume_02.gif" alt="Interactive_Resume" title="Interactive_Resume">
 </p>
 <br/>
-<br/>
 
 ## Sources
 Using [Freepik](https://www.freepik.com/).
