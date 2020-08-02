@@ -75,7 +75,7 @@ class ConnectPhone extends React.Component {
                 response = 'I am extremely proactive, I spearheaded revised website actively. ' +
                     'held git training courses and wrote technical documents to reduce problem occurs on the work,  ' +
                     'revised webpack config of official website to reduce the bundle time to half, and import ESLint, ' +
-                    'SonarLint and using Git Pre-commit to maintain the quantity of code and avoid the debt.'
+                    'SonarLint and using Git Pre-commit to maintain the quantity of code and avoid the debt.';
                 break;
             case 'disagreement':
                 response = 'I will listen to the opposite opinion first, try to understand the reason why he think at that way, ' +
