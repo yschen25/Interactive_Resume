@@ -61,42 +61,36 @@ class ConnectPhone extends React.Component {
         let response = '';
         switch (type) {
             case 'intro':
-                response = 'I have 3 years experiences in front-end, back-end and designing websites. ' +
-                'I have spearheaded building a new official website from the old one when nobody wanted to take the responsibility, and I cooperate and communicate                   with team members smoothly, finally make website online, the clients are really appreciate my effort. ' +
-                'I also proactively improve company work environment such as held a series training classes, write inter message board to help employee can contact to                boss directly. I love to write side-project and review code with my colleagues in my spare time. My supervisors always notes that he impressed my                     strong logic and enthusiasm for the job. ' +
-                'I have been be an exchange student in Germany, I need to deal with plenty of things alone, that means I can work under great pressures.';
+                response = 'I have 3 years experiences in front-end, back-end, and I have spearheaded revising website to make it online, ' +
+                    'hold courses training, write technical documents and review code to enhance efficiency of work, revised ' +
+                    'webpack config of official website to reduce the bundle time to half, and import ESLint, SonarLint and using ' +
+                    'Git Pre-commit to maintain the quantity of code and avoid the debt.';
                 break;
             case 'abroad':
                 response = 'I am eager to take challenges like how to work abroad, how to communicate with people in a foreign language, ' +
                     'I think what makes life sparkles because there are plenty of challenges are waiting for me and I have chance to make progress, ' +
-                    'I wish I can say "What a ride!" In the end of my life.\n';
+                    'I wish I can say "What a ride!" In the end of my life.';
                 break;
             case 'swot':
-                response = 'Strengths : I am extremely curious, ambitious and proactive, there are several examples that come to my mind, ' +
-                    'I spearheaded revised website actively. held git training courses and wrote technic documents to reduce problem occurs on the work, ' +
-                    'I also improved working process by writing gitlab extension, ' +
-                    'helped team evaluated story points by writing scrum poker which was wrote by react.' +
-                    'Weaknesses : I usually spend too much time check over my work again and again, ' +
-                    'for example there are an urgent campaign page needs to be developed' +
-                    ' within 4 hours,  I insist to make this issue not only complete and also has clean code before the deadline,  but I were exhausted.' +
-                    'There are many functions that I don’t need to develop in this time. ' +
-                    'Now I can control myself and realize that "A bird in the hand is worth two in the bush."\n';
+                response = 'I am extremely proactive, I spearheaded revised website actively. ' +
+                    'held git training courses and wrote technical documents to reduce problem occurs on the work,  ' +
+                    'revised webpack config of official website to reduce the bundle time to half, and import ESLint, ' +
+                    'SonarLint and using Git Pre-commit to maintain the quantity of code and avoid the debt.'
                 break;
             case 'disagreement':
-                response = 'I am shine in front-end & bake-end programing, designing and communicating.';
+                response = 'I will listen to the opposite opinion first, try to understand the reason why he think at that way, ' +
+                    'the I explain to he my opinion and reason. once company ask us to use phpstorm instead of sublime, so I ask ' +
+                    'the promoter to demonstrate how to use phpstorm, it convince me, then I became a phpstorm promoter, too, ' +
+                    'finally make whole depart start to use phpstorm.';
                 break;
             case 'stress':
-                response = 'I\'m very skilled at balancing multiple projects and meeting deadlines, ' +
-                    'once I had three large things due in the same month, let new official web online, ' +
-                    'write campaign pages and deal with bugs on old web, that’s a lots of pressures. ' +
-                    'However, Rather than focusing on feeling stressed, I focus on the task first, ' +
-                    'I created a schedule that detailed how I split each things into small assignments, ' +
-                    'then finish them by their priority. Finally customers are really appreciated me,  and I really enjoy it! \n';
+                response = 'I\'m very skilled at balancing multiple projects and meeting deadlines. once I have to let new official ' +
+                    'web online, write campaign pages and maintain old web, that’s tons of pressures. However, Rather than focusing on ' +
+                    'feeling stressed, I focus on the task first. I created a schedule that I split each things into small assignments, ' +
+                    'then finish them by their priority.';
                 break;
-            case 'hire':
-                response = 'I have 3 years experiences in front-end, back-end and design web, ' +
-                    'have spearheaded building a new web from the old one for two times, can get ' +
-                    'into job soon and get started quickly. I also have excellent communication skills by soho and business trip experience.\n';
+            case 'visa':
+                response = 'Yes, I have Tier 5 visa, from 2020/11/15 to 2022/11/15';
                 break;
             default:
                 response = "The line is busy, please wait.";
@@ -140,26 +134,29 @@ class ConnectPhone extends React.Component {
                             <input id="msgInput" type="text" placeholder="Type a message" disabled/>
                             <p className={`${isInputSending ? 'act' : ''} inputSending send`}>Text sending...</p>
                         </div>
-                        <div className={`${isTextDisable ? 'act sending' : ''} icons plane`}><i className="fa fa-paper-plane"></i></div>
+                        <div className={`${isTextDisable ? 'act sending' : ''} icons plane`}><i
+                            className="fa fa-paper-plane"></i></div>
                     </div>
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="intro" onClick={this.sendMessage.bind(this)}>Tell Me About
+                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="intro"
+                     onClick={this.sendMessage.bind(this)}>Tell Me About
                     Yourself.
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="abroad" onClick={this.sendMessage.bind(this)}>Why Do You Want to
+                <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="visa"
+                     onClick={this.sendMessage.bind(this)}>Do You Have Visa ?
+                </div>
+                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="abroad"
+                     onClick={this.sendMessage.bind(this)}>Why Do You Want to
                     Work Abroad ?
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="swot" onClick={this.sendMessage.bind(this)}>Your Strengths
-                    And Weaknesses ?
+                <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="swot"
+                     onClick={this.sendMessage.bind(this)}>What Is Your Strengths ?
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="disagreement" onClick={this.sendMessage.bind(this)}>How Did You Handle The
-                    Disagreement ?
+                <div className={`${isTextDisable ? 'disable' : ''} text`} data-name="disagreement"
+                     onClick={this.sendMessage.bind(this)}>How Do You Handle The Conflict ?
                 </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="stress" onClick={this.sendMessage.bind(this)}>How Do You Handle
-                    Stress ?
-                </div>
-                <div className={`${isTextDisable ? 'disable' : ''} text text3`} data-name="hire" onClick={this.sendMessage.bind(this)}>Why Should We Hire
-                    You ?
+                <div className={`${isTextDisable ? 'disable' : ''} text text2`} data-name="stress"
+                     onClick={this.sendMessage.bind(this)}>How Do You Handle Stress ?
                 </div>
             </div>
         )

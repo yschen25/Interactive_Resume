@@ -8,16 +8,15 @@ class Certificate extends React.Component {
                 <ul className="experiences item">
                     <li><span>3 years experiences</span> in front-end and back-end</li>
                     <li><span>Spearhead team</span> to develop new official website twice</li>
-                    <li>Volunteer to <span>held technical training programs and write documents</span></li>
+                    <li>Volunteer to <span>hold technical training programs and write documents</span></li>
                     <li>Excellent <span>communication skills and logic</span> by being freelancer and taking business trip</li>
-                    <li>Got <span>best website design and RWD website reward</span> in class</li>
+                    <li>Received <span>best website design and RWD website reward</span> in class</li>
                 </ul>
                 <div className="skillList item">
-                    <p><b>Front-End</b> : HTML, CSS, Flexbox, RWD, SCSS, SASS, Bootstrap, React.js, Redux,
-                        Axios, JavaScript, ES6, Styled Component, jQuery, Babel, ESlint, Jest, SPA</p>
-                    <p><b>Back-End</b> : PHP, RESTful API, PHPUnit, Phalcon, Blitz, MySQL </p>
-                    <p><b>Others</b> : Git, Webpack, NPM, Docker, PhpStorm, Sublime, Photoshop, Illustrator,
-                        SonarQube, Docker, Web Design, UI/UX Design, Agile, SEO</p>
+                    <p><b>Front-End</b> : React.js, Redux, Axios, Hook, JavaScript, ES6, Styled Component, Babel,
+                        ESlint, Jest, Enyzme, react-testing-library, jQuery, HTML, CSS, Flexbox, RWD, SCSS, SASS, Bootstrap, Webpack, NPM, SPA</p>
+                    <p><b>Back-End</b> : PHP, PHPUnit, MySQL, RESTful API, Phalcon, Blitz</p>
+                    <p><b>Others</b> : Git, PhpStorm, Sublime, Photoshop, Illustrator, SonarQube, Docker, Web Design, UI/UX Design, Agile, SEO</p>
                 </div>
                 <div className="letter-image">
                     <div className="animated-mail">
