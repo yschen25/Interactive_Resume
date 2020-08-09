@@ -6,7 +6,7 @@ class Certificate extends React.Component {
             <div className="certificateBg">
                 <h1>Yi-Shiuan Chen</h1>
                 <ul className="experiences item">
-                    <li><span>3 years experiences</span> in front-end and back-end</li>
+                    <li><span>3 years experiences</span> in front-end, back-end and website designing</li>
                     <li><span>Spearhead team</span> to develop new official website twice</li>
                     <li>Volunteer to <span>hold technical training programs and write documents</span></li>
                     <li>Excellent <span>communication skills and logic</span> by being freelancer and taking business trip</li>
