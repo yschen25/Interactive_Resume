@@ -15,7 +15,7 @@ class Certificate extends React.Component {
                 <div className="skillList item">
                     <p><b>Front-End</b> : React.js, Redux, Axios, Hook, JavaScript, ES6, Styled Component, Babel,
                         ESlint, Jest, Enyzme, react-testing-library, jQuery, HTML, CSS, Flexbox, RWD, SCSS, SASS, Bootstrap, Webpack, NPM, SPA</p>
-                    <p><b>Back-End</b> : PHP, PHPUnit, MySQL, RESTful API, Phalcon, Blitz</p>
+                    <p><b>Back-End</b> : PHP, PHPUnit, SQL, RESTful API, Phalcon, Blitz</p>
                     <p><b>Others</b> : Git, PhpStorm, Sublime, Photoshop, Illustrator, SonarQube, Docker, Web Design, UI/UX Design, Agile, SEO</p>
                 </div>
                 <div className="letter-image">
