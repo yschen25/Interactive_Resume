@@ -10,6 +10,20 @@ import Text from '../text/text'
 class ConnectRoom extends React.Component {
 
     componentDidMount() {
+
+        // Adjust zoom
+        let width = screen.width;
+        console.log(width);
+
+        let scale = 'scale(1)';
+        if (width < 1920) {
+            scale = 'scale(0.8)';
+        }
+
+        document.body.style.webkitTransform = scale; // Chrome, Opera, Safari
+        document.body.style.msTransform = scale;     // IE 9
+        document.body.style.transform = scale;       // General
+
         const {dispatchAddMessages} = this.props;
 
         const config = {
@@ -33,7 +47,7 @@ class ConnectRoom extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="aaa">
                 <Display/>
                 <div className="wrapper">
                     <Wall/>
