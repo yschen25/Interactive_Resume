@@ -15,14 +15,13 @@ class ConnectRoom extends React.Component {
         let width = screen.width;
         console.log(width);
 
-        let scale = 'scale(1)';
-        if (width < 1920) {
-            scale = 'scale(0.8)';
+        if (1280 < width && width < 1920) {
+            document.body.style.zoom = '0.8';
         }
 
-        document.body.style.webkitTransform = scale; // Chrome, Opera, Safari
-        document.body.style.msTransform = scale;     // IE 9
-        document.body.style.transform = scale;       // General
+        if (width <= 1280) {
+            document.body.style.zoom = '0.5';
+        }
 
         const {dispatchAddMessages} = this.props;
 
@@ -47,7 +46,7 @@ class ConnectRoom extends React.Component {
 
     render() {
         return (
-            <div className="aaa">
+            <div>
                 <Display/>
                 <div className="wrapper">
                     <Wall/>
