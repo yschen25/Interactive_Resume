@@ -10,13 +10,13 @@ class Certificate extends React.Component {
                     <li><span>Spearhead team</span> to develop new official website twice</li>
                     <li>Volunteer to <span>hold technical training programs and write documents</span></li>
                     <li>Excellent <span>communication skills and logic</span> by being freelancer and taking business trip</li>
-                    <li>Received <span>best website design and RWD website reward</span> in class</li>
+                    <li>Received <span>best website design 2nd and RWD website 2nd reward</span> in class</li>
                 </ul>
                 <div className="skillList item">
                     <p><b>Front-End</b> : React.js, Redux, Axios, Hook, JavaScript, ES6, Styled Component, Babel,
                         ESlint, Jest, Enyzme, react-testing-library, jQuery, HTML, CSS, Flexbox, RWD, SCSS, SASS, Bootstrap, Webpack, NPM, SPA</p>
                     <p><b>Back-End</b> : PHP, PHPUnit, SQL, RESTful API, Phalcon, Blitz</p>
-                    <p><b>Others</b> : Git, PhpStorm, Sublime, Photoshop, Illustrator, SonarQube, Docker, Web Design, UI/UX Design, Agile, SEO</p>
+                    <p><b>Others</b> : Git, PhpStorm, Sublime, Photoshop, Illustrator, SonarQube, Docker, Web Design, UI/UX Design, Agile</p>
                 </div>
                 <div className="letter-image">
                     <div className="animated-mail">
