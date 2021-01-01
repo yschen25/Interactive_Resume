@@ -283,7 +283,7 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     margin: auto;
-    font-size: 95%;
+    font-size: 1.2rem;
     padding: 20px;
     overflow: hidden;
     line-height: 1.5;
@@ -312,15 +312,16 @@
     .skillList {
         width: 80%;
         position: absolute;
-        top: 440px;
-        left: 50%;
+        top: 420px;
+        left: 48%;
         transform: translate(-50%, 0);
     }
 
     .contactInfo {
         position: absolute;
-        top: 600px;
-        right: 50px;
+        top: 626px;
+        right: 4px;
+        line-height: 1.2;
 
         a {
             margin: 5px;
@@ -332,7 +333,7 @@
 
     .letter-image {
         position: absolute;
-        bottom: 100px;
+        bottom: 80px;
         left: 54%;
         width: 200px;
         height: 200px;
@@ -443,7 +444,7 @@
 
     .shadow {
         position: absolute;
-        top: 190px;
+        top: 175px;
         left: 50%;
         width: 400px;
         height: 30px;
@@ -479,9 +480,9 @@
     text-align: center;
     color: #d7dbdb;
     font-size: 2rem;
-    top: 145px;
+    top: 95px;
     left: 50%;
-    width: 100vw;
+    width: 100%;
     transform: translate(-50%, -50%);
     z-index: 3;
 }

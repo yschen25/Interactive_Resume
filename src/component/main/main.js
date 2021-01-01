@@ -19,7 +19,7 @@ class ConnectRoom extends React.Component {
         }
 
         if (width <= 1280) {
-            document.body.style.zoom = '0.6';
+            document.body.style.zoom = '0.65';
         }
 
         const {dispatchAddMessages} = this.props;
