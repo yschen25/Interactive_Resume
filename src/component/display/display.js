@@ -334,7 +334,7 @@ class ConnectDisplay extends React.Component {
                     display = <Certificate/>;
                 }
 
-                mask = <div className="mask " data-name={`show-${val[0]}`} onClick={this.closePopUp.bind(this)}></div>;
+                mask = <div className="mask" data-name={`show-${val[0]}`} onClick={this.closePopUp.bind(this)}></div>;
             }
 
             return (

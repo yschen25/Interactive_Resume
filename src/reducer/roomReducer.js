@@ -1,6 +1,7 @@
-import {CHANGE_STATUS, CHANGE_TAB_STATUS, CHANGE_ROSE_STATUS, CHANGE_PHONE_STATUS, CHANGE_HINT_STATUS, ADD_MESSAGES} from '../constant/actionType';
+import {CHANGE_STATUS, CHANGE_TAB_STATUS, CHANGE_ROSE_STATUS, CHANGE_PHONE_STATUS, CHANGE_HINT_STATUS, ADD_MESSAGES, CLOSE_INTRO} from '../constant/actionType';
 
 const initState = {
+    "intro" : true,
     "clicked": {},
     "tab": {
         "pwd": {
@@ -110,6 +111,11 @@ const roomReducer = (state = initState, action) => {
             return {
                 ...state,
                 messages: action.payload
+            };
+        case  CLOSE_INTRO:
+            return {
+                ...state,
+                intro: action.payload
             };
         default:
             return state;

@@ -1,492 +1,519 @@
+
+.introMask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: url('../img/close.png'), pointer;
+
+  p {
+    font-family: "Comic Sans MS", "Constantia", sans-serif;
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    line-height: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+      color: #ff2b2b;
+    }
+  }
+}
+
 .mask {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 2;
-    cursor: url('../img/close.png'), pointer;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: url('../img/close.png'), pointer;
 }
 
 .show {
-    background-size: contain;
-    position: fixed;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+  background-size: contain;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 
 %textBefore {
-    content: "";
-    white-space: pre;
-    display: inline-block;
-    font-size: 2.2rem;
-    color: #f6f6f6;
-    position: absolute;
-    top: 480px;
-    line-height: 1.5;
+  content: "";
+  white-space: pre;
+  display: inline-block;
+  font-size: 2.2rem;
+  color: #f6f6f6;
+  position: absolute;
+  top: 480px;
+  line-height: 1.5;
 }
 
 .show-pic1,
 .show-pic2,
 .show-pic3 {
-    background: url('../img/show_pic1.png') no-repeat center center;
-    width: 500px;
-    height: 650px;
-    background-size: contain;
-    top: -120px;
+  background: url('../img/show_pic1.png') no-repeat center center;
+  width: 500px;
+  height: 650px;
+  background-size: contain;
+  top: -120px;
 
-    &:before {
-        @extend %textBefore;
-    }
+  &:before {
+    @extend %textBefore;
+  }
 }
 
 .show-pic2 {
-    background: url('../img/show_pic2.png') no-repeat center center;
-    width: 700px;
-    height: 500px;
-    background-size: contain;
-    top: -200px;
+  background: url('../img/show_pic2.png') no-repeat center center;
+  width: 700px;
+  height: 500px;
+  background-size: contain;
+  top: -200px;
 
-    &:before {
-        content: "The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes. \A - Christmas in Berlin, Germany";
-    }
+  &:before {
+    content: "The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes. \A - Christmas in Berlin, Germany";
+  }
 }
 
 .show-pic3 {
-    background: url('../img/show_pic3.png') no-repeat center center;
-    height: 700px;
-    background-size: contain;
-    top: -120px;
+  background: url('../img/show_pic3.png') no-repeat center center;
+  height: 700px;
+  background-size: contain;
+  top: -120px;
 
-    &:before {
-        content: "Cacth me if you can.";
-        top: 660px;
-        left: 100px;
-    }
+  &:before {
+    content: "Cacth me if you can.";
+    top: 660px;
+    left: 100px;
+  }
 }
 
 .show-stick1,
 .show-stick2,
 .show-stick3 {
-    background: url('../img/show_stick1.png') no-repeat center center;
-    width: 500px;
-    height: 650px;
-    background-size: contain;
+  background: url('../img/show_stick1.png') no-repeat center center;
+  width: 500px;
+  height: 650px;
+  background-size: contain;
 }
 
 .show-stick2 {
-    background: url('../img/show_stick2.png') no-repeat center center;
-    width: 500px;
-    height: 650px;
-    background-size: contain;
+  background: url('../img/show_stick2.png') no-repeat center center;
+  width: 500px;
+  height: 650px;
+  background-size: contain;
 }
 
 .show-stick3 {
-    background: url('../img/show_stick3.png') no-repeat center center;
-    width: 500px;
-    height: 650px;
-    background-size: contain;
+  background: url('../img/show_stick3.png') no-repeat center center;
+  width: 500px;
+  height: 650px;
+  background-size: contain;
 }
 
 .show-duck {
-    background: url('../img/show_duck.png') no-repeat center center;
-    width: 350px;
-    height: 300px;
-    background-size: contain;
-    top: -150px;
+  background: url('../img/show_duck.png') no-repeat center center;
+  width: 350px;
+  height: 300px;
+  background-size: contain;
+  top: -150px;
 
-    &:before {
-        content: "Do you heard about rubber duck debugging before? \A Programmer debug their code by explain to the duck line-by-line. \A It's really cute, I would like to have one.";
-        @extend %textBefore;
-        top: 310px;
-        left: -200px;
-        line-height: 1.5;
-    }
+  &:before {
+    content: "Do you heard about rubber duck debugging before? \A Programmer debug their code by explain to the duck line-by-line. \A It's really cute, I would like to have one.";
+    @extend %textBefore;
+    top: 310px;
+    left: -200px;
+    line-height: 1.5;
+  }
 }
 
 .show-coffee {
-    background: url('../img/show_coffee2.png') no-repeat center center;
-    width: 350px;
-    height: 300px;
-    background-size: contain;
+  background: url('../img/show_coffee2.png') no-repeat center center;
+  width: 350px;
+  height: 300px;
+  background-size: contain;
 
-    &:before {
-        content: "Hmmmm... \A programmers are persons that convert caffeine into code, \A one of my colleagues needs four cups of coffe a day. ";
-        @extend %textBefore;
-        top: 310px;
-        left: -200px;
-        line-height: 1.5;
-    }
+  &:before {
+    content: "Hmmmm... \A programmers are persons that convert caffeine into code, \A one of my colleagues needs four cups of coffe a day. ";
+    @extend %textBefore;
+    top: 310px;
+    left: -200px;
+    line-height: 1.5;
+  }
 }
 
 .show-octocat {
-    background: url('../img/show_octocat.jpg') no-repeat center center;
-    width: 600px;
-    height: 600px;
-    background-size: contain;
-    top: -150px;
+  background: url('../img/show_octocat.jpg') no-repeat center center;
+  width: 600px;
+  height: 600px;
+  background-size: contain;
+  top: -150px;
 
-    &:before {
-        content: "Company held a greening environmental competition, \A I spent my vacation to post a ocotocat on th wall by stickers, \A and I got the prize!";
-        @extend %textBefore;
-        top: 610px;
-        left: -100px;
-        line-height: 1.5;
-    }
+  &:before {
+    content: "Company held a greening environmental competition, \A I spent my vacation to post a ocotocat on th wall by stickers, \A and I got the prize!";
+    @extend %textBefore;
+    top: 610px;
+    left: -100px;
+    line-height: 1.5;
+  }
 }
 
 .show-capoo {
-    background: url('../img/show_capoo.gif') no-repeat center center;
-    width: 500px;
-    height: 500px;
-    background-size: contain;
-    top: -150px;
+  background: url('../img/show_capoo.gif') no-repeat center center;
+  width: 500px;
+  height: 500px;
+  background-size: contain;
+  top: -150px;
 
-    &:before {
-        content: "Capoo also calls bugcat, it's a creature looks like a cat or bug, \A he loves eats meats and junk foods, sometimes he eats his friend Dogdog...\A This cute creature was created by a Taiwanese - Yara";
-        @extend %textBefore;
-        top: 467px;
-        left: -180px;
-        line-height: 1.5;
-    }
+  &:before {
+    content: "Capoo also calls bugcat, it's a creature looks like a cat or bug, \A he loves eats meats and junk foods, sometimes he eats his friend Dogdog...\A This cute creature was created by a Taiwanese - Yara";
+    @extend %textBefore;
+    top: 467px;
+    left: -180px;
+    line-height: 1.5;
+  }
 }
 
 .show-keyboard {
-    background: url('../img/show_keyboard.png') no-repeat center center;
-    width: 800px;
-    height: 800px;
-    background-size: contain;
-    top: -150px;
+  background: url('../img/show_keyboard.png') no-repeat center center;
+  width: 800px;
+  height: 800px;
+  background-size: contain;
+  top: -150px;
 
-    &:before {
-        content: "My lovely filco ninja majestouch 2 cherry MX blue mechanical Keyboard \A with side printed gradient keycaps, I also changeded esc to a cat's paw, \A you will get the soft feeling from the slowly rebounding of the cat palm keycap.";
-        @extend %textBefore;
-        top: 650px;
-        left: -180px;
-        line-height: 1.5;
-    }
+  &:before {
+    content: "My lovely filco ninja majestouch 2 cherry MX blue mechanical Keyboard \A with side printed gradient keycaps, I also changeded esc to a cat's paw, \A you will get the soft feeling from the slowly rebounding of the cat palm keycap.";
+    @extend %textBefore;
+    top: 650px;
+    left: -180px;
+    line-height: 1.5;
+  }
 }
 
 .show-mouse {
-    background: url('../img/show_mouse.jpg') no-repeat center center;
-    width: 600px;
-    height: 600px;
-    background-size: contain;
-    top: -150px;
+  background: url('../img/show_mouse.jpg') no-repeat center center;
+  width: 600px;
+  height: 600px;
+  background-size: contain;
+  top: -150px;
 
-    &:before {
-        content: "Literally a mouse. \A His name is less sugar, he accompanied me through many difficulties, \A although he has passed away, he always in the bottom of my heart.";
-        @extend %textBefore;
-        top: 620px;
-        left: -150px;
-        line-height: 1.5;
-    }
+  &:before {
+    content: "Literally a mouse. \A His name is less sugar, he accompanied me through many difficulties, \A although he has passed away, he always in the bottom of my heart.";
+    @extend %textBefore;
+    top: 620px;
+    left: -150px;
+    line-height: 1.5;
+  }
 }
 
 .show-leftBooks {
-    background: url('../img/show_leftBooks.png') no-repeat center center;
-    width: 600px;
-    height: 600px;
-    background-size: contain;
+  background: url('../img/show_leftBooks.png') no-repeat center center;
+  width: 600px;
+  height: 600px;
+  background-size: contain;
 }
 
 .show-rightBooks {
-    background: url('../img/show_rightBooks.png') no-repeat center center;
-    width: 600px;
-    height: 600px;
-    background-size: contain;
+  background: url('../img/show_rightBooks.png') no-repeat center center;
+  width: 600px;
+  height: 600px;
+  background-size: contain;
 }
 
 .show-notebooks {
-    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
-    position: fixed !important;
-    width: 800px !important;
-    height: 550px !important;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    text-align: center;
-    font-size: 1.5rem;
+  font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif;
+  position: fixed !important;
+  width: 800px !important;
+  height: 550px !important;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.5rem;
 
-    .msgPic {
-        width: 150px;
-        margin-top: 50px;
+  .msgPic {
+    width: 150px;
+    margin-top: 50px;
+  }
+
+  p {
+    text-align: left;
+    padding: 0 50px;
+    line-height: 1.5;
+    text-indent: 32px;
+  }
+
+  .msgBtn {
+    position: absolute;
+    width: 250px;
+    height: 45px;
+    background: #ef7d1b;
+    font-size: 90%;
+    line-height: 45px;
+    text-align: left;
+    text-indent: 30px;
+    top: 10px;
+    right: 10px;
+    border-radius: 25px;
+    color: #fbfbfb;
+    box-shadow: 2px 2px 0 #ca650e;
+    cursor: pointer;
+
+    &:after {
+      content: "\f054";
+      font-family: FontAwesome;
+      position: absolute;
+      right: 30px;
+      font-size: 1rem;
     }
 
-    p {
-        text-align: left;
-        padding: 0 50px;
-        line-height: 1.5;
-        text-indent: 32px;
+    &:hover {
+      box-shadow: none;
+      top: 12px;
+      right: 12px;
     }
 
-    .msgBtn {
-        position: absolute;
-        width: 250px;
-        height: 45px;
-        background: #ef7d1b;
-        font-size: 90%;
-        line-height: 45px;
-        text-align: left;
-        text-indent: 30px;
-        top: 10px;
-        right: 10px;
-        border-radius: 25px;
-        color: #fbfbfb;
-        box-shadow: 2px 2px 0 #ca650e;
-        cursor: pointer;
-
-        &:after {
-            content: "\f054";
-            font-family: FontAwesome;
-            position: absolute;
-            right: 30px;
-            font-size: 1rem;
-        }
-
-        &:hover {
-            box-shadow: none;
-            top: 12px;
-            right: 12px;
-        }
-
-        &:hover:after {
-            animation: move .7s infinite;
-        }
-
-        @keyframes move {
-            0% {
-                right: 30px;
-            }
-            100% {
-                right: 15px;
-            }
-        }
+    &:hover:after {
+      animation: move .7s infinite;
     }
+
+    @keyframes move {
+      0% {
+        right: 30px;
+      }
+      100% {
+        right: 15px;
+      }
+    }
+  }
 }
 
 .certificateBg {
-    font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif, 'Noto Sans TC';
-    background: url('../img/show_certificate.png') no-repeat center center;
-    width: 800px;
-    height: 800px;
-    background-size: contain;
-    position: fixed;
-    top: 50%;
+  font-family: "Monaco", "Trebuchet MS", "Constantia", sans-serif, 'Noto Sans TC';
+  background: url('../img/show_certificate.png') no-repeat center center;
+  width: 800px;
+  height: 800px;
+  background-size: contain;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin: auto;
+  font-size: 1.2rem;
+  padding: 20px;
+  overflow: hidden;
+  line-height: 1.5;
+
+  h1 {
+    position: absolute;
+    top: 170px;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
-    margin: auto;
-    font-size: 1.2rem;
-    padding: 20px;
-    overflow: hidden;
-    line-height: 1.5;
+  }
 
-    h1 {
-        position: absolute;
-        top: 170px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+  span {
+    color: #da2f2f;
+    font-weight: 600;
+  }
+
+  .experiences {
+    position: absolute;
+    top: 220px;
+
+    li {
+      margin: 10px;
+    }
+  }
+
+  .skillList {
+    width: 80%;
+    position: absolute;
+    top: 420px;
+    left: 48%;
+    transform: translate(-50%, 0);
+  }
+
+  .contactInfo {
+    position: absolute;
+    top: 626px;
+    right: 4px;
+    line-height: 1.2;
+
+    a {
+      margin: 5px;
+      display: flex;
+      text-decoration: none;
+      justify-content: center;
+    }
+  }
+
+  .letter-image {
+    position: absolute;
+    bottom: 80px;
+    left: 54%;
+    width: 200px;
+    height: 200px;
+    transform: scale(0.5);
+    cursor: pointer;
+  }
+
+  .animated-mail {
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    transition: .4s;
+
+    .body {
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 100px 200px;
+      border-color: transparent transparent #e95f55 transparent;
+      z-index: 2;
     }
 
-    span{
-        color: #da2f2f;
-        font-weight: 600;
+    .top-fold {
+      position: absolute;
+      top: 50px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 100px 0 100px;
+      transform-origin: 50% 0;
+      transition: transform .4s .4s, z-index .2s .4s;
+      border-color: #cf4a43 transparent transparent transparent;
+      z-index: 2;
     }
 
-    .experiences {
-        position: absolute;
-        top: 220px;
-
-        li {
-            margin: 10px;
-        }
+    .back-fold {
+      position: absolute;
+      bottom: 0;
+      width: 200px;
+      height: 100px;
+      background: #cf4a43;
+      z-index: 0;
     }
 
-    .skillList {
-        width: 80%;
-        position: absolute;
-        top: 420px;
-        left: 48%;
-        transform: translate(-50%, 0);
+    .left-fold {
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 0 50px 100px;
+      border-color: transparent transparent transparent #e15349;
+      z-index: 2;
     }
 
-    .contactInfo {
-        position: absolute;
-        top: 626px;
-        right: 4px;
-        line-height: 1.2;
+    .letter {
+      left: 20px;
+      bottom: 0;
+      position: absolute;
+      width: 160px;
+      height: 60px;
+      background: white;
+      z-index: 1;
+      overflow: hidden;
+      transition: .4s .2s;
 
-        a {
-            margin: 5px;
-            display: flex;
-            text-decoration: none;
-            justify-content: center;
-        }
+      .letter-border {
+        height: 10px;
+        width: 100%;
+        background: repeating-linear-gradient(
+                        -45deg,
+                        #cb5a5e,
+                        #cb5a5e 8px,
+                        transparent 8px,
+                        transparent 18px
+        );
+      }
+
+      .letter-title {
+        margin-top: 10px;
+        margin-left: 5px;
+        height: 10px;
+        width: 40%;
+        background: #cb5a5e;
+      }
+
+      .letter-context {
+        margin-top: 10px;
+        margin-left: 5px;
+        height: 10px;
+        width: 20%;
+        background: #cb5a5e;
+      }
+
+      .letter-stamp {
+        margin-top: 30px;
+        margin-left: 120px;
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        background: #cb5a5e;
+        opacity: 0.3;
+      }
     }
+  }
 
-    .letter-image {
-        position: absolute;
-        bottom: 80px;
-        left: 54%;
-        width: 200px;
-        height: 200px;
-        transform: scale(0.5);
-        cursor: pointer;
-    }
+  .shadow {
+    position: absolute;
+    top: 175px;
+    left: 50%;
+    width: 400px;
+    height: 30px;
+    transition: .4s;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
+  }
 
+  .letter-image:hover {
     .animated-mail {
-        position: absolute;
-        height: 150px;
-        width: 200px;
-        transition: .4s;
+      transform: translateY(30px);
+    }
 
-        .body {
-            position: absolute;
-            bottom: 0;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 0 100px 200px;
-            border-color: transparent transparent #e95f55 transparent;
-            z-index: 2;
-        }
+    .animated-mail .top-fold {
+      transition: transform .4s, z-index .2s;
+      transform: rotateX(180deg);
+      z-index: 0;
+    }
 
-        .top-fold {
-            position: absolute;
-            top: 50px;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 50px 100px 0 100px;
-            transform-origin: 50% 0;
-            transition: transform .4s .4s, z-index .2s .4s;
-            border-color: #cf4a43 transparent transparent transparent;
-            z-index: 2;
-        }
-
-        .back-fold {
-            position: absolute;
-            bottom: 0;
-            width: 200px;
-            height: 100px;
-            background: #cf4a43;
-            z-index: 0;
-        }
-
-        .left-fold {
-            position: absolute;
-            bottom: 0;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 50px 0 50px 100px;
-            border-color: transparent transparent transparent #e15349;
-            z-index: 2;
-        }
-
-        .letter {
-            left: 20px;
-            bottom: 0;
-            position: absolute;
-            width: 160px;
-            height: 60px;
-            background: white;
-            z-index: 1;
-            overflow: hidden;
-            transition: .4s .2s;
-
-            .letter-border {
-                height: 10px;
-                width: 100%;
-                background: repeating-linear-gradient(
-                                -45deg,
-                                #cb5a5e,
-                                #cb5a5e 8px,
-                                transparent 8px,
-                                transparent 18px
-                );
-            }
-
-            .letter-title {
-                margin-top: 10px;
-                margin-left: 5px;
-                height: 10px;
-                width: 40%;
-                background: #cb5a5e;
-            }
-
-            .letter-context {
-                margin-top: 10px;
-                margin-left: 5px;
-                height: 10px;
-                width: 20%;
-                background: #cb5a5e;
-            }
-
-            .letter-stamp {
-                margin-top: 30px;
-                margin-left: 120px;
-                border-radius: 100%;
-                height: 30px;
-                width: 30px;
-                background: #cb5a5e;
-                opacity: 0.3;
-            }
-        }
+    .animated-mail .letter {
+      height: 160px;
     }
 
     .shadow {
-        position: absolute;
-        top: 175px;
-        left: 50%;
-        width: 400px;
-        height: 30px;
-        transition: .4s;
-        transform: translateX(-50%);
-        border-radius: 100%;
-        background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+      width: 250px;
     }
-
-    .letter-image:hover {
-        .animated-mail {
-            transform: translateY(30px);
-        }
-
-        .animated-mail .top-fold {
-            transition: transform .4s, z-index .2s;
-            transform: rotateX(180deg);
-            z-index: 0;
-        }
-
-        .animated-mail .letter {
-            height: 160px;
-        }
-
-        .shadow {
-            width: 250px;
-        }
-    }
+  }
 }
 
 .noMsg {
-    position: fixed;
-    text-align: center;
-    color: #d7dbdb;
-    font-size: 2rem;
-    top: 95px;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
+  position: fixed;
+  text-align: center;
+  color: #d7dbdb;
+  font-size: 2rem;
+  top: 95px;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .disable {
-    pointer-events: none;
+  pointer-events: none;
 }
