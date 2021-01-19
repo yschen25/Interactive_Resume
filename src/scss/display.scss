@@ -1,3 +1,7 @@
+body::after{
+  position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+  content:url('../img/show_pic1.png') url('../img/show_pic2.png') url('../img/show_pic2.png') url('../img/show_pic3.png') url('../img/show_stick1.png') url('../img/show_stick2.png') url('../img/show_stick3.png') url('../img/show_duck.png') url('../img/show_coffee2.png') url('../img/show_octocat.jpg') url('../img/show_capoo.gif') url('../img/show_keyboard.png') url('../img/show_mouse.jpg') url('../img/show_leftBooks.png') url('../img/show_rightBooks.png') url('../img/show_certificate.png') url('../img/show_computer.png') url("../img/youtube_icon.png") url("../img/portfolio_icon.png") url("../img/medium_icon.jpg") url("../img/youtube.png") url("../img/uiux_design.png") url("../img/phpstorm.png") url("../img/photoshop.png") url("../img/gitBash.png") url("../img/windows_icon.png") url("../img/illustrator_Icon.png") url("../img/steam_icon.png") url("../img/chrome_icon.png") url("../img/phpstorm_icon.png") url("../img/photoshop_icon.png") url("../img/gitbash_icon.png") url('../img/phoneBg.jpg') url('./../img/magnifier.png');
+}
 
 .introMask {
   width: 100%;
