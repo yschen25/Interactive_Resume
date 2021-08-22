@@ -5,10 +5,10 @@ const initState = {
     "clicked": {},
     "tab": {
         "pwd": {
-            "show": true
+            "show": false
         },
         "youtube": {
-            "show": false
+            "show": true
         },
         "portfolio": {
             "show": false

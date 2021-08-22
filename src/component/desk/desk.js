@@ -11,10 +11,11 @@ import notebooks from '../../img/notebooks.png';
 import {connect} from "react-redux";
 import {changeStatus} from "../../action";
 
-class ConnectDesk extends React.Component {
+const ConnectDesk = (props) => {
 
     // Click the specific object on the desk
-    openPopUp(e) {
+    function openPopUp(e) {
+
         let name = e.target.getAttribute('data-name');
 
         // Show popup
@@ -32,21 +33,20 @@ class ConnectDesk extends React.Component {
         }
     }
 
-    render() {
-        return (
-            <div className="desk" onClick={this.openPopUp.bind(this)}>
-                <img className="lock" data-name="lock" src={lock}/>
-                <img id="rose" className="rose" data-name="rose" src={rose}/>
-                <img className="papers" data-name="messageBoard" src={papers}/>
-                <img className="phone" data-name="phone" src={phone}/>
-                <img className="keyboard" data-name="keyboard" src={keyboard}/>
-                <img className="mouse" data-name="mouse" src={mouse}/>
-                <img className="coffee" data-name="coffee" src={coffee}/>
-                <img className="octocat" data-name="octocat" src={octocat}/>
-                <img className="notebooks" data-name="notebooks" src={notebooks}/>
-            </div>
-        );
-    }
+    return (
+        <div className="desk" onClick={openPopUp}>
+            <img className="lock" data-name="lock" src={lock}/>
+            <img id="rose" className="rose" data-name="rose" src={rose}/>
+            <img className="papers" data-name="messageBoard" src={papers}/>
+            <img className="phone" data-name="phone" src={phone}/>
+            <img className="keyboard" data-name="keyboard" src={keyboard}/>
+            <img className="mouse" data-name="mouse" src={mouse}/>
+            <img className="coffee" data-name="coffee" src={coffee}/>
+            <img className="octocat" data-name="octocat" src={octocat}/>
+            <img className="notebooks" data-name="notebooks" src={notebooks}/>
+        </div>
+    );
+
 }
 
 const mapDispatchToProps = dispatch => {

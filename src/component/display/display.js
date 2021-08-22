@@ -70,14 +70,14 @@ class ConnectDisplay extends React.Component {
 
         let name = e.target.getAttribute('data-name');
         let displayArr = ['youtube', 'portfolio', 'uiuxDesign', 'phpstorm', 'photoshop', 'gitBash'];
-        if (localStorage.getItem("companyPwd") || inputValue === 418) {
-
+        // if (localStorage.getItem("companyPwd") || inputValue === 418) {
+        //
             dispatchChangeTabStatus({
-                name: 'pwd',
-                show: false
+                name: 'youtube',
+                show: true
             });
 
-            localStorage.setItem("companyPwd", true);
+            // localStorage.setItem("companyPwd", true);
 
             let pre = localStorage.getItem('pre') !== '' ? localStorage.getItem('pre') : ''; // Record what tabs or software did you choose
             let web = localStorage.getItem('web') !== '' ? localStorage.getItem('web') : ''; // Record the specific tab when change tabs to software
@@ -131,9 +131,9 @@ class ConnectDisplay extends React.Component {
 
             localStorage.setItem('pre', name);
 
-        } else {
-            alert('You enter the wrong password, plz see the tip.');
-        }
+        // } else {
+        //     alert('You enter the wrong password, plz see the tip.');
+        // }
     }
 
     render() {
