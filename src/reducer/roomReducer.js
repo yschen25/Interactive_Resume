@@ -1,53 +1,53 @@
 import {CHANGE_STATUS, CHANGE_TAB_STATUS, CHANGE_ROSE_STATUS, CHANGE_PHONE_STATUS, CHANGE_HINT_STATUS, ADD_MESSAGES, CLOSE_INTRO} from '../constant/actionType';
 
 const initState = {
-    "intro" : true,
-    "clicked": {},
-    "tab": {
-        "pwd": {
-            "show": false
-        },
-        "youtube": {
-            "show": true
-        },
-        "portfolio": {
-            "show": false
-        },
-        "uiuxDesign": {
-            "show": false
-        },
-        "phpstorm": {
-            "show": false
-        },
-        "photoshop": {
-            "show": false
-        },
-        "gitBash": {
-            "show": false
-        }
+  intro: true,
+  clicked: {},
+  tab: {
+    pwd: {
+      show: true,
     },
-    "rose": {
-        "blooming": {
-            "show": true
-        },
-        "withering": {
-            "show": false
-        },
+    youtube: {
+      show: false,
     },
-    "phone": {
-        "isTextDisable": {
-            "show": false
-        },
-        "isInputSending": {
-            "show": false
-        }
+    portfolio: {
+      show: false,
     },
-    "capoo": {
-        "isHintShow": {
-            "show": false
-        }
+    uiuxDesign: {
+      show: false,
     },
-    "messages": {}
+    phpstorm: {
+      show: false,
+    },
+    photoshop: {
+      show: false,
+    },
+    gitBash: {
+      show: false,
+    },
+  },
+  rose: {
+    blooming: {
+      show: true,
+    },
+    withering: {
+      show: false,
+    },
+  },
+  phone: {
+    isTextDisable: {
+      show: false,
+    },
+    isInputSending: {
+      show: false,
+    },
+  },
+  capoo: {
+    isHintShow: {
+      show: false,
+    },
+  },
+  messages: {},
 };
 
 const roomReducer = (state = initState, action) => {

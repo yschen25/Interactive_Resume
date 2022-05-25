@@ -123,12 +123,12 @@ class ConnectMessageBoard extends React.Component {
         }
 
         if (textarea === '') {
-            alert('Please enter message');
+            alert('Please enter the message');
             return;
         }
 
         if (textarea.length > 200) {
-            alert('Over letters limit');
+            alert("Over characters limit");
             return;
         }
 
@@ -149,7 +149,7 @@ class ConnectMessageBoard extends React.Component {
         ).then(response => {
 
             if (response.data.status) {
-                alert('Message send success!');
+                alert("Message sent successfully!");
                 location.reload();
             }
 
@@ -160,32 +160,80 @@ class ConnectMessageBoard extends React.Component {
 
     render() {
         return (
-            <div className="show-messageBoard">
-                <h1>Message Board</h1>
-                <p className="desc">Welcome all of you here to my interactive resume, wish you have fun here</p>
-                <div className="msg">
-                    <div className="inputItem">
-                        <label htmlFor="name">Name : </label>
-                        <input id="name" name="name" maxLength="20" autoFocus autoComplete="off" placeholder="Your Name"/>
-                    </div>
-                    <div className="inputItem">
-                        <label htmlFor="avatar">Avatar : </label>
-                        <input type="radio" className="avatar" id="man" name="avatar" value="1"/><label htmlFor="man"><img src={man}/></label>
-                        <input type="radio" className="avatar" id="woman" name="avatar" value="2"/><label
-                        htmlFor="woman"><img src={woman}/></label>
-                        <input type="radio" className="avatar" id="hamster" name="avatar" value="3"/><label
-                        htmlFor="hamster"><img src={hamster}/></label>
-                    </div>
-                    <img id="pen" className="pen" src={pen}/>
-                    <textarea id="textarea" cols="40" rows="5" maxLength="200" data-count={this.state.count}
-                              onFocus={this.focus.bind(this)} onBlur={this.blur.bind(this)}
-                              onKeyPress={this.typeMessage.bind(this)}></textarea>
-                    <p id="warningText">There are {this.state.letter} letters left</p>
-                    <div className="submitBtn" onClick={this.sendMessage.bind(this)}>Submit</div>
-                    <div className="msgBtn" onClick={this.showMessages.bind(this)}>See the Messages</div>
-                </div>
+          <div className="show-messageBoard">
+            <h1>Message Board</h1>
+            <p className="desc">
+              Thank you for visiting my interactive resume website, leave any
+              testimonial here.
+            </p>
+            <div className="msg">
+              <div className="inputItem">
+                <label htmlFor="name">Name: </label>
+                <input
+                  id="name"
+                  name="name"
+                  maxLength="20"
+                  autoFocus
+                  autoComplete="off"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div className="inputItem">
+                <label htmlFor="avatar">Avatar: </label>
+                <input
+                  type="radio"
+                  className="avatar"
+                  id="man"
+                  name="avatar"
+                  value="1"
+                />
+                <label htmlFor="man">
+                  <img src={man} />
+                </label>
+                <input
+                  type="radio"
+                  className="avatar"
+                  id="woman"
+                  name="avatar"
+                  value="2"
+                />
+                <label htmlFor="woman">
+                  <img src={woman} />
+                </label>
+                <input
+                  type="radio"
+                  className="avatar"
+                  id="hamster"
+                  name="avatar"
+                  value="3"
+                />
+                <label htmlFor="hamster">
+                  <img src={hamster} />
+                </label>
+              </div>
+              <img id="pen" className="pen" src={pen} />
+              <textarea
+                id="textarea"
+                cols="40"
+                rows="5"
+                maxLength="200"
+                data-count={this.state.count}
+                onFocus={this.focus.bind(this)}
+                onBlur={this.blur.bind(this)}
+                onKeyPress={this.typeMessage.bind(this)}
+              ></textarea>
+              <p id="warningText">
+                There are {this.state.letter} characters left
+              </p>
+              <div className="submitBtn" onClick={this.sendMessage.bind(this)}>
+                Submit
+              </div>
+              <div className="msgBtn" onClick={this.showMessages.bind(this)}>
+                See others Messages
+              </div>
             </div>
-        )
+          </div>
+        );
     }
 }
 

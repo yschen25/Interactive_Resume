@@ -3,6 +3,33 @@ body::after{
   content:url('../img/show_pic1.png') url('../img/show_pic2.png') url('../img/show_pic2.png') url('../img/show_pic3.png') url('../img/show_stick1.png') url('../img/show_stick2.png') url('../img/show_stick3.png') url('../img/show_duck.png') url('../img/show_coffee2.png') url('../img/show_octocat.jpg') url('../img/show_capoo.gif') url('../img/show_keyboard.png') url('../img/show_mouse.jpg') url('../img/show_leftBooks.png') url('../img/show_rightBooks.png') url('../img/show_certificate.png') url('../img/show_computer.png') url("../img/youtube_icon.png") url("../img/portfolio_icon.png") url("../img/medium_icon.jpg") url("../img/youtube.png") url("../img/uiux_design.png") url("../img/phpstorm.png") url("../img/photoshop.png") url("../img/gitBash.png") url("../img/windows_icon.png") url("../img/illustrator_Icon.png") url("../img/steam_icon.png") url("../img/chrome_icon.png") url("../img/phpstorm_icon.png") url("../img/photoshop_icon.png") url("../img/gitbash_icon.png") url('../img/phoneBg.jpg') url('./../img/magnifier.png');
 }
 
+.mobileWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background: #000;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+
+  .mobileDesc {
+    font-family: "Comic Sans MS", "Constantia", sans-serif;
+    color: #f6f6f6;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    line-height: 1.5;
+  }
+
+  .mobileBg {
+    background: url('../../Interactive_Resume_01.gif') no-repeat center center;
+    width: 100%;
+    height: 140px;
+    background-size: contain;
+  }
+
+}
+
 .introMask {
   width: 100%;
   height: 100%;
@@ -64,13 +91,22 @@ body::after{
 .show-pic2,
 .show-pic3 {
   background: url('../img/show_pic1.png') no-repeat center center;
-  width: 500px;
+  width: 550px;
   height: 650px;
   background-size: contain;
   top: -120px;
+  
 
   &:before {
     @extend %textBefore;
+    left: -100px;
+  }
+}
+
+.show-pic1 {
+  &:before {
+    top: 620px;
+    content: "I really love drawing, and I also sell my paintings as a postcards, \A stickers on Etsy and Line creators markets."
   }
 }
 
@@ -82,7 +118,7 @@ body::after{
   top: -200px;
 
   &:before {
-    content: "The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes. \A - Christmas in Berlin, Germany";
+    content: "I like photography, this picture was taken Christmas in Berlin, Germany. \A The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes.";
   }
 }
 
@@ -93,9 +129,8 @@ body::after{
   top: -120px;
 
   &:before {
-    content: "Cacth me if you can.";
-    top: 660px;
-    left: 100px;
+    content: "Friends see me as clever and interesting person, \A the picture shows that I went to airport to pick up my friend \A with a cockroach costume";
+    top: 680px;
   }
 }
 
@@ -130,7 +165,7 @@ body::after{
   top: -150px;
 
   &:before {
-    content: "Do you heard about rubber duck debugging before? \A Programmer debug their code by explain to the duck line-by-line. \A It's really cute, I would like to have one.";
+    content: "Have you heard about rubber duck debugging before? \A It's a way programmer debugs their code by explaining to a duck line-by-line,\A it's a really helpful way to walk through the whole codebase logic.";
     @extend %textBefore;
     top: 310px;
     left: -200px;
@@ -145,7 +180,7 @@ body::after{
   background-size: contain;
 
   &:before {
-    content: "Hmmmm... \A programmers are persons that convert caffeine into code, \A one of my colleagues needs four cups of coffe a day. ";
+    content: "Hmmmm... \A programmers are persons that convert caffeine into code, \A one of my colleagues usually needs four cups of coffe a day. ";
     @extend %textBefore;
     top: 310px;
     left: -200px;
@@ -161,7 +196,7 @@ body::after{
   top: -150px;
 
   &:before {
-    content: "Company held a greening environmental competition, \A I spent my vacation to post a ocotocat on th wall by stickers, \A and I got the prize!";
+    content: "Once company held a greening environmental competition, \A I spent my consecutive holidays to design and post an ocotocat on the wall by stickers, \A and I got the prize!";
     @extend %textBefore;
     top: 610px;
     left: -100px;
@@ -177,7 +212,7 @@ body::after{
   top: -150px;
 
   &:before {
-    content: "Capoo also calls bugcat, it's a creature looks like a cat or bug, \A he loves eats meats and junk foods, sometimes he eats his friend Dogdog...\A This cute creature was created by a Taiwanese - Yara";
+    content: "Capoo also calls bugcat, it's a creature looks like a cat or bug, \A he loves eating meats and junk foods, sometimes he eats his friend Dogdog...\A This cute creature was created by a Taiwanese illustrator - Yara";
     @extend %textBefore;
     top: 467px;
     left: -180px;
@@ -193,7 +228,7 @@ body::after{
   top: -150px;
 
   &:before {
-    content: "My lovely filco ninja majestouch 2 cherry MX blue mechanical Keyboard \A with side printed gradient keycaps, I also changeded esc to a cat's paw, \A you will get the soft feeling from the slowly rebounding of the cat palm keycap.";
+    content: "My lovely filco ninja majestouch 2 cherry MX blue mechanical Keyboard \A with side printed gradient keycaps, I also changeded esc key to a cat paw, \A the soft texture makes me feel relaxing.";
     @extend %textBefore;
     top: 650px;
     left: -180px;
@@ -209,7 +244,7 @@ body::after{
   top: -150px;
 
   &:before {
-    content: "Literally a mouse. \A His name is less sugar, he accompanied me through many difficulties, \A although he has passed away, he always in the bottom of my heart.";
+    content: "Literally a mouse. \A His name is less sugar and he accompanied me through many difficulties, \A although he has passed away, he always in the bottom of my heart.";
     @extend %textBefore;
     top: 620px;
     left: -150px;
@@ -334,6 +369,8 @@ body::after{
   .experiences {
     position: absolute;
     top: 220px;
+    width: 70%;
+    margin: 20px;
 
     li {
       margin: 10px;
@@ -343,15 +380,15 @@ body::after{
   .skillList {
     width: 80%;
     position: absolute;
-    top: 420px;
+    top: 396px;
     left: 48%;
     transform: translate(-50%, 0);
   }
 
   .contactInfo {
     position: absolute;
-    top: 626px;
-    right: 4px;
+    top: 582px;
+    left: 60%;
     line-height: 1.2;
 
     a {
@@ -364,8 +401,8 @@ body::after{
 
   .letter-image {
     position: absolute;
-    bottom: 80px;
-    left: 54%;
+    bottom: 120px;
+    left: 35%;
     width: 200px;
     height: 200px;
     transform: scale(0.5);
@@ -521,3 +558,5 @@ body::after{
 .disable {
   pointer-events: none;
 }
+
+
