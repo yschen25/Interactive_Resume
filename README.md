@@ -24,13 +24,13 @@ My interactive resume.
 ### **[INTERACTIVE RESUME](http://www.yschen25.com/portfolio/interactiveResume/) -> Where You Can Enter The Website**
 <br/>
 
-<img src="Interactive_Resume_01.png" alt="Interactive_Resume" title="Interactive_Resume">
+<img src="Interactive_Resume.png" alt="Interactive_Resume" title="Interactive_Resume">
 <br/>
 <br/>
 <br/>
 
 <p align="center">
-   <img src="Interactive_Resume_02.gif" alt="Interactive_Resume" title="Interactive_Resume">
+   <img src="Interactive_Resume_Gif.gif" alt="Interactive_Resume" title="Interactive_Resume">
 </p>
 <br/>
 
