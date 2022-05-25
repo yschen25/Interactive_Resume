@@ -26,8 +26,7 @@ My interactive resume.
 
 <img src="Interactive_Resume.png" alt="Interactive_Resume" title="Interactive_Resume">
 <br/>
-<br/>
-<br/>
+
 
 <p align="center">
    <img src="Interactive_Resume_Gif.gif" alt="Interactive_Resume" title="Interactive_Resume">
