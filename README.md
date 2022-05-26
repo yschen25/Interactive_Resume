@@ -21,7 +21,7 @@ My interactive resume.
 
 ## Demo
 
-### **[INTERACTIVE RESUME](http://www.yschen25.com/portfolio/interactiveResume/) -> Where You Can Enter The Website**
+### **[INTERACTIVE RESUME](https://www.yschen25.com/interactiveResume/) -> Where You Can Enter The Website**
 <br/>
 
 <img src="Interactive_Resume.png" alt="Interactive_Resume" title="Interactive_Resume">
