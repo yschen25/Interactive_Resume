@@ -61,13 +61,13 @@ class ConnectPhone extends React.Component {
     switch (type) {
       case "intro":
         response =
-          "Enthusiastic software engineer with 4 years’ experience in web development for e-commerce and fintech industry. " +
+          "I'm an enthusiastic software engineer with 4 years’ experience in web development. " +
           "An interviewer and mentor for junior engineers. " +
           "Have experiences on collaboration with people from various countries including Dominica government while working for an international company. ";
         break;
       case "quit":
         response =
-          "Because I want to join a large-scale and well-organized company which has excellent engineers. " +
+          "I want to join a large-scale and well-organized company which has excellent engineers. " +
           "My previous company asked me to maintain more than 10 websites and build the servers, " +
           "be an interviewer and mentor to lead the junior engineer, " +
           "I am really appreciate the company gave me the chance to gain these experiences, " +
@@ -84,14 +84,15 @@ class ConnectPhone extends React.Component {
         response =
           "That's correct, I like to share my own experiences as a software engineer to others, " +
           'so I writing articles about technical and job seeking and the blog reached average 5,000 views/month, ' +
-          "there are also two articles were posted on two social media platforms. Welcome to visit my blog: https://yschen25.blogspot.com/";
+          'there are also articles were posted on a famous international communication website 𝗖𝗿𝗼𝘀𝘀𝗶𝗻𝗴.𝗰𝘄, 𝟭𝟭𝟭𝟭 𝗝𝗼𝗯 𝗕𝗮𝗻𝗸 - 𝗧𝗲𝗰𝗵 𝗶𝘀𝗹𝗮𝗻𝗱.' +
+          'Welcome to visit my blog: https://yschen25.blogspot.com.';
         break;
       case "github":
         response = "Please check https://github.com/yschen25.";
         break;
       case "visa":
         response =
-          "Yes, I have a working holiday visa but it only valids until 07/09/2022 so I need the skilled worker visa sponsorship.";
+          "Yes, I need a skilled worker visa sponsorship.";
         break;
       default:
         response = "The line is busy, please wait.";
@@ -164,7 +165,7 @@ class ConnectPhone extends React.Component {
           data-name="visa"
           onClick={this.sendMessage.bind(this)}
         >
-          Do You Have Visa?
+          Do You Need Visa?
         </div>
         <div
           className={`${isTextDisable ? "disable" : ""} text text2`}

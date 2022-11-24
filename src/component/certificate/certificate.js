@@ -6,10 +6,11 @@ const Certificate = () => {
       <h1>Yi-Shiuan Chen</h1>
       <p className="experiences item">
         Enthusiastic <span>software engineer with 4 years’ experiences</span> in
-        web development for e-commerce and fintech industry.
-        <span>An interviewer and mentor for junior engineers. </span>
-        Have experiences on collaboration with people from various countries
-        including Dominica government while working for an international
+        web development.
+        <br />
+        <span>An interviewer and mentor for junior engineers.</span> Have
+        experiences in collaboration with people from various countries
+        including the Dominica government while working for an international
         company.
       </p>
       <ul className="skillList item">

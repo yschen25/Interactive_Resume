@@ -220,8 +220,11 @@ class ConnectDisplay extends React.Component {
                     <iframe
                       width="490"
                       height="260"
-                      src="https://www.youtube.com/embed/t3v25rt-DYA"
-                      frameBorder="0"
+                      src="https://www.youtube.com/embed/Bh1Pr6ef_XI"
+                      title="Life Is Strange Full Soundtrack (22 tracks)"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>
