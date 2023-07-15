@@ -70,7 +70,7 @@ class ConnectWall extends React.Component {
         return (
 
             <div className="wall"
-                 onClick={this.openPopUp.bind(this)}> {/*<div className="wall" onClick={(e) => this.changeStatus(e)}>*/}
+                 onClick={this.openPopUp.bind(this)}>
                 <img className="pic" data-name="pic1" src={pic1}/>
                 <img className="pic pic2" data-name="pic2" src={pic2}/>
                 <img className="pic pic3" data-name="pic3" src={pic3}/>

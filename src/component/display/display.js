@@ -181,8 +181,10 @@ class ConnectDisplay extends React.Component {
 
         if (val[0] === "computer" && val[1].show) {
           Object.entries(data.tab).map((val) => {
+
             // Password tab
             if (val[0] === "pwd" && val[1].show) {
+              
               // Hide the tabs menu and bottom menu
               isTabShow = isBottomShow = false;
 

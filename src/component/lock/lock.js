@@ -156,7 +156,7 @@ class Lock extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <p>Ask capoo for the password</p>
+                    <p>Ask Capoo for the password</p>
                 </div>
             </div>
         )

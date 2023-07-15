@@ -155,7 +155,6 @@ class ConnectMessageBoard extends React.Component {
 
         }).catch(error => console.log(error));
 
-        // todo Chinese limit
     }
 
     render() {
@@ -163,8 +162,8 @@ class ConnectMessageBoard extends React.Component {
           <div className="show-messageBoard">
             <h1>Message Board</h1>
             <p className="desc">
-              Thank you for visiting my interactive resume website, leave any
-              testimonial here.
+              Thank you for visiting my interactive resume website, Please feel
+              free to share any feedback here.
             </p>
             <div className="msg">
               <div className="inputItem">

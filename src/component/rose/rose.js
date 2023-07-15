@@ -7,7 +7,7 @@ import witheringRose from '../../img/withering_rose.png';
 
 class ConnectRose extends React.Component {
 
-    componentDidMount(){
+    componentDidMount() {
 
         if (document.getElementById("option_coffee") !== null) document.getElementById("option_coffee").addEventListener("click", makeRosebloom);
         if (document.getElementById("option_water") !== null) document.getElementById("option_water").addEventListener("click", makeRoseWither);

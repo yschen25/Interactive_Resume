@@ -19,7 +19,7 @@ class ConnectPhone extends React.Component {
     chatList.innerHTML += `<li class="userInput"><span>${text}</span></li>`;
 
     let height = this.chatList.current.offsetHeight;
-
+    
     this.chatRoom.current.scrollTo({
       top: height,
       behavior: "smooth",
@@ -59,43 +59,38 @@ class ConnectPhone extends React.Component {
   transferType(type) {
     let response = "";
     switch (type) {
-      case "intro":
+      case 'intro':
         response =
-          "I'm an enthusiastic software engineer with 4 years’ experience in web development. " +
-          "An interviewer and mentor for junior engineers. " +
-          "Have experiences on collaboration with people from various countries including Dominica government while working for an international company. ";
+          "An enthusiastic software engineer with 4 years of experience in web development. " +
+          "I'm also an interviewer and mentor for junior engineers, helping engineers to get a job in the UK. ";
         break;
-      case "quit":
+      case 'skills':
         response =
-          "I want to join a large-scale and well-organized company which has excellent engineers. " +
-          "My previous company asked me to maintain more than 10 websites and build the servers, " +
-          "be an interviewer and mentor to lead the junior engineer, " +
-          "I am really appreciate the company gave me the chance to gain these experiences, " +
-          "but it limited me to archive my working goal, and it makes me too busy to have time interviewing, " +
-          "so I quit the job and focusing on finding my ideally company. ";
+          'I using JavaScript, PHP, Python ans SQL, ' +
+          'for the framework is React and Redux, ' +
+          'and I am familiar with Docker, AWS, RESTful API, TDD and scrum.';
         break;
-      case "job":
+      case 'job':
         response =
-          "I’m the first engineer in this company, collaborated with London, Russian, China team, also Dominica government. " +
-          "I Imported React, typescript and Redux to implement an interactive page, " +
-          "and optimized performance for both our official website and Dominica government’s from E to A ranking.";
+          "I'm the first engineer in this company, collaborated with London, Russian, China team, also Dominica government. " +
+          'I Imported React, typescript and Redux to implement an interactive page, ' +
+          "and optimized performance for both our official website and Dominica government's from E to A ranking.";
         break;
-      case "habit":
+      case 'habit':
         response =
           "That's correct, I like to share my own experiences as a software engineer to others, " +
-          'so I writing articles about technical and job seeking and the blog reached average 5,000 views/month, ' +
-          'there are also articles were posted on a famous international communication website 𝗖𝗿𝗼𝘀𝘀𝗶𝗻𝗴.𝗰𝘄, 𝟭𝟭𝟭𝟭 𝗝𝗼𝗯 𝗕𝗮𝗻𝗸 - 𝗧𝗲𝗰𝗵 𝗶𝘀𝗹𝗮𝗻𝗱.' +
+          'so I writing articles about technical and job seeking and the blog reached average 5,000 views/month. ' +
           'Welcome to visit my blog: https://yschen25.blogspot.com.';
         break;
-      case "github":
-        response = "Please check https://github.com/yschen25.";
-        break;
-      case "visa":
+      case 'portfolio':
         response =
-          "Yes, I need a skilled worker visa sponsorship.";
+          'Please check https://www.yschen25.com/ or https://github.com/yschen25.';
+        break;
+      case 'visa':
+        response = 'Yes, I need a skilled worker visa sponsorship and currently I base in the UK now.';
         break;
       default:
-        response = "The line is busy, please wait.";
+        response = 'The line is busy, please wait.';
         break;
     }
     return response;
@@ -142,55 +137,55 @@ class ConnectPhone extends React.Component {
                 placeholder="Type a message"
                 disabled
               />
-              <p className={`${isInputSending ? "act" : ""} inputSending send`}>
+              <p className={`${isInputSending ? 'act' : ''} inputSending send`}>
                 Text sending...
               </p>
             </div>
             <div
-              className={`${isTextDisable ? "act sending" : ""} icons plane`}
+              className={`${isTextDisable ? 'act sending' : ''} icons plane`}
             >
               <i className="fa fa-paper-plane"></i>
             </div>
           </div>
         </div>
         <div
-          className={`${isTextDisable ? "disable" : ""} text`}
+          className={`${isTextDisable ? 'disable' : ''} text`}
           data-name="intro"
           onClick={this.sendMessage.bind(this)}
         >
           Tell Me About Yourself.
         </div>
         <div
-          className={`${isTextDisable ? "disable" : ""} text text3`}
+          className={`${isTextDisable ? 'disable' : ''} text text3`}
           data-name="visa"
           onClick={this.sendMessage.bind(this)}
         >
           Do You Need Visa?
         </div>
         <div
-          className={`${isTextDisable ? "disable" : ""} text text2`}
-          data-name="quit"
+          className={`${isTextDisable ? 'disable' : ''} text text2`}
+          data-name="skills"
           onClick={this.sendMessage.bind(this)}
         >
-          Why Do You Open To A New Job?
+          What Are Your Skills?
         </div>
         <div
-          className={`${isTextDisable ? "disable" : ""} text text3`}
+          className={`${isTextDisable ? 'disable' : ''} text text3`}
           data-name="job"
           onClick={this.sendMessage.bind(this)}
         >
           What Do You Responsible For?
         </div>
         <div
-          className={`${isTextDisable ? "disable" : ""} text`}
+          className={`${isTextDisable ? 'disable' : ''} text`}
           data-name="habit"
           onClick={this.sendMessage.bind(this)}
         >
           I Heard You Like To Share Things?
         </div>
         <div
-          className={`${isTextDisable ? "disable" : ""} text text2`}
-          data-name="github"
+          className={`${isTextDisable ? 'disable' : ''} text text2`}
+          data-name="portfolio"
           onClick={this.sendMessage.bind(this)}
         >
           Do You Have Other Portfolios?

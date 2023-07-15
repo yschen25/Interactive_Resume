@@ -16,7 +16,7 @@ const Certificate = () => {
       <ul className="skillList item">
         <li>
           <b>Programming Languages</b>: JavaScript, TypeScript, NodeJS, PHP,
-          SQL, CSS, SCSS, SASS
+          Python, SQL, CSS, SCSS, SASS
         </li>
         <li>
           <b>Dev Principles</b>: RESTful API, TDD, Agile, SPA

@@ -11,7 +11,9 @@ import { Desk } from "../desk/desk";
 import Text from "../text/text";
 
 class ConnectRoom extends React.Component {
+
   componentDidMount() {
+
     // Adjust the size of windows
     let width = screen.width;
 
@@ -62,10 +64,11 @@ class ConnectRoom extends React.Component {
             Welcome! How's going? Hope you are doing well.
             <br />
             <br />
-            On this website you can know me on a deeper level by{" "}
-            <span>interacting with the objects</span>. Feel free to click
-            anythings on the wall and desk, you can also find plenty of easter
-            eggs for programmer, wish all of you have fun here : )
+            This website offers the opportunity to get to know me better by
+            engaging with various objects. You are encouraged to freely click on
+            items found on the wall and desk, where you can discover numerous
+            programmer-oriented Easter eggs. I hope everyone enjoys their time
+            here!
           </p>
         </div>
       );

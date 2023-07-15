@@ -1,6 +1,10 @@
 body::after{
-  position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-  content:url('../img/show_pic1.png') url('../img/show_pic2.png') url('../img/show_pic2.png') url('../img/show_pic3.png') url('../img/show_stick1.png') url('../img/show_stick2.png') url('../img/show_stick3.png') url('../img/show_duck.png') url('../img/show_coffee2.png') url('../img/show_octocat.jpg') url('../img/show_capoo.gif') url('../img/show_keyboard.png') url('../img/show_mouse.jpg') url('../img/show_leftBooks.png') url('../img/show_rightBooks.png') url('../img/show_certificate.png') url('../img/show_computer.png') url("../img/youtube_icon.png") url("../img/portfolio_icon.png") url("../img/medium_icon.jpg") url("../img/youtube.png") url("../img/uiux_design.png") url("../img/phpstorm.png") url("../img/photoshop.png") url("../img/gitBash.png") url("../img/windows_icon.png") url("../img/illustrator_Icon.png") url("../img/steam_icon.png") url("../img/chrome_icon.png") url("../img/phpstorm_icon.png") url("../img/photoshop_icon.png") url("../img/gitbash_icon.png") url('../img/phoneBg.jpg') url('./../img/magnifier.png');
+  position: absolute; 
+  width: 0; 
+  height: 0; 
+  overflow: hidden; 
+  z-index: -1;
+  content: url('../img/show_pic1.png') url('../img/show_pic2.png') url('../img/show_pic2.png') url('../img/show_pic3.png') url('../img/show_stick1.png') url('../img/show_stick2.png') url('../img/show_stick3.png') url('../img/show_duck.png') url('../img/show_coffee2.png') url('../img/show_octocat.jpg') url('../img/show_capoo.gif') url('../img/show_keyboard.png') url('../img/show_mouse.jpg') url('../img/show_leftBooks.png') url('../img/show_rightBooks.png') url('../img/show_certificate.png') url('../img/show_computer.png') url("../img/youtube_icon.png") url("../img/portfolio_icon.png") url("../img/medium_icon.jpg") url("../img/youtube.png") url("../img/uiux_design.png") url("../img/phpstorm.png") url("../img/photoshop.png") url("../img/gitBash.png") url("../img/windows_icon.png") url("../img/illustrator_Icon.png") url("../img/steam_icon.png") url("../img/chrome_icon.png") url("../img/phpstorm_icon.png") url("../img/photoshop_icon.png") url("../img/gitbash_icon.png") url('../img/phoneBg.jpg') url('./../img/magnifier.png');
 }
 
 .mobileWrapper {
@@ -14,19 +18,17 @@ body::after{
 
   .mobileDesc {
     font-family: "Comic Sans MS", "Constantia", sans-serif;
+    font-size: 1.5rem;
     color: #f6f6f6;
     margin: auto;
     text-align: center;
     width: 90%;
     line-height: 1.5;
-  }
 
-  .mobileBg {
-    background: url('../../Interactive_Resume_Gif.gif') no-repeat center center;
-    width: 100%;
-    background-size: contain;
+    a {
+      color: #e3e451;
+    }
   }
-
 }
 
 .introMask {
@@ -105,7 +107,7 @@ body::after{
 .show-pic1 {
   &:before {
     top: 620px;
-    content: "I really love drawing, and I also sell my paintings as a postcards, \A stickers on Etsy and Line creators markets."
+    content: "I have a deep passion for drawing, \A and I actively sell my paintings as postcards and stickers on platforms \A like Etsy and Line creators markets."
   }
 }
 
@@ -117,7 +119,7 @@ body::after{
   top: -200px;
 
   &:before {
-    content: "I like photography, this picture was taken Christmas in Berlin, Germany. \A The cold and deep water reflects all glitter lights, \A try to find myself in the reflection of that water, \A but immaculate brightness dazzled my eyes.";
+    content: "I love photography, and the picture was taken on Christmas in Berlin, Germany. \A The chilly and profound water mirrors the sparkling lights, \A as I attempt to discover my own reflection amidst its shimmering surface. \A However, the immaculate brilliance proves to be dazzling to my eyes.";
   }
 }
 
@@ -128,7 +130,7 @@ body::after{
   top: -120px;
 
   &:before {
-    content: "Friends see me as clever and interesting person, \A the picture shows that I went to airport to pick up my friend \A with a cockroach costume";
+    content: "Friends see me as a clever and interesting person. \A The picture shows me at the airport, \A dressed in a cockroach costume, welcoming my friend.";
     top: 680px;
   }
 }
@@ -179,7 +181,7 @@ body::after{
   background-size: contain;
 
   &:before {
-    content: "Hmmmm... \A programmers are persons that convert caffeine into code, \A one of my colleagues usually needs four cups of coffe a day. ";
+    content: "Hmmmm... \A programmers are individuals who convert caffeine into code, \A one of my colleagues usually needs four cups of coffe a day. ";
     @extend %textBefore;
     top: 310px;
     left: -200px;
@@ -195,7 +197,7 @@ body::after{
   top: -150px;
 
   &:before {
-    content: "Once company held a greening environmental competition, \A I spent my consecutive holidays to design and post an ocotocat on the wall by stickers, \A and I got the prize!";
+    content: "Once company held a greening environmental competition, \A I spent my consecutive holidays to designing and posting an ocotocat \A on the wall using stickers,and I got the prize!";
     @extend %textBefore;
     top: 610px;
     left: -100px;
@@ -227,7 +229,7 @@ body::after{
   top: -150px;
 
   &:before {
-    content: "My lovely filco ninja majestouch 2 cherry MX blue mechanical Keyboard \A with side printed gradient keycaps, I also changeded esc key to a cat paw, \A the soft texture makes me feel relaxing.";
+    content: "My lovely Filco Ninja Majestouch 2 Cherry MX Blue mechanical keyboard, \A with side-printed gradient keycaps, \A also features an esc key replaced by a cat paw. \A The soft texture of the keyboard brings me a sense of relaxation.";
     @extend %textBefore;
     top: 650px;
     left: -180px;
@@ -243,7 +245,7 @@ body::after{
   top: -150px;
 
   &:before {
-    content: "Literally a mouse. \A His name is less sugar and he accompanied me through many difficulties, \A although he has passed away, he always in the bottom of my heart.";
+    content: "Literally a mouse, his name was Less Sugar,  \A and he accompanied me through many difficulties. \A Although he has passed away, he will always remain in the bottom of my heart.";
     @extend %textBefore;
     top: 620px;
     left: -150px;
