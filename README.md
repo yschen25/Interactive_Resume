@@ -16,7 +16,11 @@ My interactive resume.
 
 ## Introduction
 
-It's an interactive website out of a desire to break away from the conventional resume format that simply presents my background, work experience, education, and so on. Instead, I wanted people to get a glimpse of my personality by engaging with my website, which is why everything on the site is clickable.
+The main idea is to break away from traditional resume websites that merely display work experience, education, and so on. Since I have already created two similar websites before, I started to find them a bit boring.
+
+Therefore, I decided to design an interactive resume website. The background is my desk, with photos I took, a keyboard, books, coffee, and so on. The phone on the desk can be clicked to choose conversations, and the computer in the middle can be accessed after entering a password.
+
+This website also incorporates puzzle elements, where some items can only be seen after solving puzzles. It also includes some Easter eggs that only engineers would know, hoping that users can get to know my personality and traits through this unique approach.
 
 You can **explore and interact with my [interactive resume website](https://www.yschen25.com/interactiveResume/)
  on your own**. For the best experience, I recommend using a screen resolution of 1920 x 1080.
