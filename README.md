@@ -25,11 +25,7 @@ This website also incorporates puzzle elements, where some items can only be see
 You can **explore and interact with my [interactive resume website](https://www.yschen25.com/interactiveResume/)
  on your own**. For the best experience, I recommend using a screen resolution of 1920 x 1080.
 
-<br/>
-
 Alternatively, if you prefer, you can watch a [**video walkthrough of the website on YouTube**](https://youtu.be/iKtZwhi1SKE).
-
-<br/>
 
 if you're interested in a **detailed description with demonstrations**, please continue reading the following.
 
